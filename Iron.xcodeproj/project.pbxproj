@@ -13,6 +13,12 @@
 		0159A74B2848336B005CDC32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0159A74A2848336B005CDC32 /* Preview Assets.xcassets */; };
 		0159A752284838D3005CDC32 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A751284838D3005CDC32 /* DataController.swift */; };
 		0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7532848393C005CDC32 /* Iron.xcdatamodeld */; };
+		0159A7692848491B005CDC32 /* ESet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */; };
+		0159A76A2848491B005CDC32 /* ESet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */; };
+		0159A76B2848491B005CDC32 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */; };
+		0159A76C2848491B005CDC32 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */; };
+		0159A76D2848491B005CDC32 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */; };
+		0159A76E2848491B005CDC32 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		0159A74A2848336B005CDC32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0159A751284838D3005CDC32 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0159A7542848393C005CDC32 /* Iron.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Iron.xcdatamodel; sourceTree = "<group>"; };
+		0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,8 @@
 			children = (
 				0159A7432848336A005CDC32 /* IronApp.swift */,
 				0159A7452848336A005CDC32 /* ContentView.swift */,
-				0159A751284838D3005CDC32 /* DataController.swift */,
-				0159A7532848393C005CDC32 /* Iron.xcdatamodeld */,
 				0159A7472848336B005CDC32 /* Assets.xcassets */,
+				0159A7622848453A005CDC32 /* CoreData */,
 				0159A7492848336B005CDC32 /* Preview Content */,
 			);
 			path = Iron;
@@ -71,6 +82,22 @@
 				0159A74A2848336B005CDC32 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0159A7622848453A005CDC32 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0159A7532848393C005CDC32 /* Iron.xcdatamodeld */,
+				0159A751284838D3005CDC32 /* DataController.swift */,
+				0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */,
+				0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */,
+				0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */,
+				0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */,
+				0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */,
+				0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */,
+			);
+			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +172,13 @@
 			files = (
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,
 				0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */,
+				0159A7692848491B005CDC32 /* ESet+CoreDataClass.swift in Sources */,
+				0159A76B2848491B005CDC32 /* Exercise+CoreDataClass.swift in Sources */,
+				0159A76D2848491B005CDC32 /* Workout+CoreDataClass.swift in Sources */,
 				0159A752284838D3005CDC32 /* DataController.swift in Sources */,
+				0159A76E2848491B005CDC32 /* Workout+CoreDataProperties.swift in Sources */,
+				0159A76C2848491B005CDC32 /* Exercise+CoreDataProperties.swift in Sources */,
+				0159A76A2848491B005CDC32 /* ESet+CoreDataProperties.swift in Sources */,
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

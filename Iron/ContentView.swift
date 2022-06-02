@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(sortDescriptors: []) var workouts: FetchedResults<>
+    @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     var body: some View {
         Text("Hello, world!")
             .padding()
