@@ -10,12 +10,17 @@ import SwiftUI
 @main
 struct IronApp: App {
     
-    @StateObject private var dataController = DataController()
+    //@StateObject private var dataController = DataController()
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
+        let persistenceController = PersistenceController.shared
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+        .onChange(of: scenePhase) { _ in
+            persistenceController.save()
         }
     }
 }

@@ -2,7 +2,7 @@
 //  Exercise+CoreDataProperties.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/1/22.
+//  Created by Nick Schwab on 6/6/22.
 //
 //
 
@@ -17,37 +17,36 @@ extension Exercise {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var id: UUID?
-    @NSManaged public var eset: NSSet?
-    @NSManaged public var origin: Workout?
+    @NSManaged public var workout: Workout?
+    @NSManaged public var eSet: NSSet?
 
     public var wrappedName: String {
-        name ?? "Unknown Name"
+        get {name ?? "Unknown Name"}
+        set {name = newValue}
     }
     
-    public var esetArray: [ESet] {
-        let set = eset as? Set<ESet> ?? []
-        return set.sorted {
-            $0.id < $1.id
-        }
+    public var eSetArray: [ESet] {
+            let set = eSet as? Set<ESet> ?? []
+            return set.sorted{
+                $0.set < $1.set
+            }
     }
-    
 }
 
-// MARK: Generated accessors for eset
+// MARK: Generated accessors for eSet
 extension Exercise {
 
-    @objc(addEsetObject:)
-    @NSManaged public func addToEset(_ value: ESet)
+    @objc(addESetObject:)
+    @NSManaged public func addToESet(_ value: ESet)
 
-    @objc(removeEsetObject:)
-    @NSManaged public func removeFromEset(_ value: ESet)
+    @objc(removeESetObject:)
+    @NSManaged public func removeFromESet(_ value: ESet)
 
-    @objc(addEset:)
-    @NSManaged public func addToEset(_ values: NSSet)
+    @objc(addESet:)
+    @NSManaged public func addToESet(_ values: NSSet)
 
-    @objc(removeEset:)
-    @NSManaged public func removeFromEset(_ values: NSSet)
+    @objc(removeESet:)
+    @NSManaged public func removeFromESet(_ values: NSSet)
 
 }
 

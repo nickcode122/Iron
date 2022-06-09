@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/1/22.
+//  Created by Nick Schwab on 6/6/22.
 //
 //
 
@@ -16,21 +16,20 @@ extension Workout {
         return NSFetchRequest<Workout>(entityName: "Workout")
     }
 
-    @NSManaged public var id: UUID?
     @NSManaged public var name: String?
+    @NSManaged public var id: UUID?
     @NSManaged public var exercise: NSSet?
-    
+
     public var wrappedName: String {
         name ?? "Unknown Name"
     }
     
     public var exerciseArray: [Exercise] {
-        let set = exercise as? Set<Exercise> ?? []
-        return set.sorted {
-            $0.wrappedName < $1.wrappedName
-        }
+            let set = exercise as? Set<Exercise> ?? []
+            return set.sorted {
+                $0.wrappedName < $1.wrappedName
+            }
     }
-
 }
 
 // MARK: Generated accessors for exercise

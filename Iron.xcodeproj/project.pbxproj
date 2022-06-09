@@ -7,21 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010B2C5B284A8FF1000810E5 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */; };
+		010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84BD284E6BE800732AF9 /* PersistenceController.swift */; };
+		010B84C5284E6F0A00732AF9 /* ESet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84BF284E6F0A00732AF9 /* ESet+CoreDataClass.swift */; };
+		010B84C6284E6F0A00732AF9 /* ESet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84C0284E6F0A00732AF9 /* ESet+CoreDataProperties.swift */; };
+		010B84C7284E6F0A00732AF9 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84C1284E6F0A00732AF9 /* Exercise+CoreDataClass.swift */; };
+		010B84C8284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84C2284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift */; };
+		010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84C3284E6F0A00732AF9 /* Workout+CoreDataClass.swift */; };
+		010B84CA284E6F0A00732AF9 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B84C4284E6F0A00732AF9 /* Workout+CoreDataProperties.swift */; };
 		0159A7442848336A005CDC32 /* IronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7432848336A005CDC32 /* IronApp.swift */; };
 		0159A7462848336A005CDC32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7452848336A005CDC32 /* ContentView.swift */; };
 		0159A7482848336B005CDC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0159A7472848336B005CDC32 /* Assets.xcassets */; };
 		0159A74B2848336B005CDC32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0159A74A2848336B005CDC32 /* Preview Assets.xcassets */; };
 		0159A752284838D3005CDC32 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A751284838D3005CDC32 /* DataController.swift */; };
 		0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7532848393C005CDC32 /* Iron.xcdatamodeld */; };
-		0159A7692848491B005CDC32 /* ESet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */; };
-		0159A76A2848491B005CDC32 /* ESet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */; };
-		0159A76B2848491B005CDC32 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */; };
-		0159A76C2848491B005CDC32 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */; };
-		0159A76D2848491B005CDC32 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */; };
-		0159A76E2848491B005CDC32 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */; };
+		0187BC8428493B3900B77DCF /* AddSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8328493B3900B77DCF /* AddSetView.swift */; };
+		0187BC8628493C8F00B77DCF /* ExerciseEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8528493C8F00B77DCF /* ExerciseEntryView.swift */; };
+		0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC87284979EC00B77DCF /* ClearTextField.swift */; };
+		01E6F6722852358D00D54373 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6712852358D00D54373 /* WorkoutView.swift */; };
+		01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6732852416C00D54373 /* AddWorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		010B84BD284E6BE800732AF9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		010B84BF284E6F0A00732AF9 /* ESet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		010B84C0284E6F0A00732AF9 /* ESet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		010B84C1284E6F0A00732AF9 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		010B84C2284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		010B84C3284E6F0A00732AF9 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		010B84C4284E6F0A00732AF9 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0159A7402848336A005CDC32 /* Iron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0159A7432848336A005CDC32 /* IronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronApp.swift; sourceTree = "<group>"; };
 		0159A7452848336A005CDC32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,12 +44,11 @@
 		0159A74A2848336B005CDC32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0159A751284838D3005CDC32 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0159A7542848393C005CDC32 /* Iron.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Iron.xcdatamodel; sourceTree = "<group>"; };
-		0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ESet+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0187BC8328493B3900B77DCF /* AddSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetView.swift; sourceTree = "<group>"; };
+		0187BC8528493C8F00B77DCF /* ExerciseEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseEntryView.swift; sourceTree = "<group>"; };
+		0187BC87284979EC00B77DCF /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
+		01E6F6712852358D00D54373 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		01E6F6732852416C00D54373 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,12 @@
 			children = (
 				0159A7432848336A005CDC32 /* IronApp.swift */,
 				0159A7452848336A005CDC32 /* ContentView.swift */,
+				01E6F6712852358D00D54373 /* WorkoutView.swift */,
+				01E6F6732852416C00D54373 /* AddWorkoutView.swift */,
+				0187BC8528493C8F00B77DCF /* ExerciseEntryView.swift */,
+				0187BC8328493B3900B77DCF /* AddSetView.swift */,
+				010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */,
+				0187BC87284979EC00B77DCF /* ClearTextField.swift */,
 				0159A7472848336B005CDC32 /* Assets.xcassets */,
 				0159A7622848453A005CDC32 /* CoreData */,
 				0159A7492848336B005CDC32 /* Preview Content */,
@@ -88,13 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				0159A7532848393C005CDC32 /* Iron.xcdatamodeld */,
+				010B84BD284E6BE800732AF9 /* PersistenceController.swift */,
 				0159A751284838D3005CDC32 /* DataController.swift */,
-				0159A7642848491B005CDC32 /* ESet+CoreDataProperties.swift */,
-				0159A7662848491B005CDC32 /* Exercise+CoreDataProperties.swift */,
-				0159A7682848491B005CDC32 /* Workout+CoreDataProperties.swift */,
-				0159A7652848491B005CDC32 /* Exercise+CoreDataClass.swift */,
-				0159A7672848491B005CDC32 /* Workout+CoreDataClass.swift */,
-				0159A7632848491B005CDC32 /* ESet+CoreDataClass.swift */,
+				010B84C0284E6F0A00732AF9 /* ESet+CoreDataProperties.swift */,
+				010B84C2284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift */,
+				010B84C4284E6F0A00732AF9 /* Workout+CoreDataProperties.swift */,
+				010B84C3284E6F0A00732AF9 /* Workout+CoreDataClass.swift */,
+				010B84C1284E6F0A00732AF9 /* Exercise+CoreDataClass.swift */,
+				010B84BF284E6F0A00732AF9 /* ESet+CoreDataClass.swift */,
 			);
 			name = CoreData;
 			path = ..;
@@ -116,6 +137,8 @@
 			dependencies = (
 			);
 			name = Iron;
+			packageProductDependencies = (
+			);
 			productName = Iron;
 			productReference = 0159A7402848336A005CDC32 /* Iron.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +167,8 @@
 				Base,
 			);
 			mainGroup = 0159A7372848336A005CDC32;
+			packageReferences = (
+			);
 			productRefGroup = 0159A7412848336A005CDC32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,16 +195,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
+				0187BC8628493C8F00B77DCF /* ExerciseEntryView.swift in Sources */,
+				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
+				010B84CA284E6F0A00732AF9 /* Workout+CoreDataProperties.swift in Sources */,
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,
+				0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */,
+				010B84C6284E6F0A00732AF9 /* ESet+CoreDataProperties.swift in Sources */,
 				0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */,
-				0159A7692848491B005CDC32 /* ESet+CoreDataClass.swift in Sources */,
-				0159A76B2848491B005CDC32 /* Exercise+CoreDataClass.swift in Sources */,
-				0159A76D2848491B005CDC32 /* Workout+CoreDataClass.swift in Sources */,
+				0187BC8428493B3900B77DCF /* AddSetView.swift in Sources */,
+				01E6F6722852358D00D54373 /* WorkoutView.swift in Sources */,
+				010B84C5284E6F0A00732AF9 /* ESet+CoreDataClass.swift in Sources */,
+				010B2C5B284A8FF1000810E5 /* CheckboxStyle.swift in Sources */,
+				010B84C7284E6F0A00732AF9 /* Exercise+CoreDataClass.swift in Sources */,
 				0159A752284838D3005CDC32 /* DataController.swift in Sources */,
-				0159A76E2848491B005CDC32 /* Workout+CoreDataProperties.swift in Sources */,
-				0159A76C2848491B005CDC32 /* Exercise+CoreDataProperties.swift in Sources */,
-				0159A76A2848491B005CDC32 /* ESet+CoreDataProperties.swift in Sources */,
+				010B84C8284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift in Sources */,
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
+				010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
