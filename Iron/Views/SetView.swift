@@ -7,7 +7,7 @@
 import CoreData
 import SwiftUI
 
-struct AddSetView: View {
+struct SetView: View {
     
     //@FetchRequest var fetchRequest: FetchedResults<Exercise>
     @Environment(\.managedObjectContext) var moc
@@ -77,6 +77,7 @@ struct AddSetView: View {
             let set = eSetArray[index]
             moc.delete(set)
             eSetArray.remove(atOffsets: offsets)
+            PersistenceController.shared.save()
         }
         
     }
@@ -93,6 +94,7 @@ struct AddSetView: View {
         newSet.isComplete = false
         newSet.exercise = eSetArray[0].exercise
         eSetArray.append(newSet)
+        PersistenceController.shared.save()
     }
 }
 

@@ -4,6 +4,8 @@
 //
 //  Created by Nick Schwab on 6/9/22.
 //
+
+
 import CoreData
 import SwiftUI
 
@@ -12,17 +14,18 @@ struct WorkoutView: View {
     @Environment(\.managedObjectContext) var moc
     
     @State private var showingSheet = false
+    
     var body: some View {
-            List {
-                ForEach( workouts, id: \.self) { workout in
-                    NavigationLink(destination: ExerciseEntryView(exerciseArray: workout.exerciseArray)) {
-                        Text(workout.wrappedName)
-                    }
-                    
+        List {
+            ForEach( workouts, id: \.self) { workout in
+                NavigationLink(destination: ExerciseView(exerciseArray: workout.exerciseArray)) {
+                    Text(workout.wrappedName)
                 }
-                .onDelete(perform: removeWorkout)
                 
             }
+            .onDelete(perform: removeWorkout)
+            
+        }
         .navigationTitle("Workouts")
         .sheet(isPresented: $showingSheet) {
             AddWorkoutView()
@@ -34,15 +37,13 @@ struct WorkoutView: View {
                 }
             }
         }
-
-    }
-    func addWorkout() {
         
     }
     func removeWorkout(at offsets: IndexSet) {
         for index in offsets {
             let set = workouts[index]
             moc.delete(set)
+            PersistenceController.shared.save()
         }
     }
 }

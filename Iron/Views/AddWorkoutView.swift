@@ -9,18 +9,20 @@ import SwiftUI
 
 struct AddWorkoutView: View {
     @State private var workoutName = ""
+    @State private var exerciseName = ""
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack (alignment: .center) {
+        VStack {
             Form {
                 TextField("Workout Name", text: $workoutName)
-                    .multilineTextAlignment(.center)
+                TextField("Exercise Name", text: $exerciseName)
                 Button("Add") { addWorkout(name: workoutName)}
                     .frame(maxWidth: .infinity, alignment: .center)
             }
+            .multilineTextAlignment(.center)
             
             
         }
@@ -30,6 +32,16 @@ struct AddWorkoutView: View {
         let newWorkout = Workout(context: moc)
         newWorkout.id = UUID()
         newWorkout.name = name
+        let newExercise = Exercise(context: moc)
+        newExercise.name = exerciseName
+        newExercise.workout = newWorkout
+        let defaultSet = ESet(context: moc)
+        defaultSet.exercise = newExercise
+        defaultSet.set = 1
+        defaultSet.weight = 45.0
+        defaultSet.reps = 6
+        defaultSet.rpe = 8
+        defaultSet.isComplete = false
         PersistenceController.shared.save()
         dismiss()
     }
