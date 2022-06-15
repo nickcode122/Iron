@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct ExerciseView: View {
+    
     @Environment(\.managedObjectContext) var moc
-    
     @State private var showingSheet = false
-    
     @ObservedObject var workout: Workout
-//    init( exerciseArray: [Exercise]) {
-//        //_fetchRequest = FetchRequest<Exercise>(sortDescriptors: [], predicate: NSPredicate(format: "name ==%@", filter))
-//        self._exerciseArray = State(initialValue:exerciseArray)
-//    }
+    
     var body: some View {
         VStack {
             List {
@@ -51,10 +47,3 @@ struct ExerciseView: View {
     }
     
 }
-//
-//struct excerciseEntryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExerciseEntryView()
-//    }
-//}
-

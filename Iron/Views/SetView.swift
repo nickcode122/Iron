@@ -10,10 +10,8 @@ import SwiftUI
 struct SetView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @State var titles = ["Set","Reps","Weight","RPE","Done"]
-    @State var test = ""
-    @State var textboxBinding = ""
-    @State var isComplete = false
+    
+    private let titles = ["Set","Reps","Weight","RPE","Done"]
     
     @ObservedObject var exercise: Exercise
     var body: some View {
