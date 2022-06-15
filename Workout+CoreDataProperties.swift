@@ -25,10 +25,18 @@ extension Workout {
     }
     
     public var exerciseArray: [Exercise] {
+        
+        get {
             let set = exercise as? Set<Exercise> ?? []
             return set.sorted {
                 $0.wrappedName < $1.wrappedName
             }
+        }
+//        set {
+//            
+//            self.exerciseArray = newValue
+//        }
+
     }
 }
 

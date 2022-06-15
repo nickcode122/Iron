@@ -18,7 +18,7 @@ struct WorkoutView: View {
     var body: some View {
         List {
             ForEach( workouts, id: \.self) { workout in
-                NavigationLink(destination: ExerciseView(exerciseArray: workout.exerciseArray)) {
+                NavigationLink(destination: ExerciseView(workout: workout)) {
                     Text(workout.wrappedName)
                 }
                 

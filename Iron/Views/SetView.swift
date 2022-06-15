@@ -1,5 +1,5 @@
 //
-//  addSetView.swift
+//  SetView.swift
 //  Iron
 //
 //  Created by Nick Schwab on 6/2/22.
@@ -9,20 +9,13 @@ import SwiftUI
 
 struct SetView: View {
     
-    //@FetchRequest var fetchRequest: FetchedResults<Exercise>
     @Environment(\.managedObjectContext) var moc
     @State var titles = ["Set","Reps","Weight","RPE","Done"]
     @State var test = ""
     @State var textboxBinding = ""
     @State var isComplete = false
     
-    @State var eSetArray: [ESet]
-    
-    init( eSetArray: [ESet]) {
-        //_fetchRequest = FetchRequest<Exercise>(sortDescriptors: [], predicate: NSPredicate(format: "name ==%@", filter))
-        self._eSetArray = State(initialValue:eSetArray)
-        
-    }
+    @ObservedObject var exercise: Exercise
     var body: some View {
         
         VStack {
@@ -37,19 +30,8 @@ struct SetView: View {
                     .font(Font.headline)
                     
                     List {
-                        ForEach($eSetArray, id: \.self) {$eSet in
-                            HStack {
-                                Text(String(eSet.set))
-                                    .frame(minWidth: 60, alignment:.center)
-                                TextField("1", text: $eSet.strReps)
-                                    .frame(minWidth: 60)
-                                TextField("1", text: $eSet.strWeight)
-                                    .frame(minWidth: 60)
-                                TextField("1", text: $eSet.strRpe)
-                                    .frame(minWidth: 60)
-                                Toggle(isOn: $eSet.isComplete) {}
-                                    .frame(minWidth: 60)
-                            }
+                        ForEach(exercise.eSetArray, id: \.self) {eSet in
+                            ESetTextfieldView(eSet: eSet)
                             .multilineTextAlignment(.center)
                             .toggleStyle(CheckboxStyle())
                             .keyboardType(.decimalPad)
@@ -66,25 +48,21 @@ struct SetView: View {
             }
 
         }
-        .navigationTitle(eSetArray[0].exercise?.wrappedName ?? "Unknown Exercise Name")
+        .navigationTitle(exercise.eSetArray[0].exercise?.wrappedName ?? "Unknown Exercise Name")
         
     }
     func removeRows(at offsets: IndexSet) {
-        
-
-        
         for index in offsets {
-            let set = eSetArray[index]
+            let set = exercise.eSetArray[index]
             moc.delete(set)
-            eSetArray.remove(atOffsets: offsets)
             PersistenceController.shared.save()
         }
         
     }
     func addSet() {
         let newSet = ESet(context: moc)
-        let count = eSetArray.count
-        let lastSet = eSetArray[count - 1]
+        let count = exercise.eSetArray.count
+        let lastSet = exercise.eSetArray[count - 1]
         
         newSet.set = Int16(count + 1)
         
@@ -92,15 +70,7 @@ struct SetView: View {
         newSet.weight = lastSet.weight
         newSet.rpe = lastSet.rpe
         newSet.isComplete = false
-        newSet.exercise = eSetArray[0].exercise
-        eSetArray.append(newSet)
+        newSet.exercise = exercise.eSetArray[0].exercise
         PersistenceController.shared.save()
     }
 }
-
-//struct addSetView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        AddSetView(filter: "")
-//    }
-//}

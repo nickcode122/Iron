@@ -10,30 +10,29 @@ import SwiftUI
 struct ExerciseView: View {
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(sortDescriptors: []) var exercises: FetchedResults<Exercise>
-    
     @State private var showingSheet = false
-    @State private var exerciseArray: [Exercise]
     
-    init( exerciseArray: [Exercise]) {
-        //_fetchRequest = FetchRequest<Exercise>(sortDescriptors: [], predicate: NSPredicate(format: "name ==%@", filter))
-        self._exerciseArray = State(initialValue:exerciseArray)
-    }
+    @ObservedObject var workout: Workout
+//    init( exerciseArray: [Exercise]) {
+//        //_fetchRequest = FetchRequest<Exercise>(sortDescriptors: [], predicate: NSPredicate(format: "name ==%@", filter))
+//        self._exerciseArray = State(initialValue:exerciseArray)
+//    }
     var body: some View {
         VStack {
             List {
-                ForEach (exerciseArray, id: \.self) { exercise in
-                    NavigationLink (destination:SetView(eSetArray: exercise.eSetArray)) {
+                ForEach (workout.exerciseArray, id: \.self) { exercise in
+                    NavigationLink (destination:SetView(exercise: exercise )) {
                         Text(exercise.wrappedName)
                     }
                     
                 }
+                .onDelete(perform: removeExercise)
             }
             
         }
         .navigationTitle("Exercises")
         .sheet(isPresented: $showingSheet) {
-            AddExerciseView(exercise: exerciseArray[0])
+            AddExerciseView(exercise: workout.exerciseArray[0])
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,9 +44,8 @@ struct ExerciseView: View {
     }
     func removeExercise(at offsets: IndexSet) {
         for index in offsets {
-            let set = exerciseArray[index]
+            let set = workout.exerciseArray[index]
             moc.delete(set)
-            exerciseArray.remove(atOffsets: offsets)
             PersistenceController.shared.save()
         }
     }
