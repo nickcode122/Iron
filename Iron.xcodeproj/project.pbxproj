@@ -27,7 +27,6 @@
 		01E6F6722852358D00D54373 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6712852358D00D54373 /* WorkoutView.swift */; };
 		01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6732852416C00D54373 /* AddWorkoutView.swift */; };
 		01E6F67828524A0300D54373 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F67728524A0300D54373 /* AddExerciseView.swift */; };
-		01E6F67A2857A5C200D54373 /* WorkoutArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6792857A5C200D54373 /* WorkoutArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		01E6F6712852358D00D54373 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		01E6F6732852416C00D54373 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 		01E6F67728524A0300D54373 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
-		01E6F6792857A5C200D54373 /* WorkoutArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				0159A7432848336A005CDC32 /* IronApp.swift */,
-				01E6F6792857A5C200D54373 /* WorkoutArray.swift */,
 				01E6F6752852484C00D54373 /* Views */,
 				0159A7472848336B005CDC32 /* Assets.xcassets */,
 				0159A7622848453A005CDC32 /* CoreData */,
@@ -235,7 +232,6 @@
 				010B84C8284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift in Sources */,
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
 				010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */,
-				01E6F67A2857A5C200D54373 /* WorkoutArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
