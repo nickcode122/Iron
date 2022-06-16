@@ -17,26 +17,26 @@ extension ESet {
     }
 
     @NSManaged public var set: Int16
-    @NSManaged public var rpe: Int16
-    @NSManaged public var weight: Double
+    @NSManaged public var rpe: String?
+    @NSManaged public var weight: String?
     @NSManaged public var isComplete: Bool
     @NSManaged public var exercise: Exercise?
-    @NSManaged public var reps: Int16
+    @NSManaged public var reps: String?
     
     public var strSet: String {
         String(set)
     }
     public var strRpe: String {
-        get {String(rpe)}
-        set {rpe = Int16(newValue) ?? 0}
+        get {rpe ?? "11"}
+        set {self.rpe = newValue}
     }
     public var strWeight: String {
-        get {String(weight)}
-        set {weight = Double(newValue) ?? 0}
+        get {weight ?? "111.11"}
+        set {self.weight = newValue}
     }
     public var strReps: String {
-        get {String(reps)}
-        set {reps = Int16(newValue) ?? 0}
+        get { reps ?? "11"}
+        set {self.reps = newValue}
     }
     
 

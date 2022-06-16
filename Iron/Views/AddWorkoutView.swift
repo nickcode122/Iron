@@ -38,9 +38,9 @@ struct AddWorkoutView: View {
         let defaultSet = ESet(context: moc)
         defaultSet.exercise = newExercise
         defaultSet.set = 1
-        defaultSet.weight = 45.0
-        defaultSet.reps = 6
-        defaultSet.rpe = 8
+        defaultSet.weight = "45.0"
+        defaultSet.reps = "6"
+        defaultSet.rpe = "8"
         defaultSet.isComplete = false
         PersistenceController.shared.save()
         dismiss()
