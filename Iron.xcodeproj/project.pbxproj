@@ -115,8 +115,7 @@
 				010B84C1284E6F0A00732AF9 /* Exercise+CoreDataClass.swift */,
 				010B84BF284E6F0A00732AF9 /* ESet+CoreDataClass.swift */,
 			);
-			name = CoreData;
-			path = ..;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		01E6F6752852484C00D54373 /* Views */ = {
