@@ -15,11 +15,11 @@ struct ESetTextfieldView: View {
         HStack {
             Text(String(eSet.set))
                 .frame(minWidth: 60, alignment:.center)
-            TextField("1", text: $eSet.strReps)
+            ClearTextField(titleText: "1", text: $eSet.strReps)
                 .frame(minWidth: 60)
-            TextField("1", text: $eSet.strWeight)
+            ClearTextField(titleText: "1", text: $eSet.strWeight)
                 .frame(minWidth: 60)
-            TextField("1", text: $eSet.strRpe)
+            ClearTextField(titleText: "1", text: $eSet.strRpe)
                 .frame(minWidth: 60)
             Toggle(isOn: $eSet.isComplete) {}
                 .frame(minWidth: 60)
