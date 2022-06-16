@@ -34,7 +34,7 @@ struct SetView: View {
                             .toggleStyle(CheckboxStyle())
                             .keyboardType(.decimalPad)
                         }
-                        .onDelete(perform: removeRows)
+                        .onDelete(perform: removeESet)
                     }
                 }
                 Button("Add Set") {
@@ -49,14 +49,24 @@ struct SetView: View {
         .navigationTitle(exercise.wrappedName)
         
     }
-    func removeRows(at offsets: IndexSet) {
+    func removeESet(at offsets: IndexSet) {
         for index in offsets {
             let set = exercise.eSetArray[index]
             moc.delete(set)
             PersistenceController.shared.save()
+            renumberSets()
         }
-        
     }
+    func renumberSets() {
+        var count: Int16 = 1
+        for eSet in exercise.eSetArray {
+            eSet.set = count
+            count += 1
+            print(eSet.set)
+        }
+        PersistenceController.shared.save()
+    }
+    
     func addSet() {
         let newSet = ESet(context: moc)
         let setCount = exercise.eSetArray.count
@@ -74,7 +84,7 @@ struct SetView: View {
         
         newSet.set = Int16(setCount + 1)
         newSet.isComplete = false
-        newSet.exercise = exercise.eSetArray[0].exercise
+        newSet.exercise = exercise
         PersistenceController.shared.save()
     }
 }
