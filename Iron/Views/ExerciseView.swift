@@ -28,7 +28,7 @@ struct ExerciseView: View {
         }
         .navigationTitle("Exercises")
         .sheet(isPresented: $showingSheet) {
-            AddExerciseView(exercise: workout.exerciseArray[0])
+            AddExerciseView(workout: workout)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

@@ -46,7 +46,7 @@ struct SetView: View {
             }
 
         }
-        .navigationTitle(exercise.eSetArray[0].exercise?.wrappedName ?? "Unknown Exercise Name")
+        .navigationTitle(exercise.wrappedName)
         
     }
     func removeRows(at offsets: IndexSet) {
@@ -59,14 +59,20 @@ struct SetView: View {
     }
     func addSet() {
         let newSet = ESet(context: moc)
-        let count = exercise.eSetArray.count
-        let lastSet = exercise.eSetArray[count - 1]
+        let setCount = exercise.eSetArray.count
         
-        newSet.set = Int16(count + 1)
+        if setCount > 0 { //If there is a previous set to copy, copy it
+            let lastSet = exercise.eSetArray[setCount - 1]
+            newSet.reps = lastSet.reps
+            newSet.weight = lastSet.weight
+            newSet.rpe = lastSet.rpe
+        } else { // otherwise use default values
+            newSet.reps = "5"
+            newSet.weight = "45.0"
+            newSet.rpe = "7"
+        }
         
-        newSet.reps = lastSet.reps
-        newSet.weight = lastSet.weight
-        newSet.rpe = lastSet.rpe
+        newSet.set = Int16(setCount + 1)
         newSet.isComplete = false
         newSet.exercise = exercise.eSetArray[0].exercise
         PersistenceController.shared.save()

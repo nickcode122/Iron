@@ -13,7 +13,7 @@ struct AddExerciseView: View {
     
     @State private var exerciseName = ""
     
-    let exercise: Exercise
+    let workout: Workout
     var body: some View {
         Form {
             TextField("Exercise Name", text: $exerciseName)
@@ -24,14 +24,14 @@ struct AddExerciseView: View {
     func addExercise (name: String) {
         let newExercise = Exercise(context: moc)
         newExercise.name = name
-        newExercise.workout = exercise.workout
+        newExercise.workout = workout
         
         let defaultSet = ESet(context: moc)
         defaultSet.exercise = newExercise
         defaultSet.set = 1
-        defaultSet.weight = 45.0
-        defaultSet.reps = 6
-        defaultSet.rpe = 8
+        defaultSet.weight = "45.0"
+        defaultSet.reps = "6"
+        defaultSet.rpe = "8"
         defaultSet.isComplete = false
         
         PersistenceController.shared.save()
