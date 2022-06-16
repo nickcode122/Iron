@@ -34,6 +34,7 @@ struct AddWorkoutView: View {
         newWorkout.name = name
         let newExercise = Exercise(context: moc)
         newExercise.name = exerciseName
+        newExercise.id = UUID()
         newExercise.workout = newWorkout
         let defaultSet = ESet(context: moc)
         defaultSet.exercise = newExercise
