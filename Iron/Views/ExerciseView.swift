@@ -13,6 +13,8 @@ struct ExerciseView: View {
     @State private var showingSheet = false
     @ObservedObject var workout: Workout
     
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
+    
     var body: some View {
         VStack {
             List {
@@ -26,9 +28,9 @@ struct ExerciseView: View {
             }
             
         }
-        .navigationTitle("Exercises")
+        .navigationTitle("\(workout.wrappedName)")
         .sheet(isPresented: $showingSheet) {
-            AddExerciseView(workout: workout)
+            AllExercisesView(exercises: exercises, workout: workout)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
