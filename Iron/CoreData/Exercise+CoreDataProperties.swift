@@ -19,6 +19,7 @@ extension Exercise {
     @NSManaged public var name: String?
     @NSManaged public var workout: Workout?
     @NSManaged public var eSet: NSSet?
+    @NSManaged public var id: UUID?
 
     public var wrappedName: String {
         get {name ?? "Unknown Name"}

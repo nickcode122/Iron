@@ -9,12 +9,13 @@
         <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="eSet" inverseEntity="Exercise"/>
     </entity>
     <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="eSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ESet" inverseName="exercise" inverseEntity="ESet"/>
         <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercise" inverseEntity="Workout"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
-                <constraint value="name"/>
+                <constraint value="id"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
@@ -30,7 +31,7 @@
     </entity>
     <elements>
         <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="119"/>
-        <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="14"/>
+        <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="89"/>
         <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="88"/>
     </elements>
 </model>

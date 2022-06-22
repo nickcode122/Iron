@@ -12,35 +12,40 @@ struct AddExerciseView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var exerciseName = ""
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     
-    let workout: Workout
+    let uniqueExercises: [Exercise]
+    
     var body: some View {
+        
         Form {
             TextField("Exercise Name", text: $exerciseName)
-            Button("Add Exercise") {addExercise(name: exerciseName)}
-            
+                .multilineTextAlignment(.center)
+            Button("Add Exercise") {addExercise()}
+                .frame(maxWidth: .infinity, alignment: .center)
+                .disabled(!isUnique)
         }
-    }
-    func addExercise (name: String) {
-        let newExercise = Exercise(context: moc)
-        newExercise.name = name
-        newExercise.workout = workout
         
-        let defaultSet = ESet(context: moc)
-        defaultSet.exercise = newExercise
-        defaultSet.set = 1
-        defaultSet.weight = "45.0"
-        defaultSet.reps = "6"
-        defaultSet.rpe = "8"
-        defaultSet.isComplete = false
+    }
+    
+    var uniqueExerciseNames: [String] {
+        var names = [String]()
+        for exercise in uniqueExercises {
+            names.append(exercise.wrappedName)
+        }
+        return names
+    }
+    
+    var isUnique: Bool {
+        !uniqueExerciseNames.contains(exerciseName)
+    }
+    func addExercise () {
+        
+        let newExercise = Exercise(context: moc)
+        newExercise.name = exerciseName
+        newExercise.id = UUID()
         
         PersistenceController.shared.save()
         dismiss()
     }
 }
-
-//struct AddExerciseView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddExerciseView()
-//    }
-//}
