@@ -36,6 +36,10 @@ struct SetView: View {
                 Button("Add Set") {
                     addSet()
                 }
+                Section("Notes") {
+                    TextEditor(text: $exercise.strNotes)
+                        .frame(height: 150, alignment: .topLeading)
+                }
             }
             
         }
