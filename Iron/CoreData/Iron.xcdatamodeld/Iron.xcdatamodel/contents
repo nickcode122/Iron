@@ -24,6 +24,7 @@
     <entity name="Workout" representedClassName="Workout" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
         <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workout" inverseEntity="Exercise"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
@@ -34,6 +35,6 @@
     <elements>
         <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="148"/>
         <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="104"/>
-        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="88"/>
+        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="89"/>
     </elements>
 </model>
