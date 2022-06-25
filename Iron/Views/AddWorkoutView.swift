@@ -18,7 +18,6 @@ struct AddWorkoutView: View {
         VStack {
             Form {
                 TextField("Workout Name", text: $workoutName)
-                TextField("Exercise Name", text: $exerciseName)
                 Button("Add") { addWorkout(name: workoutName)}
                     .frame(maxWidth: .infinity, alignment: .center)
             }
@@ -32,17 +31,7 @@ struct AddWorkoutView: View {
         let newWorkout = Workout(context: moc)
         newWorkout.id = UUID()
         newWorkout.name = name
-        let newExercise = Exercise(context: moc)
-        newExercise.name = exerciseName
-        newExercise.id = UUID()
-        newExercise.workout = newWorkout
-        let defaultSet = ESet(context: moc)
-        defaultSet.exercise = newExercise
-        defaultSet.set = 1
-        defaultSet.weight = "45.0"
-        defaultSet.reps = "6"
-        defaultSet.rpe = "8"
-        defaultSet.isComplete = false
+        
         PersistenceController.shared.save()
         dismiss()
     }

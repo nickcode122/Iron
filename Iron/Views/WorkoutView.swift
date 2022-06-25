@@ -16,27 +16,33 @@ struct WorkoutView: View {
     @State private var showingSheet = false
     
     var body: some View {
-        List {
-            ForEach( workouts, id: \.self) { workout in
-                NavigationLink(destination: ExerciseView(workout: workout)) {
-                    Text(workout.wrappedName)
+        
+        NavigationView {
+            List {
+                ForEach( workouts, id: \.self) { workout in
+                    NavigationLink(destination: ExerciseView(workout: workout)) {
+                        Text(workout.wrappedName)
+                    }
+                    
                 }
+                .onDelete(perform: removeWorkout)
                 
             }
-            .onDelete(perform: removeWorkout)
-            
-        }
-        .navigationTitle("Workouts")
-        .sheet(isPresented: $showingSheet) {
-            AddWorkoutView()
-        }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("New Workout") {
-                    showingSheet.toggle()
+            .navigationTitle("Workouts")
+            .sheet(isPresented: $showingSheet) {
+                AddWorkoutView()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingSheet.toggle()
+                    } label: {
+                        Label("Edit", systemImage: "plus")
+                    }
                 }
             }
         }
+
         
     }
     func removeWorkout(at offsets: IndexSet) {

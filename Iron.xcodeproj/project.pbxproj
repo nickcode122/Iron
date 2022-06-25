@@ -23,6 +23,8 @@
 		0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0159A7532848393C005CDC32 /* Iron.xcdatamodeld */; };
 		0161D1E1285A6F0E0085320B /* ESetTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0161D1E0285A6F0E0085320B /* ESetTextfieldView.swift */; };
 		0161D1E3285BBCD40085320B /* AllExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0161D1E2285BBCD40085320B /* AllExercisesView.swift */; };
+		0161D1E52866128E0085320B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0161D1E42866128E0085320B /* SettingsView.swift */; };
+		0161D1E72867B2FB0085320B /* ESetTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0161D1E62867B2FB0085320B /* ESetTitleView.swift */; };
 		0187BC8428493B3900B77DCF /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8328493B3900B77DCF /* SetView.swift */; };
 		0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8528493C8F00B77DCF /* ExerciseView.swift */; };
 		0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC87284979EC00B77DCF /* ClearTextField.swift */; };
@@ -49,6 +51,8 @@
 		0159A7542848393C005CDC32 /* Iron.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Iron.xcdatamodel; sourceTree = "<group>"; };
 		0161D1E0285A6F0E0085320B /* ESetTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESetTextfieldView.swift; sourceTree = "<group>"; };
 		0161D1E2285BBCD40085320B /* AllExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllExercisesView.swift; sourceTree = "<group>"; };
+		0161D1E42866128E0085320B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0161D1E62867B2FB0085320B /* ESetTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESetTitleView.swift; sourceTree = "<group>"; };
 		0187BC8328493B3900B77DCF /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
 		0187BC8528493C8F00B77DCF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0187BC87284979EC00B77DCF /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
@@ -124,12 +128,14 @@
 			isa = PBXGroup;
 			children = (
 				0159A7452848336A005CDC32 /* ContentView.swift */,
+				0161D1E42866128E0085320B /* SettingsView.swift */,
 				01E6F6712852358D00D54373 /* WorkoutView.swift */,
 				01E6F6732852416C00D54373 /* AddWorkoutView.swift */,
 				0187BC8528493C8F00B77DCF /* ExerciseView.swift */,
 				01E6F67728524A0300D54373 /* AddExerciseView.swift */,
 				0161D1E2285BBCD40085320B /* AllExercisesView.swift */,
 				0187BC8328493B3900B77DCF /* SetView.swift */,
+				0161D1E62867B2FB0085320B /* ESetTitleView.swift */,
 				0161D1E0285A6F0E0085320B /* ESetTextfieldView.swift */,
 				01E6F6762852486A00D54373 /* Supporting Views */,
 			);
@@ -219,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0161D1E52866128E0085320B /* SettingsView.swift in Sources */,
 				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
 				0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */,
 				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
@@ -238,6 +245,7 @@
 				010B84C8284E6F0A00732AF9 /* Exercise+CoreDataProperties.swift in Sources */,
 				0161D1E1285A6F0E0085320B /* ESetTextfieldView.swift in Sources */,
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
+				0161D1E72867B2FB0085320B /* ESetTitleView.swift in Sources */,
 				010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,28 +11,24 @@ struct SetView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    private let titles = ["Set","Reps","Weight","RPE","Done"]
+    @AppStorage("defaultReps") public var defaultReps = "5"
+    @AppStorage("defaultWeight") private var defaultWeight = "45"
+    @AppStorage("defaultRPE") private var defaultRPE = "7"
+    @AppStorage("defaultRIR") private var defaultRIR = "2"
+    @AppStorage("useLastSetValues") private var useLastSetValues = true
     
     @ObservedObject var exercise: Exercise
     var body: some View {
-        
         VStack {
             Form {
                 Section {
-                    HStack {
-                        ForEach(titles, id: \.self) { title in
-                            Text(title)
-                                .frame(width: 60, alignment: .center)
-                        }
-                    }
-                    .font(Font.headline)
-                    
+                    ESetTitleView()
                     List {
                         ForEach(exercise.eSetArray, id: \.self) {eSet in
                             ESetTextfieldView(eSet: eSet)
-                            .multilineTextAlignment(.center)
-                            .toggleStyle(CheckboxStyle())
-                            .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.center)
+                                .toggleStyle(CheckboxStyle())
+                                .keyboardType(.decimalPad)
                         }
                         .onDelete(perform: removeESet)
                     }
@@ -40,15 +36,13 @@ struct SetView: View {
                 Button("Add Set") {
                     addSet()
                 }
-                Button("Save") {
-                    PersistenceController.shared.save()
-                }
             }
-
+            
         }
         .navigationTitle(exercise.wrappedName)
         
     }
+    
     func removeESet(at offsets: IndexSet) {
         for index in offsets {
             let set = exercise.eSetArray[index]
@@ -62,7 +56,6 @@ struct SetView: View {
         for eSet in exercise.eSetArray {
             eSet.set = count
             count += 1
-            print(eSet.set)
         }
         PersistenceController.shared.save()
     }
@@ -71,15 +64,18 @@ struct SetView: View {
         let newSet = ESet(context: moc)
         let setCount = exercise.eSetArray.count
         
-        if setCount > 0 { //If there is a previous set to copy, copy it
+        if setCount > 0 && useLastSetValues {
             let lastSet = exercise.eSetArray[setCount - 1]
             newSet.reps = lastSet.reps
             newSet.weight = lastSet.weight
             newSet.rpe = lastSet.rpe
-        } else { // otherwise use default values
-            newSet.reps = "5"
-            newSet.weight = "45.0"
-            newSet.rpe = "7"
+            newSet.rir = lastSet.rir
+        } else {
+            newSet.reps = defaultReps
+            newSet.weight = defaultWeight
+            newSet.rpe = defaultRPE
+            newSet.rir = defaultRIR
+            
         }
         
         newSet.set = Int16(setCount + 1)

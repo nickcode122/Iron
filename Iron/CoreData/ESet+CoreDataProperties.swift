@@ -22,10 +22,13 @@ extension ESet {
     @NSManaged public var isComplete: Bool
     @NSManaged public var exercise: Exercise?
     @NSManaged public var reps: String?
+    @NSManaged public var rir: String?
     
-    public var strSet: String {
-        String(set)
+    public var strRir: String {
+        get {rir ?? "11"}
+        set {self.rir = newValue}
     }
+
     public var strRpe: String {
         get {rpe ?? "11"}
         set {self.rpe = newValue}

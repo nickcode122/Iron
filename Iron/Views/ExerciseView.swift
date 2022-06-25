@@ -34,8 +34,10 @@ struct ExerciseView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button("New Exercise") {
+                Button {
                     showingSheet.toggle()
+                } label: {
+                    Label("New Workout", systemImage: "plus")
                 }
             }
         }
