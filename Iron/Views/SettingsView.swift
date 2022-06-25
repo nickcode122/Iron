@@ -9,12 +9,13 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State var defaultReps = ""
-    @State var defaultWeight = ""
-    @State var defaultRPE = ""
-    @State var name = "Megan"
-    @State var enableRPE = true
-    @State var enableRIR = false
+    @AppStorage("defaultReps") private var defaultReps = "5"
+    @AppStorage("defaultWeight") private var defaultWeight = "45"
+    @AppStorage("defaultRPE") private var defaultRPE = "7"
+    @AppStorage("defaultRIR") private var defaultRIR = "2"
+    @AppStorage("enableRPE") private var enableRPE = true
+    @AppStorage("enableRIR") private var enableRIR = false
+    @AppStorage("useLastSetValues") private var useLastSetValues = true
     
     var body: some View {
         NavigationView {
@@ -34,6 +35,15 @@ struct SettingsView: View {
                                 Text("Default RPE")
                                 TextField("8", text: $defaultRPE)
                             }
+                            HStack {
+                                Text("Default RIR")
+                                TextField("1", text: $defaultRIR)
+                            }
+                            HStack {
+                                Text("Use Last Set Values")
+                                Spacer()
+                                Toggle("", isOn: $useLastSetValues)
+                            }
                         }
                         
                         Section {
@@ -41,13 +51,11 @@ struct SettingsView: View {
                                 Text("Enable RPE")
                                 Spacer()
                                 Toggle("", isOn: $enableRPE)
-                                    .disabled(true)
                             }
                             HStack {
                                 Text("Enable RIR")
                                 Spacer()
                                 Toggle("", isOn: $enableRIR)
-                                    .disabled(true)
                             }
                         }
 
