@@ -3,6 +3,7 @@
     <entity name="ESet" representedClassName="ESet" syncable="YES">
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="reps" optional="YES" attributeType="String"/>
+        <attribute name="rir" optional="YES" attributeType="String"/>
         <attribute name="rpe" optional="YES" attributeType="String"/>
         <attribute name="set" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="weight" optional="YES" attributeType="String"/>
@@ -30,7 +31,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="119"/>
+        <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="148"/>
         <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="89"/>
         <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="88"/>
     </elements>

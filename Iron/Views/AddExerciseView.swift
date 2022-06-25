@@ -44,7 +44,6 @@ struct AddExerciseView: View {
         let newExercise = Exercise(context: moc)
         newExercise.name = exerciseName
         newExercise.id = UUID()
-        
         PersistenceController.shared.save()
         dismiss()
     }
