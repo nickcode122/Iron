@@ -9,26 +9,47 @@ import SwiftUI
 
 struct ExerciseView: View {
     
+    private enum Field: Int, CaseIterable {
+        case notes
+    }
+    
+    @FocusState private var focusedField: Field?
+    
     @Environment(\.managedObjectContext) var moc
     @State private var showingSheet = false
     @ObservedObject var workout: Workout
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     
+    
+    
+    
     var body: some View {
         VStack {
-            List {
-                ForEach (workout.exerciseArray, id: \.self) { exercise in
-                    NavigationLink (destination:SetView(exercise: exercise )) {
-                        Text(exercise.wrappedName)
+            Form {
+                List {
+                    ForEach (workout.exerciseArray, id: \.self) { exercise in
+                        NavigationButton(
+                            action: {focusedField = nil},
+                            destination: {SetView(exercise: exercise)},
+                            label: {Text(exercise.wrappedName)}
+                        )
+                        
                     }
-                    
+                    .onDelete(perform: removeExercise)
                 }
-                .onDelete(perform: removeExercise)
+                    
+                    Section("Notes") {
+                        TextEditor(text: $workout.strNotes)
+                            .focused($focusedField, equals: .notes)
+                            .frame(height: 150, alignment: .topLeading)
+                    }
             }
+
             
         }
         .navigationTitle("\(workout.wrappedName)")
+
         .sheet(isPresented: $showingSheet) {
             AllExercisesView(exercises: exercises, workout: workout)
         }
@@ -39,6 +60,9 @@ struct ExerciseView: View {
                 } label: {
                     Label("New Workout", systemImage: "plus")
                 }
+            }
+            ToolbarItem(placement: .keyboard) {
+                Button("Done") {focusedField = nil}
             }
         }
     }
@@ -51,3 +75,5 @@ struct ExerciseView: View {
     }
     
 }
+
+

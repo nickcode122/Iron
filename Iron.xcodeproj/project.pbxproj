@@ -28,6 +28,7 @@
 		0187BC8428493B3900B77DCF /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8328493B3900B77DCF /* SetView.swift */; };
 		0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8528493C8F00B77DCF /* ExerciseView.swift */; };
 		0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC87284979EC00B77DCF /* ClearTextField.swift */; };
+		01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5AA722867FC58005C91B6 /* NavigationButton.swift */; };
 		01E6F6722852358D00D54373 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6712852358D00D54373 /* WorkoutView.swift */; };
 		01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6732852416C00D54373 /* AddWorkoutView.swift */; };
 		01E6F67828524A0300D54373 /* AddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F67728524A0300D54373 /* AddExerciseView.swift */; };
@@ -56,6 +57,7 @@
 		0187BC8328493B3900B77DCF /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
 		0187BC8528493C8F00B77DCF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0187BC87284979EC00B77DCF /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
+		01E5AA722867FC58005C91B6 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		01E6F6712852358D00D54373 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		01E6F6732852416C00D54373 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 		01E6F67728524A0300D54373 /* AddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		01E5AA742867FD7B005C91B6 /* Set VIew */ = {
+			isa = PBXGroup;
+			children = (
+				0187BC8328493B3900B77DCF /* SetView.swift */,
+				0161D1E62867B2FB0085320B /* ESetTitleView.swift */,
+				0161D1E0285A6F0E0085320B /* ESetTextfieldView.swift */,
+			);
+			path = "Set VIew";
+			sourceTree = "<group>";
+		};
 		01E6F6752852484C00D54373 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,9 +146,7 @@
 				0187BC8528493C8F00B77DCF /* ExerciseView.swift */,
 				01E6F67728524A0300D54373 /* AddExerciseView.swift */,
 				0161D1E2285BBCD40085320B /* AllExercisesView.swift */,
-				0187BC8328493B3900B77DCF /* SetView.swift */,
-				0161D1E62867B2FB0085320B /* ESetTitleView.swift */,
-				0161D1E0285A6F0E0085320B /* ESetTextfieldView.swift */,
+				01E5AA742867FD7B005C91B6 /* Set VIew */,
 				01E6F6762852486A00D54373 /* Supporting Views */,
 			);
 			path = Views;
@@ -145,6 +155,7 @@
 		01E6F6762852486A00D54373 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				01E5AA722867FC58005C91B6 /* NavigationButton.swift */,
 				010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */,
 				0187BC87284979EC00B77DCF /* ClearTextField.swift */,
 			);
@@ -229,6 +240,7 @@
 				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
 				0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */,
 				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
+				01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */,
 				010B84CA284E6F0A00732AF9 /* Workout+CoreDataProperties.swift in Sources */,
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,
 				0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */,

@@ -16,16 +16,21 @@ extension Exercise {
         return NSFetchRequest<Exercise>(entityName: "Exercise")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var workout: Workout?
-    @NSManaged public var eSet: NSSet?
     @NSManaged public var id: UUID?
-
+    
+    @NSManaged public var name: String?
     public var wrappedName: String {
         get {name ?? "Unknown Name"}
         set {name = newValue}
     }
     
+    @NSManaged public var notes: String?
+    public var strNotes: String {
+        get {notes ?? ""}
+        set {notes = newValue}
+    }
+    @NSManaged public var eSet: NSSet?
     public var eSetArray: [ESet] {
             let set = eSet as? Set<ESet> ?? []
             return set.sorted{
