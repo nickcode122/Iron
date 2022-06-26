@@ -25,7 +25,7 @@ extension Workout {
     }
     
     @NSManaged public var notes: String?
-    public var strNotes: String? {
+    public var strNotes: String {
         get {notes ?? ""}
         set {notes = newValue}
     }
