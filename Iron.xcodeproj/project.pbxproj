@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				0159A7432848336A005CDC32 /* IronApp.swift */,
-				0199E149286CADE7003150C7 /* Extensions */,
 				01E6F6752852484C00D54373 /* Views */,
+				0199E149286CADE7003150C7 /* Extensions */,
 				0159A7472848336B005CDC32 /* Assets.xcassets */,
 				0159A7622848453A005CDC32 /* CoreData */,
 				0159A7492848336B005CDC32 /* Preview Content */,

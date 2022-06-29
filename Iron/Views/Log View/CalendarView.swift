@@ -25,10 +25,13 @@ struct CalendarView: View {
                             ForEach(workouts, id: \.self) { workout in
                                 if sameDay(workoutDate: workout.wrappedDate) {
                                     NavigationLink(destination: ExerciseView(workout: workout)) {
-                                        Text(workout.wrappedName)
+                                        VStack(alignment: .leading) {
+                                            Text(workout.wrappedName).font(.headline)
+                                            Text("Exercises: \(workout.exercise?.count ?? 0)").font(.caption)
+                                        }
+
                                     }
                                 }
-
                             }
                             .onDelete(perform: removeWorkout)
                         }

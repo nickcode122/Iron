@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct IronApp: App {
-    
-    //@StateObject private var dataController = DataController()
     @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
