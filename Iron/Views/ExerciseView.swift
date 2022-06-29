@@ -21,9 +21,6 @@ struct ExerciseView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     
-    
-    
-    
     var body: some View {
         VStack {
             Form {
@@ -32,11 +29,23 @@ struct ExerciseView: View {
                         NavigationButton(
                             action: {focusedField = nil},
                             destination: {SetView(exercise: exercise)},
-                            label: {Text(exercise.wrappedName)}
+                            label: {
+                                VStack(alignment: .leading) {
+                                    Text(exercise.wrappedName).font(.headline)
+                                    Text("Sets: \(exercise.eSet?.count ?? 0)").font(.caption)
+                                }
+                                
+                                
+                            }
                         )
+                        .foregroundColor(.primary)
+                        //.background
                         
                     }
                     .onDelete(perform: removeExercise)
+                }
+                Section {
+                    Button("Add Exercise") { showingSheet.toggle() }
                 }
                     
                     Section("Notes") {
