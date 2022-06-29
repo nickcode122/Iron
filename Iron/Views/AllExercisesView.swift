@@ -16,6 +16,11 @@ struct AllExercisesView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
+    @AppStorage("defaultReps") private var defaultReps = "5"
+    @AppStorage("defaultWeight") private var defaultWeight = "45"
+    @AppStorage("defaultRPE") private var defaultRPE = "7"
+    @AppStorage("defaultRIR") private var defaultRIR = "2"
+    
     @State private var searchText = ""
     
     var body: some View {
@@ -63,9 +68,10 @@ struct AllExercisesView: View {
         let defaultSet = ESet(context: moc)
         defaultSet.exercise = newExercise
         defaultSet.set = 1
-        defaultSet.weight = "45.0"
-        defaultSet.reps = "6"
-        defaultSet.rpe = "8"
+        defaultSet.weight = defaultWeight
+        defaultSet.reps = defaultReps
+        defaultSet.rpe = defaultRPE
+        defaultSet.rir = defaultRIR
         defaultSet.isComplete = false
         
         PersistenceController.shared.save()

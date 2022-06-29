@@ -61,7 +61,8 @@ struct ExerciseView: View {
                     Label("New Workout", systemImage: "plus")
                 }
             }
-            ToolbarItem(placement: .keyboard) {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
                 Button("Done") {focusedField = nil}
             }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21223.11" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ESet" representedClassName="ESet" syncable="YES">
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="reps" optional="YES" attributeType="String"/>
@@ -22,6 +22,7 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
@@ -35,6 +36,6 @@
     <elements>
         <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="148"/>
         <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="104"/>
-        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="89"/>
+        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="104"/>
     </elements>
 </model>

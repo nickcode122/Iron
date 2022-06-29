@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            CalendarView()
+                .tabItem {
+                    Label("Log", systemImage:"calendar")
+                }
             WorkoutView()
                 .tabItem {
                     Label("Workouts", systemImage: "list.dash")
@@ -18,6 +22,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gearshape")
                 }
+
         }
         
     }
