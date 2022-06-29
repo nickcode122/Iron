@@ -8,10 +8,10 @@ import CoreData
 import SwiftUI
 
 struct SetView: View {
-    
+
     @Environment(\.managedObjectContext) var moc
     
-    @AppStorage("defaultReps") public var defaultReps = "5"
+    @AppStorage("defaultReps") private var defaultReps = "5"
     @AppStorage("defaultWeight") private var defaultWeight = "45"
     @AppStorage("defaultRPE") private var defaultRPE = "7"
     @AppStorage("defaultRIR") private var defaultRIR = "2"
@@ -29,6 +29,7 @@ struct SetView: View {
                                 .multilineTextAlignment(.center)
                                 .toggleStyle(CheckboxStyle())
                                 .keyboardType(.decimalPad)
+                                .submitLabel(.next)
                         }
                         .onDelete(perform: removeESet)
                     }
@@ -39,12 +40,22 @@ struct SetView: View {
                 Section("Notes") {
                     TextEditor(text: $exercise.strNotes)
                         .frame(height: 150, alignment: .topLeading)
+                        .submitLabel(.done)
+                        .toolbar {
+                            ToolbarItemGroup(placement: .keyboard) {
+                                Spacer()
+                                Button("Done") {
+                                    UIApplication.shared.endEditing()
+                                }
+
+                            }
+                        }
                 }
             }
             
         }
         .navigationTitle(exercise.wrappedName)
-        
+
     }
     
     func removeESet(at offsets: IndexSet) {
@@ -88,3 +99,5 @@ struct SetView: View {
         PersistenceController.shared.save()
     }
 }
+
+

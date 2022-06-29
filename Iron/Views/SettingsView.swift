@@ -64,7 +64,7 @@ struct SettingsView: View {
                 }
                 .multilineTextAlignment(.trailing)
             }
-            .navigationTitle("Settings")
+            .navigationBarTitle(Text("Settings"), displayMode: .inline)
         }
     }
 }

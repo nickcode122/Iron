@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ESetTextfieldView: View {
+    
     @ObservedObject var eSet: ESet
     
     @AppStorage("enableRPE") private var enableRPE = true
@@ -44,9 +45,3 @@ struct ESetTextfieldView: View {
         return titleCount
     }
 }
-
-//struct ESetTextfieldView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ESetTextfieldView()
-//    }
-//}

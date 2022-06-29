@@ -28,7 +28,7 @@ struct WorkoutView: View {
                 .onDelete(perform: removeWorkout)
                 
             }
-            .navigationTitle("Workouts")
+            .navigationBarTitle(Text("All Workouts"), displayMode: .inline)
             .sheet(isPresented: $showingSheet) {
                 AddWorkoutView()
             }
@@ -37,7 +37,7 @@ struct WorkoutView: View {
                     Button {
                         showingSheet.toggle()
                     } label: {
-                        Label("Edit", systemImage: "plus")
+                        Label("Add", systemImage: "plus")
                     }
                 }
             }
@@ -45,7 +45,7 @@ struct WorkoutView: View {
 
         
     }
-    func removeWorkout(at offsets: IndexSet) {
+   private func removeWorkout(at offsets: IndexSet) {
         for index in offsets {
             let set = workouts[index]
             moc.delete(set)

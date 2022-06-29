@@ -37,6 +37,11 @@ extension Workout {
             $0.wrappedName < $1.wrappedName
         }
     }
+    
+    @NSManaged public var date: Date?
+    public var wrappedDate: Date {
+        get { date ?? Date() }
+    }
 }
 
 // MARK: Generated accessors for exercise

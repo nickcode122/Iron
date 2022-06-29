@@ -28,6 +28,8 @@
 		0187BC8428493B3900B77DCF /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8328493B3900B77DCF /* SetView.swift */; };
 		0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC8528493C8F00B77DCF /* ExerciseView.swift */; };
 		0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0187BC87284979EC00B77DCF /* ClearTextField.swift */; };
+		0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */; };
+		01D24AFC286B6E2400CE5255 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D24AFB286B6E2400CE5255 /* CalendarView.swift */; };
 		01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5AA722867FC58005C91B6 /* NavigationButton.swift */; };
 		01E6F6722852358D00D54373 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6712852358D00D54373 /* WorkoutView.swift */; };
 		01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E6F6732852416C00D54373 /* AddWorkoutView.swift */; };
@@ -57,6 +59,8 @@
 		0187BC8328493B3900B77DCF /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
 		0187BC8528493C8F00B77DCF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		0187BC87284979EC00B77DCF /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
+		0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardExtension.swift; sourceTree = "<group>"; };
+		01D24AFB286B6E2400CE5255 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		01E5AA722867FC58005C91B6 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 		01E6F6712852358D00D54373 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		01E6F6732852416C00D54373 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				0159A7432848336A005CDC32 /* IronApp.swift */,
+				0199E149286CADE7003150C7 /* Extensions */,
 				01E6F6752852484C00D54373 /* Views */,
 				0159A7472848336B005CDC32 /* Assets.xcassets */,
 				0159A7622848453A005CDC32 /* CoreData */,
@@ -126,6 +131,24 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		0199E149286CADE7003150C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01D24AFF286B7EC100CE5255 /* Log View */ = {
+			isa = PBXGroup;
+			children = (
+				01E6F6712852358D00D54373 /* WorkoutView.swift */,
+				01D24AFB286B6E2400CE5255 /* CalendarView.swift */,
+				01E6F6732852416C00D54373 /* AddWorkoutView.swift */,
+			);
+			path = "Log View";
+			sourceTree = "<group>";
+		};
 		01E5AA742867FD7B005C91B6 /* Set VIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,11 +164,10 @@
 			children = (
 				0159A7452848336A005CDC32 /* ContentView.swift */,
 				0161D1E42866128E0085320B /* SettingsView.swift */,
-				01E6F6712852358D00D54373 /* WorkoutView.swift */,
-				01E6F6732852416C00D54373 /* AddWorkoutView.swift */,
 				0187BC8528493C8F00B77DCF /* ExerciseView.swift */,
 				01E6F67728524A0300D54373 /* AddExerciseView.swift */,
 				0161D1E2285BBCD40085320B /* AllExercisesView.swift */,
+				01D24AFF286B7EC100CE5255 /* Log View */,
 				01E5AA742867FD7B005C91B6 /* Set VIew */,
 				01E6F6762852486A00D54373 /* Supporting Views */,
 			);
@@ -238,6 +260,7 @@
 			files = (
 				0161D1E52866128E0085320B /* SettingsView.swift in Sources */,
 				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
+				01D24AFC286B6E2400CE5255 /* CalendarView.swift in Sources */,
 				0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */,
 				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
 				01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */,
@@ -259,6 +282,7 @@
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
 				0161D1E72867B2FB0085320B /* ESetTitleView.swift in Sources */,
 				010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */,
+				0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
