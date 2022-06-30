@@ -41,6 +41,11 @@ struct AllExercisesView: View {
         }
     }
     
+    func removeExercise() {
+        // remove exercise logic ...
+        // will need to remove all exercises with the same name
+    }
+    
     // Filters exercise array to return only unique elements.
     var uniqueExercises: [Exercise] {
         var uniqueNameArray = [""]

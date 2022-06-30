@@ -42,6 +42,15 @@ extension Workout {
     public var wrappedDate: Date {
         get { date ?? Date() }
     }
+    
+//    public var warmup: [Exercise] {
+//        let predicate = NSPredicate(
+//            format: "tag LIKE [c] %@", "warmup"
+//            )
+//
+//        return Array(exercise!.filtered(using: predicate))
+//        as! [Exercise]
+//    }
 }
 
 // MARK: Generated accessors for exercise
