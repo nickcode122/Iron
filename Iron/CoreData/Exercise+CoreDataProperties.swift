@@ -37,6 +37,12 @@ extension Exercise {
                 $0.set < $1.set
             }
     }
+    
+    @NSManaged public var tag: String?
+    public var strTag: String {
+        get { tag ?? "main" }
+        set { tag = newValue }
+    }
 }
 
 // MARK: Generated accessors for eSet

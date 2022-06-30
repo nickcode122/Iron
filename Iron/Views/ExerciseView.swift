@@ -14,51 +14,51 @@ struct ExerciseView: View {
     }
     
     @FocusState private var focusedField: Field?
-    
+    @State var updater: Bool = false
     @Environment(\.managedObjectContext) var moc
     @State private var showingSheet = false
+    
     @ObservedObject var workout: Workout
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     
     var body: some View {
         VStack {
+            if updater {} //hacked solution - refactor at a later date
             Form {
                 List {
-                    ForEach (workout.exerciseArray, id: \.self) { exercise in
-                        NavigationButton(
-                            action: {focusedField = nil},
-                            destination: {SetView(exercise: exercise)},
-                            label: {
-                                VStack(alignment: .leading) {
-                                    Text(exercise.wrappedName).font(.headline)
-                                    Text("Sets: \(exercise.eSet?.count ?? 0)").font(.caption)
-                                }
-                                
-                                
-                            }
-                        )
-                        .foregroundColor(.primary)
-                        //.background
-                        
+                    Section("Warmup") {
+                        ForEach (workout.exerciseArray, id: \.self) { exercise in
+                            if exercise.strTag == "warmup" { ExerciseRow(exercise,  $updater) }
+                        }
+                        .onDelete(perform: removeExercise)
                     }
-                    .onDelete(perform: removeExercise)
+                    Section("Main") {
+                        ForEach (workout.exerciseArray, id: \.self) { exercise in
+                            if exercise.strTag == "main" { ExerciseRow(exercise, $updater) }
+                        }
+                        .onDelete(perform: removeExercise)
+                    }
+                    Section("Cooldown") {
+                        ForEach (workout.exerciseArray, id: \.self) { exercise in
+                            if exercise.strTag == "cooldown" { ExerciseRow( exercise, $updater) }
+                        }
+                        .onDelete(perform: removeExercise)
+                    }
                 }
                 Section {
                     Button("Add Exercise") { showingSheet.toggle() }
                 }
-                    
-                    Section("Notes") {
-                        TextEditor(text: $workout.strNotes)
-                            .focused($focusedField, equals: .notes)
-                            .frame(height: 150, alignment: .topLeading)
-                    }
-            }
-
-            
+                
+                Section("Notes") {
+                    TextEditor(text: $workout.strNotes)
+                        .focused($focusedField, equals: .notes)
+                        .frame(height: 150, alignment: .topLeading)
+                }
+            }     
         }
         .navigationTitle("\(workout.wrappedName)")
-
+        
         .sheet(isPresented: $showingSheet) {
             AllExercisesView(exercises: exercises, workout: workout)
         }
@@ -83,7 +83,6 @@ struct ExerciseView: View {
             PersistenceController.shared.save()
         }
     }
-    
 }
 
 
