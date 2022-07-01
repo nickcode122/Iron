@@ -64,11 +64,7 @@ struct ExerciseView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    showingSheet.toggle()
-                } label: {
-                    Label("New Workout", systemImage: "plus")
-                }
+                newWorkoutButton
             }
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
@@ -81,6 +77,14 @@ struct ExerciseView: View {
             let set = workout.exerciseArray[index]
             moc.delete(set)
             PersistenceController.shared.save()
+        }
+    }
+    
+    var newWorkoutButton: some View {
+        Button {
+            showingSheet.toggle()
+        } label: {
+            Label("New Workout", systemImage: "plus")
         }
     }
 }

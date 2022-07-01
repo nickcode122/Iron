@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21223.11" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ESet" representedClassName="ESet" syncable="YES">
+    <entity name="ESet" representedClassName="ESet" syncable="YES" codeGenerationType="category">
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="reps" optional="YES" attributeType="String"/>
         <attribute name="rir" optional="YES" attributeType="String"/>
@@ -9,15 +9,16 @@
         <attribute name="weight" optional="YES" attributeType="String"/>
         <relationship name="exerciseEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="eSet" inverseEntity="ExerciseEntity"/>
     </entity>
-    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="category">
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="exercise" inverseEntity="ExerciseEntity"/>
     </entity>
-    <entity name="ExerciseEntity" representedClassName="ExerciseEntity" syncable="YES">
+    <entity name="ExerciseEntity" representedClassName="ExerciseEntity" syncable="YES" codeGenerationType="category">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="tag" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseEntityCategory" inverseName="exerciseEntity" inverseEntity="ExerciseEntityCategory"/>
         <relationship name="eSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ESet" inverseName="exerciseEntity" inverseEntity="ESet"/>
         <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="exerciseEntity" inverseEntity="Exercise"/>
         <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exerciseEntity" inverseEntity="Workout"/>
@@ -27,12 +28,23 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="Workout" representedClassName="Workout" syncable="YES">
+    <entity name="ExerciseEntityCategory" representedClassName="ExerciseEntityCategory" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="category" inverseEntity="ExerciseEntity"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exerciseEntityCategory" inverseEntity="Workout"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="category">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="workout" inverseEntity="ExerciseEntity"/>
+        <relationship name="exerciseEntityCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntityCategory" inverseName="workout" inverseEntity="ExerciseEntityCategory"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -41,8 +53,9 @@
     </entity>
     <elements>
         <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="134"/>
-        <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="134"/>
-        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="104"/>
         <element name="Exercise" positionX="-279" positionY="54" width="128" height="59"/>
+        <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="149"/>
+        <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="119"/>
+        <element name="ExerciseEntityCategory" positionX="-270" positionY="63" width="128" height="74"/>
     </elements>
 </model>
