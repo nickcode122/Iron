@@ -60,7 +60,7 @@ struct ExerciseView: View {
         .navigationTitle("\(workout.wrappedName)")
         
         .sheet(isPresented: $showingSheet) {
-            AllExercisesView(workout: workout)
+            AllExercisesView(viewState: .add, workout: workout)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

@@ -14,9 +14,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Log", systemImage:"calendar")
                 }
-            WorkoutView()
+            AllExercisesView(viewState: .view)
                 .tabItem {
-                    Label("Workouts", systemImage: "list.dash")
+                    Label("Exercise List", systemImage: "list.dash")
                 }
             SettingsView()
                 .tabItem {
