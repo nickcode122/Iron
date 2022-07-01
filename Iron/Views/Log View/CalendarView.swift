@@ -27,7 +27,7 @@ struct CalendarView: View {
                                     NavigationLink(destination: ExerciseView(workout: workout)) {
                                         VStack(alignment: .leading) {
                                             Text(workout.wrappedName).font(.headline)
-                                            Text("Exercises: \(workout.exercise?.count ?? 0)").font(.caption)
+                                            Text("Exercises: \(workout.exerciseEntity?.count ?? 0)").font(.caption)
                                         }
 
                                     }

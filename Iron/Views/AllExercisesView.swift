@@ -9,8 +9,8 @@ import CoreData
 import SwiftUI
 
 struct AllExercisesView: View {
-    
-    let exercises: FetchedResults<Exercise>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
+    // let exercises: FetchedResults<ExerciseEntity>
     let workout: Workout
     
     @Environment(\.managedObjectContext) var moc
@@ -22,16 +22,17 @@ struct AllExercisesView: View {
     @AppStorage("defaultRIR") private var defaultRIR = "2"
     
     @State private var searchText = ""
+    //    let testData: [ExercisesList] = Bundle.main.decode("ExerciseList.json")
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(searchResults, id: \.self) { exercise in
-                    Button("\(exercise.wrappedName)") {
-                        addExercise(name: exercise.wrappedName)
+                    Button("\(exercise.strName)") {
+                        addExercise(exercise)
                     }
                 }
-                NavigationLink(destination: AddExerciseView(uniqueExercises: uniqueExercises)) {
+                NavigationLink(destination: AddExerciseView(exercises: exerciseArray)) {
                     Text("New Exercise")
                 }
                 
@@ -46,33 +47,29 @@ struct AllExercisesView: View {
         // will need to remove all exercises with the same name
     }
     
-    // Filters exercise array to return only unique elements.
-    var uniqueExercises: [Exercise] {
-        var uniqueNameArray = [""]
-        var uniqueExercisesArray = [Exercise]()
+    var exerciseArray: [Exercise] {
+        var exerciseArray = [Exercise]()
         for exercise in exercises {
-            if !uniqueNameArray.contains(exercise.wrappedName) {
-                uniqueNameArray.append(exercise.wrappedName)
-                uniqueExercisesArray.append(exercise)
-            }
+            exerciseArray.append(exercise)
         }
-        return uniqueExercisesArray
+        return exerciseArray
     }
     var searchResults: [Exercise] {
         if searchText.isEmpty {
-            return uniqueExercises
+            return exerciseArray
         } else {
-            return uniqueExercises.filter { $0.wrappedName.contains(searchText)}
+            return exerciseArray.filter { $0.strName.contains(searchText)}
         }
     }
-    func addExercise (name: String) {
-        let newExercise = Exercise(context: moc)
-        newExercise.name = name
+    func addExercise (_ exercise: Exercise) {
+        let newExercise = ExerciseEntity(context: moc)
+        newExercise.exercise = exercise
+        newExercise.name = exercise.strName
         newExercise.workout = workout
         newExercise.id = UUID()
         newExercise.tag = "main"
         let defaultSet = ESet(context: moc)
-        defaultSet.exercise = newExercise
+        defaultSet.exerciseEntity = newExercise
         defaultSet.set = 1
         defaultSet.weight = defaultWeight
         defaultSet.reps = defaultReps

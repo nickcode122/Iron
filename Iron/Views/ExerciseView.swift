@@ -20,7 +20,7 @@ struct ExerciseView: View {
     
     @ObservedObject var workout: Workout
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<ExerciseEntity>
     
     var body: some View {
         VStack {
@@ -60,7 +60,7 @@ struct ExerciseView: View {
         .navigationTitle("\(workout.wrappedName)")
         
         .sheet(isPresented: $showingSheet) {
-            AllExercisesView(exercises: exercises, workout: workout)
+            AllExercisesView(workout: workout)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

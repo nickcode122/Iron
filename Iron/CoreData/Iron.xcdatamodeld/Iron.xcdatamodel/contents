@@ -7,15 +7,20 @@
         <attribute name="rpe" optional="YES" attributeType="String"/>
         <attribute name="set" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="weight" optional="YES" attributeType="String"/>
-        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="eSet" inverseEntity="Exercise"/>
+        <relationship name="exerciseEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="eSet" inverseEntity="ExerciseEntity"/>
     </entity>
     <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="exercise" inverseEntity="ExerciseEntity"/>
+    </entity>
+    <entity name="ExerciseEntity" representedClassName="ExerciseEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="tag" optional="YES" attributeType="String"/>
-        <relationship name="eSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ESet" inverseName="exercise" inverseEntity="ESet"/>
-        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercise" inverseEntity="Workout"/>
+        <relationship name="eSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ESet" inverseName="exerciseEntity" inverseEntity="ESet"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="exerciseEntity" inverseEntity="Exercise"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exerciseEntity" inverseEntity="Workout"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -27,7 +32,7 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
-        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workout" inverseEntity="Exercise"/>
+        <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="workout" inverseEntity="ExerciseEntity"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -35,8 +40,9 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="148"/>
-        <element name="Exercise" positionX="-169.53515625" positionY="96.33984375" width="128" height="119"/>
+        <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="134"/>
+        <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="134"/>
         <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="104"/>
+        <element name="Exercise" positionX="-279" positionY="54" width="128" height="59"/>
     </elements>
 </model>

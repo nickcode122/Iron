@@ -12,9 +12,8 @@ struct AddExerciseView: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var exerciseName = ""
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     
-    let uniqueExercises: [Exercise]
+    let exercises: [Exercise]
     
     var body: some View {
         
@@ -27,11 +26,10 @@ struct AddExerciseView: View {
         }
         
     }
-    
     var uniqueExerciseNames: [String] {
         var names = [String]()
-        for exercise in uniqueExercises {
-            names.append(exercise.wrappedName)
+        for exercise in exercises {
+            names.append(exercise.strName)
         }
         return names
     }
@@ -40,10 +38,9 @@ struct AddExerciseView: View {
         !uniqueExerciseNames.contains(exerciseName)
     }
     func addExercise () {
-        
         let newExercise = Exercise(context: moc)
         newExercise.name = exerciseName
-        newExercise.id = UUID()
+        
         PersistenceController.shared.save()
         dismiss()
     }

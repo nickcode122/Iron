@@ -2,7 +2,7 @@
 //  ESet+CoreDataProperties.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/6/22.
+//  Created by Nick Schwab on 6/30/22.
 //
 //
 
@@ -16,13 +16,13 @@ extension ESet {
         return NSFetchRequest<ESet>(entityName: "ESet")
     }
 
-    @NSManaged public var set: Int16
-    @NSManaged public var rpe: String?
-    @NSManaged public var weight: String?
     @NSManaged public var isComplete: Bool
-    @NSManaged public var exercise: Exercise?
     @NSManaged public var reps: String?
     @NSManaged public var rir: String?
+    @NSManaged public var rpe: String?
+    @NSManaged public var set: Int16
+    @NSManaged public var weight: String?
+    @NSManaged public var exerciseEntity: ExerciseEntity?
     
     public var strRir: String {
         get {rir ?? "11"}
@@ -41,7 +41,6 @@ extension ESet {
         get { reps ?? "11"}
         set {self.reps = newValue}
     }
-    
 
 }
 

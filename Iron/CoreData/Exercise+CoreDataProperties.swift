@@ -2,7 +2,7 @@
 //  Exercise+CoreDataProperties.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/6/22.
+//  Created by Nick Schwab on 6/30/22.
 //
 //
 
@@ -16,49 +16,31 @@ extension Exercise {
         return NSFetchRequest<Exercise>(entityName: "Exercise")
     }
 
-    @NSManaged public var workout: Workout?
-    @NSManaged public var id: UUID?
+
+    @NSManaged public var exerciseEntity: NSSet?
     
     @NSManaged public var name: String?
-    public var wrappedName: String {
+    public var strName: String {
         get {name ?? "Unknown Name"}
         set {name = newValue}
     }
-    
-    @NSManaged public var notes: String?
-    public var strNotes: String {
-        get {notes ?? ""}
-        set {notes = newValue}
-    }
-    @NSManaged public var eSet: NSSet?
-    public var eSetArray: [ESet] {
-            let set = eSet as? Set<ESet> ?? []
-            return set.sorted{
-                $0.set < $1.set
-            }
-    }
-    
-    @NSManaged public var tag: String?
-    public var strTag: String {
-        get { tag ?? "main" }
-        set { tag = newValue }
-    }
+
 }
 
-// MARK: Generated accessors for eSet
+// MARK: Generated accessors for exerciseEntity
 extension Exercise {
 
-    @objc(addESetObject:)
-    @NSManaged public func addToESet(_ value: ESet)
+    @objc(addExerciseEntityObject:)
+    @NSManaged public func addToExerciseEntity(_ value: ExerciseEntity)
 
-    @objc(removeESetObject:)
-    @NSManaged public func removeFromESet(_ value: ESet)
+    @objc(removeExerciseEntityObject:)
+    @NSManaged public func removeFromExerciseEntity(_ value: ExerciseEntity)
 
-    @objc(addESet:)
-    @NSManaged public func addToESet(_ values: NSSet)
+    @objc(addExerciseEntity:)
+    @NSManaged public func addToExerciseEntity(_ values: NSSet)
 
-    @objc(removeESet:)
-    @NSManaged public func removeFromESet(_ values: NSSet)
+    @objc(removeExerciseEntity:)
+    @NSManaged public func removeFromExerciseEntity(_ values: NSSet)
 
 }
 

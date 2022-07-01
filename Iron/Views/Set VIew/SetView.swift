@@ -17,7 +17,7 @@ struct SetView: View {
     @AppStorage("defaultRIR") private var defaultRIR = "2"
     @AppStorage("useLastSetValues") private var useLastSetValues = true
     
-    @ObservedObject var exercise: Exercise
+    @ObservedObject var exercise: ExerciseEntity
     var body: some View {
         VStack {
             Form {
@@ -95,7 +95,7 @@ struct SetView: View {
         
         newSet.set = Int16(setCount + 1)
         newSet.isComplete = false
-        newSet.exercise = exercise
+        newSet.exerciseEntity = exercise
         PersistenceController.shared.save()
     }
 }

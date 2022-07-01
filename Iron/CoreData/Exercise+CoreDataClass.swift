@@ -2,7 +2,7 @@
 //  Exercise+CoreDataClass.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/6/22.
+//  Created by Nick Schwab on 6/30/22.
 //
 //
 
@@ -11,5 +11,7 @@ import CoreData
 
 @objc(Exercise)
 public class Exercise: NSManagedObject {
+    
+    
 
 }

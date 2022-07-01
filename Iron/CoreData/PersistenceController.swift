@@ -5,9 +5,12 @@
 //  Created by Nick Schwab on 6/6/22.
 //
 import CoreData
+import SwiftUI
 import Foundation
 
 struct PersistenceController {
+    
+    @AppStorage("firstRun") private var firstRun = true
     // A singleton for our entire app to use
     static let shared = PersistenceController()
 
@@ -40,6 +43,18 @@ struct PersistenceController {
             
         }
         self.container.viewContext.mergePolicy = NSMergePolicy.overwrite
+        
+        if firstRun {
+            
+            let exercises: [ExercisesList] = Bundle.main.decode("ExerciseList.json")
+            for exercise in exercises {
+                let newExercise = Exercise(context: container.viewContext)
+                newExercise.name = exercise.displayName
+                save()
+            }
+            firstRun = false
+        }
+        
     }
     func save() {
         let context = container.viewContext

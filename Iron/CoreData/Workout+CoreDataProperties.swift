@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/6/22.
+//  Created by Nick Schwab on 6/30/22.
 //
 //
 
@@ -11,13 +11,12 @@ import CoreData
 
 
 extension Workout {
-    
+
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Workout> {
         return NSFetchRequest<Workout>(entityName: "Workout")
     }
-    
+
     @NSManaged public var id: UUID?
-    
     
     @NSManaged public var name: String?
     public var wrappedName: String {
@@ -30,9 +29,10 @@ extension Workout {
         set {notes = newValue}
     }
     
-    @NSManaged public var exercise: NSSet?
-    public var exerciseArray: [Exercise] {
-        let set = exercise as? Set<Exercise> ?? []
+    @NSManaged public var exerciseEntity: NSSet?
+    
+    public var exerciseArray: [ExerciseEntity] {
+        let set = exerciseEntity as? Set<ExerciseEntity> ?? []
         return set.sorted {
             $0.wrappedName < $1.wrappedName
         }
@@ -42,34 +42,26 @@ extension Workout {
     public var wrappedDate: Date {
         get { date ?? Date() }
     }
-    
-//    public var warmup: [Exercise] {
-//        let predicate = NSPredicate(
-//            format: "tag LIKE [c] %@", "warmup"
-//            )
-//
-//        return Array(exercise!.filtered(using: predicate))
-//        as! [Exercise]
-//    }
+
 }
 
-// MARK: Generated accessors for exercise
+// MARK: Generated accessors for exerciseEntity
 extension Workout {
-    
-    @objc(addExerciseObject:)
-    @NSManaged public func addToExercise(_ value: Exercise)
-    
-    @objc(removeExerciseObject:)
-    @NSManaged public func removeFromExercise(_ value: Exercise)
-    
-    @objc(addExercise:)
-    @NSManaged public func addToExercise(_ values: NSSet)
-    
-    @objc(removeExercise:)
-    @NSManaged public func removeFromExercise(_ values: NSSet)
-    
+
+    @objc(addExerciseEntityObject:)
+    @NSManaged public func addToExerciseEntity(_ value: ExerciseEntity)
+
+    @objc(removeExerciseEntityObject:)
+    @NSManaged public func removeFromExerciseEntity(_ value: ExerciseEntity)
+
+    @objc(addExerciseEntity:)
+    @NSManaged public func addToExerciseEntity(_ values: NSSet)
+
+    @objc(removeExerciseEntity:)
+    @NSManaged public func removeFromExerciseEntity(_ values: NSSet)
+
 }
 
 extension Workout : Identifiable {
-    
+
 }

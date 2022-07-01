@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ExerciseRow: View {
-    @ObservedObject var exercise: Exercise
+    @ObservedObject var exercise: ExerciseEntity
     @Binding var updater: Bool
     
-    init(_ exercise: Exercise, _ updater: Binding<Bool>) {
+    init(_ exercise: ExerciseEntity, _ updater: Binding<Bool>) {
         self.exercise = exercise
         self._updater = updater
     }
