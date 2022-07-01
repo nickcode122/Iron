@@ -42,8 +42,6 @@ struct WorkoutView: View {
                 }
             }
         }
-
-        
     }
    private func removeWorkout(at offsets: IndexSet) {
         for index in offsets {

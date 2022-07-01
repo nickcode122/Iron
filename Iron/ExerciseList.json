@@ -1,0 +1,2616 @@
+[
+
+        {
+            "name": "Ab_Crunch_Machine"
+        },
+        {
+            "name": "Ab_Roller"
+        },
+        {
+            "name": "Adductor"
+        },
+        {
+            "name": "Adductor_Groin"
+        },
+        {
+            "name": "Advanced_Kettlebell_Windmill"
+        },
+        {
+            "name": "Air_Bike"
+        },
+        {
+            "name": "All_Fours_Quad_Stretch"
+        },
+        {
+            "name": "Alternate_Hammer_Curl"
+        },
+        {
+            "name": "Alternate_Heel_Touchers"
+        },
+        {
+            "name": "Alternate_Incline_Dumbbell_Curl"
+        },
+        {
+            "name": "Alternate_Leg_Diagonal_Bound"
+        },
+        {
+            "name": "Alternating_Cable_Shoulder_Press"
+        },
+        {
+            "name": "Alternating_Deltoid_Raise"
+        },
+        {
+            "name": "Alternating_Floor_Press"
+        },
+        {
+            "name": "Alternating_Hang_Clean"
+        },
+        {
+            "name": "Alternating_Kettlebell_Press"
+        },
+        {
+            "name": "Alternating_Kettlebell_Row"
+        },
+        {
+            "name": "Alternating_Renegade_Row"
+        },
+        {
+            "name": "Ankle_Circles"
+        },
+        {
+            "name": "Ankle_On_The_Knee"
+        },
+        {
+            "name": "Anterior_Tibialis-SMR"
+        },
+        {
+            "name": "Anti-Gravity_Press"
+        },
+        {
+            "name": "Arm_Circles"
+        },
+        {
+            "name": "Arnold_Dumbbell_Press"
+        },
+        {
+            "name": "Around_The_Worlds"
+        },
+        {
+            "name": "Atlas_Stone_Trainer"
+        },
+        {
+            "name": "Atlas_Stones"
+        },
+        {
+            "name": "Axle_Deadlift"
+        },
+        {
+            "name": "Back_Flyes_-_With_Bands"
+        },
+        {
+            "name": "Backward_Drag"
+        },
+        {
+            "name": "Backward_Medicine_Ball_Throw"
+        },
+        {
+            "name": "Balance_Board"
+        },
+        {
+            "name": "Ball_Leg_Curl"
+        },
+        {
+            "name": "Band_Assisted_Pull-Up"
+        },
+        {
+            "name": "Band_Good_Morning"
+        },
+        {
+            "name": "Band_Good_Morning_(Pull_Through)"
+        },
+        {
+            "name": "Band_Hip_Adductions"
+        },
+        {
+            "name": "Band_Pull_Apart"
+        },
+        {
+            "name": "Band_Skull_Crusher"
+        },
+        {
+            "name": "Barbell_Ab_Rollout"
+        },
+        {
+            "name": "Barbell_Ab_Rollout_-_On_Knees"
+        },
+        {
+            "name": "Barbell_Bench_Press_-_Medium_Grip"
+        },
+        {
+            "name": "Barbell_Curl"
+        },
+        {
+            "name": "Barbell_Curls_Lying_Against_An_Incline"
+        },
+        {
+            "name": "Barbell_Deadlift"
+        },
+        {
+            "name": "Barbell_Full_Squat"
+        },
+        {
+            "name": "Barbell_Glute_Bridge"
+        },
+        {
+            "name": "Barbell_Guillotine_Bench_Press"
+        },
+        {
+            "name": "Barbell_Hack_Squat"
+        },
+        {
+            "name": "Barbell_Hip_Thrust"
+        },
+        {
+            "name": "Barbell_Incline_Bench_Press_-_Medium_Grip"
+        },
+        {
+            "name": "Barbell_Incline_Shoulder_Raise"
+        },
+        {
+            "name": "Barbell_Lunge"
+        },
+        {
+            "name": "Barbell_Rear_Delt_Row"
+        },
+        {
+            "name": "Barbell_Rollout_from_Bench"
+        },
+        {
+            "name": "Barbell_Seated_Calf_Raise"
+        },
+        {
+            "name": "Barbell_Shoulder_Press"
+        },
+        {
+            "name": "Barbell_Shrug"
+        },
+        {
+            "name": "Barbell_Shrug_Behind_The_Back"
+        },
+        {
+            "name": "Barbell_Side_Bend"
+        },
+        {
+            "name": "Barbell_Side_Split_Squat"
+        },
+        {
+            "name": "Barbell_Squat"
+        },
+        {
+            "name": "Barbell_Squat_To_A_Bench"
+        },
+        {
+            "name": "Barbell_Step_Ups"
+        },
+        {
+            "name": "Barbell_Walking_Lunge"
+        },
+        {
+            "name": "Battling_Ropes"
+        },
+        {
+            "name": "Bear_Crawl_Sled_Drags"
+        },
+        {
+            "name": "Behind_Head_Chest_Stretch"
+        },
+        {
+            "name": "Bench_Dips"
+        },
+        {
+            "name": "Bench_Jump"
+        },
+        {
+            "name": "Bench_Press_-_Powerlifting"
+        },
+        {
+            "name": "Bench_Press_-_With_Bands"
+        },
+        {
+            "name": "Bench_Press_with_Chains"
+        },
+        {
+            "name": "Bench_Sprint"
+        },
+        {
+            "name": "Bent-Arm_Barbell_Pullover"
+        },
+        {
+            "name": "Bent-Arm_Dumbbell_Pullover"
+        },
+        {
+            "name": "Bent-Knee_Hip_Raise"
+        },
+        {
+            "name": "Bent_Over_Barbell_Row"
+        },
+        {
+            "name": "Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench"
+        },
+        {
+            "name": "Bent_Over_Low-Pulley_Side_Lateral"
+        },
+        {
+            "name": "Bent_Over_One-Arm_Long_Bar_Row"
+        },
+        {
+            "name": "Bent_Over_Two-Arm_Long_Bar_Row"
+        },
+        {
+            "name": "Bent_Over_Two-Dumbbell_Row"
+        },
+        {
+            "name": "Bent_Over_Two-Dumbbell_Row_With_Palms_In"
+        },
+        {
+            "name": "Bent_Press"
+        },
+        {
+            "name": "Bicycling"
+        },
+        {
+            "name": "Bicycling,_Stationary"
+        },
+        {
+            "name": "Board_Press"
+        },
+        {
+            "name": "Body-Up"
+        },
+        {
+            "name": "Body_Tricep_Press"
+        },
+        {
+            "name": "Bodyweight_Flyes"
+        },
+        {
+            "name": "Bodyweight_Mid_Row"
+        },
+        {
+            "name": "Bodyweight_Squat"
+        },
+        {
+            "name": "Bodyweight_Walking_Lunge"
+        },
+        {
+            "name": "Bosu_Ball_Cable_Crunch_With_Side_Bends"
+        },
+        {
+            "name": "Bottoms-Up_Clean_From_The_Hang_Position"
+        },
+        {
+            "name": "Bottoms_Up"
+        },
+        {
+            "name": "Box_Jump_(Multiple_Response)"
+        },
+        {
+            "name": "Box_Skip"
+        },
+        {
+            "name": "Box_Squat"
+        },
+        {
+            "name": "Box_Squat_with_Bands"
+        },
+        {
+            "name": "Box_Squat_with_Chains"
+        },
+        {
+            "name": "Brachialis-SMR"
+        },
+        {
+            "name": "Bradford_Rocky_Presses"
+        },
+        {
+            "name": "Butt-Ups"
+        },
+        {
+            "name": "Butt_Lift_(Bridge)"
+        },
+        {
+            "name": "Butterfly"
+        },
+        {
+            "name": "Cable_Chest_Press"
+        },
+        {
+            "name": "Cable_Crossover"
+        },
+        {
+            "name": "Cable_Crunch"
+        },
+        {
+            "name": "Cable_Deadlifts"
+        },
+        {
+            "name": "Cable_Hammer_Curls_-_Rope_Attachment"
+        },
+        {
+            "name": "Cable_Hip_Adduction"
+        },
+        {
+            "name": "Cable_Incline_Pushdown"
+        },
+        {
+            "name": "Cable_Incline_Triceps_Extension"
+        },
+        {
+            "name": "Cable_Internal_Rotation"
+        },
+        {
+            "name": "Cable_Iron_Cross"
+        },
+        {
+            "name": "Cable_Judo_Flip"
+        },
+        {
+            "name": "Cable_Lying_Triceps_Extension"
+        },
+        {
+            "name": "Cable_One_Arm_Tricep_Extension"
+        },
+        {
+            "name": "Cable_Preacher_Curl"
+        },
+        {
+            "name": "Cable_Rear_Delt_Fly"
+        },
+        {
+            "name": "Cable_Reverse_Crunch"
+        },
+        {
+            "name": "Cable_Rope_Overhead_Triceps_Extension"
+        },
+        {
+            "name": "Cable_Rope_Rear-Delt_Rows"
+        },
+        {
+            "name": "Cable_Russian_Twists"
+        },
+        {
+            "name": "Cable_Seated_Crunch"
+        },
+        {
+            "name": "Cable_Seated_Lateral_Raise"
+        },
+        {
+            "name": "Cable_Shoulder_Press"
+        },
+        {
+            "name": "Cable_Shrugs"
+        },
+        {
+            "name": "Cable_Wrist_Curl"
+        },
+        {
+            "name": "Calf-Machine_Shoulder_Shrug"
+        },
+        {
+            "name": "Calf_Press"
+        },
+        {
+            "name": "Calf_Press_On_The_Leg_Press_Machine"
+        },
+        {
+            "name": "Calf_Raise_On_A_Dumbbell"
+        },
+        {
+            "name": "Calf_Raises_-_With_Bands"
+        },
+        {
+            "name": "Calf_Stretch_Elbows_Against_Wall"
+        },
+        {
+            "name": "Calf_Stretch_Hands_Against_Wall"
+        },
+        {
+            "name": "Calves-SMR"
+        },
+        {
+            "name": "Car_Deadlift"
+        },
+        {
+            "name": "Car_Drivers"
+        },
+        {
+            "name": "Carioca_Quick_Step"
+        },
+        {
+            "name": "Cat_Stretch"
+        },
+        {
+            "name": "Catch_and_Overhead_Throw"
+        },
+        {
+            "name": "Chain_Handle_Extension"
+        },
+        {
+            "name": "Chain_Press"
+        },
+        {
+            "name": "Chair_Leg_Extended_Stretch"
+        },
+        {
+            "name": "Chair_Lower_Back_Stretch"
+        },
+        {
+            "name": "Chair_Squat"
+        },
+        {
+            "name": "Chair_Upper_Body_Stretch"
+        },
+        {
+            "name": "Chest_And_Front_Of_Shoulder_Stretch"
+        },
+        {
+            "name": "Chest_Push_(multiple_response)"
+        },
+        {
+            "name": "Chest_Push_(single_response)"
+        },
+        {
+            "name": "Chest_Push_from_3_point_stance"
+        },
+        {
+            "name": "Chest_Push_with_Run_Release"
+        },
+        {
+            "name": "Chest_Stretch_on_Stability_Ball"
+        },
+        {
+            "name": "Child's_Pose"
+        },
+        {
+            "name": "Chin-Up"
+        },
+        {
+            "name": "Chin_To_Chest_Stretch"
+        },
+        {
+            "name": "Circus_Bell"
+        },
+        {
+            "name": "Clean"
+        },
+        {
+            "name": "Clean_Deadlift"
+        },
+        {
+            "name": "Clean_Pull"
+        },
+        {
+            "name": "Clean_Shrug"
+        },
+        {
+            "name": "Clean_and_Jerk"
+        },
+        {
+            "name": "Clean_and_Press"
+        },
+        {
+            "name": "Clean_from_Blocks"
+        },
+        {
+            "name": "Clock_Push-Up"
+        },
+        {
+            "name": "Close-Grip_Barbell_Bench_Press"
+        },
+        {
+            "name": "Close-Grip_Dumbbell_Press"
+        },
+        {
+            "name": "Close-Grip_EZ-Bar_Curl_with_Band"
+        },
+        {
+            "name": "Close-Grip_EZ-Bar_Press"
+        },
+        {
+            "name": "Close-Grip_EZ_Bar_Curl"
+        },
+        {
+            "name": "Close-Grip_Front_Lat_Pulldown"
+        },
+        {
+            "name": "Close-Grip_Push-Up_off_of_a_Dumbbell"
+        },
+        {
+            "name": "Close-Grip_Standing_Barbell_Curl"
+        },
+        {
+            "name": "Cocoons"
+        },
+        {
+            "name": "Conan's_Wheel"
+        },
+        {
+            "name": "Concentration_Curls"
+        },
+        {
+            "name": "Cross-Body_Crunch"
+        },
+        {
+            "name": "Cross_Body_Hammer_Curl"
+        },
+        {
+            "name": "Cross_Over_-_With_Bands"
+        },
+        {
+            "name": "Crossover_Reverse_Lunge"
+        },
+        {
+            "name": "Crucifix"
+        },
+        {
+            "name": "Crunch_-_Hands_Overhead"
+        },
+        {
+            "name": "Crunch_-_Legs_On_Exercise_Ball"
+        },
+        {
+            "name": "Crunches"
+        },
+        {
+            "name": "Cuban_Press"
+        },
+        {
+            "name": "Dancer's_Stretch"
+        },
+        {
+            "name": "Dead_Bug"
+        },
+        {
+            "name": "Deadlift_with_Bands"
+        },
+        {
+            "name": "Deadlift_with_Chains"
+        },
+        {
+            "name": "Decline_Barbell_Bench_Press"
+        },
+        {
+            "name": "Decline_Close-Grip_Bench_To_Skull_Crusher"
+        },
+        {
+            "name": "Decline_Crunch"
+        },
+        {
+            "name": "Decline_Dumbbell_Bench_Press"
+        },
+        {
+            "name": "Decline_Dumbbell_Flyes"
+        },
+        {
+            "name": "Decline_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Decline_EZ_Bar_Triceps_Extension"
+        },
+        {
+            "name": "Decline_Oblique_Crunch"
+        },
+        {
+            "name": "Decline_Push-Up"
+        },
+        {
+            "name": "Decline_Reverse_Crunch"
+        },
+        {
+            "name": "Decline_Smith_Press"
+        },
+        {
+            "name": "Deficit_Deadlift"
+        },
+        {
+            "name": "Depth_Jump_Leap"
+        },
+        {
+            "name": "Dip_Machine"
+        },
+        {
+            "name": "Dips_-_Chest_Version"
+        },
+        {
+            "name": "Dips_-_Triceps_Version"
+        },
+        {
+            "name": "Donkey_Calf_Raises"
+        },
+        {
+            "name": "Double_Kettlebell_Alternating_Hang_Clean"
+        },
+        {
+            "name": "Double_Kettlebell_Jerk"
+        },
+        {
+            "name": "Double_Kettlebell_Push_Press"
+        },
+        {
+            "name": "Double_Kettlebell_Snatch"
+        },
+        {
+            "name": "Double_Kettlebell_Windmill"
+        },
+        {
+            "name": "Double_Leg_Butt_Kick"
+        },
+        {
+            "name": "Downward_Facing_Balance"
+        },
+        {
+            "name": "Drag_Curl"
+        },
+        {
+            "name": "Drop_Push"
+        },
+        {
+            "name": "Dumbbell_Alternate_Bicep_Curl"
+        },
+        {
+            "name": "Dumbbell_Bench_Press"
+        },
+        {
+            "name": "Dumbbell_Bench_Press_with_Neutral_Grip"
+        },
+        {
+            "name": "Dumbbell_Bicep_Curl"
+        },
+        {
+            "name": "Dumbbell_Clean"
+        },
+        {
+            "name": "Dumbbell_Floor_Press"
+        },
+        {
+            "name": "Dumbbell_Flyes"
+        },
+        {
+            "name": "Dumbbell_Incline_Row"
+        },
+        {
+            "name": "Dumbbell_Incline_Shoulder_Raise"
+        },
+        {
+            "name": "Dumbbell_Lunges"
+        },
+        {
+            "name": "Dumbbell_Lying_One-Arm_Rear_Lateral_Raise"
+        },
+        {
+            "name": "Dumbbell_Lying_Pronation"
+        },
+        {
+            "name": "Dumbbell_Lying_Rear_Lateral_Raise"
+        },
+        {
+            "name": "Dumbbell_Lying_Supination"
+        },
+        {
+            "name": "Dumbbell_One-Arm_Shoulder_Press"
+        },
+        {
+            "name": "Dumbbell_One-Arm_Triceps_Extension"
+        },
+        {
+            "name": "Dumbbell_One-Arm_Upright_Row"
+        },
+        {
+            "name": "Dumbbell_Prone_Incline_Curl"
+        },
+        {
+            "name": "Dumbbell_Raise"
+        },
+        {
+            "name": "Dumbbell_Rear_Lunge"
+        },
+        {
+            "name": "Dumbbell_Scaption"
+        },
+        {
+            "name": "Dumbbell_Seated_Box_Jump"
+        },
+        {
+            "name": "Dumbbell_Seated_One-Leg_Calf_Raise"
+        },
+        {
+            "name": "Dumbbell_Shoulder_Press"
+        },
+        {
+            "name": "Dumbbell_Shrug"
+        },
+        {
+            "name": "Dumbbell_Side_Bend"
+        },
+        {
+            "name": "Dumbbell_Squat"
+        },
+        {
+            "name": "Dumbbell_Squat_To_A_Bench"
+        },
+        {
+            "name": "Dumbbell_Step_Ups"
+        },
+        {
+            "name": "Dumbbell_Tricep_Extension_-Pronated_Grip"
+        },
+        {
+            "name": "Dynamic_Back_Stretch"
+        },
+        {
+            "name": "Dynamic_Chest_Stretch"
+        },
+        {
+            "name": "EZ-Bar_Curl"
+        },
+        {
+            "name": "EZ-Bar_Skullcrusher"
+        },
+        {
+            "name": "Elbow_Circles"
+        },
+        {
+            "name": "Elbow_to_Knee"
+        },
+        {
+            "name": "Elbows_Back"
+        },
+        {
+            "name": "Elevated_Back_Lunge"
+        },
+        {
+            "name": "Elevated_Cable_Rows"
+        },
+        {
+            "name": "Elliptical_Trainer"
+        },
+        {
+            "name": "Exercise_Ball_Crunch"
+        },
+        {
+            "name": "Exercise_Ball_Pull-In"
+        },
+        {
+            "name": "Extended_Range_One-Arm_Kettlebell_Floor_Press"
+        },
+        {
+            "name": "External_Rotation"
+        },
+        {
+            "name": "External_Rotation_with_Band"
+        },
+        {
+            "name": "External_Rotation_with_Cable"
+        },
+        {
+            "name": "Face_Pull"
+        },
+        {
+            "name": "Farmer's_Walk"
+        },
+        {
+            "name": "Fast_Skipping"
+        },
+        {
+            "name": "Finger_Curls"
+        },
+        {
+            "name": "Flat_Bench_Cable_Flyes"
+        },
+        {
+            "name": "Flat_Bench_Leg_Pull-In"
+        },
+        {
+            "name": "Flat_Bench_Lying_Leg_Raise"
+        },
+        {
+            "name": "Flexor_Incline_Dumbbell_Curls"
+        },
+        {
+            "name": "Floor_Glute-Ham_Raise"
+        },
+        {
+            "name": "Floor_Press"
+        },
+        {
+            "name": "Floor_Press_with_Chains"
+        },
+        {
+            "name": "Flutter_Kicks"
+        },
+        {
+            "name": "Foot-SMR"
+        },
+        {
+            "name": "Forward_Drag_with_Press"
+        },
+        {
+            "name": "Frankenstein_Squat"
+        },
+        {
+            "name": "Freehand_Jump_Squat"
+        },
+        {
+            "name": "Frog_Hops"
+        },
+        {
+            "name": "Frog_Sit-Ups"
+        },
+        {
+            "name": "Front_Barbell_Squat"
+        },
+        {
+            "name": "Front_Barbell_Squat_To_A_Bench"
+        },
+        {
+            "name": "Front_Box_Jump"
+        },
+        {
+            "name": "Front_Cable_Raise"
+        },
+        {
+            "name": "Front_Cone_Hops_(or_hurdle_hops)"
+        },
+        {
+            "name": "Front_Dumbbell_Raise"
+        },
+        {
+            "name": "Front_Incline_Dumbbell_Raise"
+        },
+        {
+            "name": "Front_Leg_Raises"
+        },
+        {
+            "name": "Front_Plate_Raise"
+        },
+        {
+            "name": "Front_Raise_And_Pullover"
+        },
+        {
+            "name": "Front_Squat_(Clean_Grip)"
+        },
+        {
+            "name": "Front_Squats_With_Two_Kettlebells"
+        },
+        {
+            "name": "Front_Two-Dumbbell_Raise"
+        },
+        {
+            "name": "Full_Range-Of-Motion_Lat_Pulldown"
+        },
+        {
+            "name": "Gironda_Sternum_Chins"
+        },
+        {
+            "name": "Glute_Ham_Raise"
+        },
+        {
+            "name": "Glute_Kickback"
+        },
+        {
+            "name": "Goblet_Squat"
+        },
+        {
+            "name": "Good_Morning"
+        },
+        {
+            "name": "Good_Morning_off_Pins"
+        },
+        {
+            "name": "Gorilla_Chin_Crunch"
+        },
+        {
+            "name": "Groin_and_Back_Stretch"
+        },
+        {
+            "name": "Groiners"
+        },
+        {
+            "name": "Hack_Squat"
+        },
+        {
+            "name": "Hammer_Curls"
+        },
+        {
+            "name": "Hammer_Grip_Incline_DB_Bench_Press"
+        },
+        {
+            "name": "Hamstring-SMR"
+        },
+        {
+            "name": "Hamstring_Stretch"
+        },
+        {
+            "name": "Handstand_Push-Ups"
+        },
+        {
+            "name": "Hang_Clean"
+        },
+        {
+            "name": "Hang_Clean_-_Below_the_Knees"
+        },
+        {
+            "name": "Hang_Snatch"
+        },
+        {
+            "name": "Hang_Snatch_-_Below_Knees"
+        },
+        {
+            "name": "Hanging_Bar_Good_Morning"
+        },
+        {
+            "name": "Hanging_Leg_Raise"
+        },
+        {
+            "name": "Hanging_Pike"
+        },
+        {
+            "name": "Heaving_Snatch_Balance"
+        },
+        {
+            "name": "Heavy_Bag_Thrust"
+        },
+        {
+            "name": "High_Cable_Curls"
+        },
+        {
+            "name": "Hip_Circles_(prone)"
+        },
+        {
+            "name": "Hip_Extension_with_Bands"
+        },
+        {
+            "name": "Hip_Flexion_with_Band"
+        },
+        {
+            "name": "Hip_Lift_with_Band"
+        },
+        {
+            "name": "Hug_A_Ball"
+        },
+        {
+            "name": "Hug_Knees_To_Chest"
+        },
+        {
+            "name": "Hurdle_Hops"
+        },
+        {
+            "name": "Hyperextensions_(Back_Extensions)"
+        },
+        {
+            "name": "Hyperextensions_With_No_Hyperextension_Bench"
+        },
+        {
+            "name": "IT_Band_and_Glute_Stretch"
+        },
+        {
+            "name": "Iliotibial_Tract-SMR"
+        },
+        {
+            "name": "Inchworm"
+        },
+        {
+            "name": "Incline_Barbell_Triceps_Extension"
+        },
+        {
+            "name": "Incline_Bench_Pull"
+        },
+        {
+            "name": "Incline_Cable_Chest_Press"
+        },
+        {
+            "name": "Incline_Cable_Flye"
+        },
+        {
+            "name": "Incline_Dumbbell_Bench_With_Palms_Facing_In"
+        },
+        {
+            "name": "Incline_Dumbbell_Curl"
+        },
+        {
+            "name": "Incline_Dumbbell_Flyes"
+        },
+        {
+            "name": "Incline_Dumbbell_Flyes_-_With_A_Twist"
+        },
+        {
+            "name": "Incline_Dumbbell_Press"
+        },
+        {
+            "name": "Incline_Hammer_Curls"
+        },
+        {
+            "name": "Incline_Inner_Biceps_Curl"
+        },
+        {
+            "name": "Incline_Push-Up"
+        },
+        {
+            "name": "Incline_Push-Up_Close-Grip"
+        },
+        {
+            "name": "Incline_Push-Up_Depth_Jump"
+        },
+        {
+            "name": "Incline_Push-Up_Medium"
+        },
+        {
+            "name": "Incline_Push-Up_Reverse_Grip"
+        },
+        {
+            "name": "Incline_Push-Up_Wide"
+        },
+        {
+            "name": "Intermediate_Groin_Stretch"
+        },
+        {
+            "name": "Intermediate_Hip_Flexor_and_Quad_Stretch"
+        },
+        {
+            "name": "Internal_Rotation_with_Band"
+        },
+        {
+            "name": "Inverted_Row"
+        },
+        {
+            "name": "Inverted_Row_with_Straps"
+        },
+        {
+            "name": "Iron_Cross"
+        },
+        {
+            "name": "Iron_Crosses_(stretch)"
+        },
+        {
+            "name": "Isometric_Chest_Squeezes"
+        },
+        {
+            "name": "Isometric_Neck_Exercise_-_Front_And_Back"
+        },
+        {
+            "name": "Isometric_Neck_Exercise_-_Sides"
+        },
+        {
+            "name": "Isometric_Wipers"
+        },
+        {
+            "name": "JM_Press"
+        },
+        {
+            "name": "Jackknife_Sit-Up"
+        },
+        {
+            "name": "Janda_Sit-Up"
+        },
+        {
+            "name": "Jefferson_Squats"
+        },
+        {
+            "name": "Jerk_Balance"
+        },
+        {
+            "name": "Jerk_Dip_Squat"
+        },
+        {
+            "name": "Jogging,_Treadmill"
+        },
+        {
+            "name": "Keg_Load"
+        },
+        {
+            "name": "Kettlebell_Arnold_Press"
+        },
+        {
+            "name": "Kettlebell_Dead_Clean"
+        },
+        {
+            "name": "Kettlebell_Figure_8"
+        },
+        {
+            "name": "Kettlebell_Hang_Clean"
+        },
+        {
+            "name": "Kettlebell_One-Legged_Deadlift"
+        },
+        {
+            "name": "Kettlebell_Pass_Between_The_Legs"
+        },
+        {
+            "name": "Kettlebell_Pirate_Ships"
+        },
+        {
+            "name": "Kettlebell_Pistol_Squat"
+        },
+        {
+            "name": "Kettlebell_Seated_Press"
+        },
+        {
+            "name": "Kettlebell_Seesaw_Press"
+        },
+        {
+            "name": "Kettlebell_Sumo_High_Pull"
+        },
+        {
+            "name": "Kettlebell_Thruster"
+        },
+        {
+            "name": "Kettlebell_Turkish_Get-Up_(Lunge_style)"
+        },
+        {
+            "name": "Kettlebell_Turkish_Get-Up_(Squat_style)"
+        },
+        {
+            "name": "Kettlebell_Windmill"
+        },
+        {
+            "name": "Kipping_Muscle_Up"
+        },
+        {
+            "name": "Knee_Across_The_Body"
+        },
+        {
+            "name": "Knee_Circles"
+        },
+        {
+            "name": "Knee_Hip_Raise_On_Parallel_Bars"
+        },
+        {
+            "name": "Knee_Tuck_Jump"
+        },
+        {
+            "name": "Kneeling_Arm_Drill"
+        },
+        {
+            "name": "Kneeling_Cable_Crunch_With_Alternating_Oblique_Twists"
+        },
+        {
+            "name": "Kneeling_Cable_Triceps_Extension"
+        },
+        {
+            "name": "Kneeling_Forearm_Stretch"
+        },
+        {
+            "name": "Kneeling_High_Pulley_Row"
+        },
+        {
+            "name": "Kneeling_Hip_Flexor"
+        },
+        {
+            "name": "Kneeling_Jump_Squat"
+        },
+        {
+            "name": "Kneeling_Single-Arm_High_Pulley_Row"
+        },
+        {
+            "name": "Kneeling_Squat"
+        },
+        {
+            "name": "Landmine_180's"
+        },
+        {
+            "name": "Landmine_Linear_Jammer"
+        },
+        {
+            "name": "Lateral_Bound"
+        },
+        {
+            "name": "Lateral_Box_Jump"
+        },
+        {
+            "name": "Lateral_Cone_Hops"
+        },
+        {
+            "name": "Lateral_Raise_-_With_Bands"
+        },
+        {
+            "name": "Latissimus_Dorsi-SMR"
+        },
+        {
+            "name": "Leg-Over_Floor_Press"
+        },
+        {
+            "name": "Leg-Up_Hamstring_Stretch"
+        },
+        {
+            "name": "Leg_Extensions"
+        },
+        {
+            "name": "Leg_Lift"
+        },
+        {
+            "name": "Leg_Press"
+        },
+        {
+            "name": "Leg_Pull-In"
+        },
+        {
+            "name": "Leverage_Chest_Press"
+        },
+        {
+            "name": "Leverage_Deadlift"
+        },
+        {
+            "name": "Leverage_Decline_Chest_Press"
+        },
+        {
+            "name": "Leverage_High_Row"
+        },
+        {
+            "name": "Leverage_Incline_Chest_Press"
+        },
+        {
+            "name": "Leverage_Iso_Row"
+        },
+        {
+            "name": "Leverage_Shoulder_Press"
+        },
+        {
+            "name": "Leverage_Shrug"
+        },
+        {
+            "name": "Linear_3-Part_Start_Technique"
+        },
+        {
+            "name": "Linear_Acceleration_Wall_Drill"
+        },
+        {
+            "name": "Linear_Depth_Jump"
+        },
+        {
+            "name": "Log_Lift"
+        },
+        {
+            "name": "London_Bridges"
+        },
+        {
+            "name": "Looking_At_Ceiling"
+        },
+        {
+            "name": "Low_Cable_Crossover"
+        },
+        {
+            "name": "Low_Cable_Triceps_Extension"
+        },
+        {
+            "name": "Low_Pulley_Row_To_Neck"
+        },
+        {
+            "name": "Lower_Back-SMR"
+        },
+        {
+            "name": "Lower_Back_Curl"
+        },
+        {
+            "name": "Lunge_Pass_Through"
+        },
+        {
+            "name": "Lunge_Sprint"
+        },
+        {
+            "name": "Lying_Bent_Leg_Groin"
+        },
+        {
+            "name": "Lying_Cable_Curl"
+        },
+        {
+            "name": "Lying_Cambered_Barbell_Row"
+        },
+        {
+            "name": "Lying_Close-Grip_Bar_Curl_On_High_Pulley"
+        },
+        {
+            "name": "Lying_Close-Grip_Barbell_Triceps_Extension_Behind_The_Head"
+        },
+        {
+            "name": "Lying_Close-Grip_Barbell_Triceps_Press_To_Chin"
+        },
+        {
+            "name": "Lying_Crossover"
+        },
+        {
+            "name": "Lying_Dumbbell_Tricep_Extension"
+        },
+        {
+            "name": "Lying_Face_Down_Plate_Neck_Resistance"
+        },
+        {
+            "name": "Lying_Face_Up_Plate_Neck_Resistance"
+        },
+        {
+            "name": "Lying_Glute"
+        },
+        {
+            "name": "Lying_Hamstring"
+        },
+        {
+            "name": "Lying_High_Bench_Barbell_Curl"
+        },
+        {
+            "name": "Lying_Leg_Curls"
+        },
+        {
+            "name": "Lying_Machine_Squat"
+        },
+        {
+            "name": "Lying_One-Arm_Lateral_Raise"
+        },
+        {
+            "name": "Lying_Prone_Quadriceps"
+        },
+        {
+            "name": "Lying_Rear_Delt_Raise"
+        },
+        {
+            "name": "Lying_Supine_Dumbbell_Curl"
+        },
+        {
+            "name": "Lying_T-Bar_Row"
+        },
+        {
+            "name": "Lying_Triceps_Press"
+        },
+        {
+            "name": "Machine_Bench_Press"
+        },
+        {
+            "name": "Machine_Bicep_Curl"
+        },
+        {
+            "name": "Machine_Preacher_Curls"
+        },
+        {
+            "name": "Machine_Shoulder_(Military)_Press"
+        },
+        {
+            "name": "Machine_Triceps_Extension"
+        },
+        {
+            "name": "Medicine_Ball_Chest_Pass"
+        },
+        {
+            "name": "Medicine_Ball_Full_Twist"
+        },
+        {
+            "name": "Medicine_Ball_Scoop_Throw"
+        },
+        {
+            "name": "Middle_Back_Shrug"
+        },
+        {
+            "name": "Middle_Back_Stretch"
+        },
+        {
+            "name": "Mixed_Grip_Chin"
+        },
+        {
+            "name": "Monster_Walk"
+        },
+        {
+            "name": "Mountain_Climbers"
+        },
+        {
+            "name": "Moving_Claw_Series"
+        },
+        {
+            "name": "Muscle_Snatch"
+        },
+        {
+            "name": "Muscle_Up"
+        },
+        {
+            "name": "Narrow_Stance_Hack_Squats"
+        },
+        {
+            "name": "Narrow_Stance_Leg_Press"
+        },
+        {
+            "name": "Narrow_Stance_Squats"
+        },
+        {
+            "name": "Natural_Glute_Ham_Raise"
+        },
+        {
+            "name": "Neck-SMR"
+        },
+        {
+            "name": "Neck_Press"
+        },
+        {
+            "name": "Oblique_Crunches"
+        },
+        {
+            "name": "Oblique_Crunches_-_On_The_Floor"
+        },
+        {
+            "name": "Olympic_Squat"
+        },
+        {
+            "name": "On-Your-Back_Quad_Stretch"
+        },
+        {
+            "name": "On_Your_Side_Quad_Stretch"
+        },
+        {
+            "name": "One-Arm_Dumbbell_Row"
+        },
+        {
+            "name": "One-Arm_Flat_Bench_Dumbbell_Flye"
+        },
+        {
+            "name": "One-Arm_High-Pulley_Cable_Side_Bends"
+        },
+        {
+            "name": "One-Arm_Incline_Lateral_Raise"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Clean"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Clean_and_Jerk"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Floor_Press"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Jerk"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Military_Press_To_The_Side"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Para_Press"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Push_Press"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Row"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Snatch"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Split_Jerk"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Split_Snatch"
+        },
+        {
+            "name": "One-Arm_Kettlebell_Swings"
+        },
+        {
+            "name": "One-Arm_Long_Bar_Row"
+        },
+        {
+            "name": "One-Arm_Medicine_Ball_Slam"
+        },
+        {
+            "name": "One-Arm_Open_Palm_Kettlebell_Clean"
+        },
+        {
+            "name": "One-Arm_Overhead_Kettlebell_Squats"
+        },
+        {
+            "name": "One-Arm_Side_Deadlift"
+        },
+        {
+            "name": "One-Arm_Side_Laterals"
+        },
+        {
+            "name": "One-Legged_Cable_Kickback"
+        },
+        {
+            "name": "One_Arm_Against_Wall"
+        },
+        {
+            "name": "One_Arm_Chin-Up"
+        },
+        {
+            "name": "One_Arm_Dumbbell_Bench_Press"
+        },
+        {
+            "name": "One_Arm_Dumbbell_Preacher_Curl"
+        },
+        {
+            "name": "One_Arm_Floor_Press"
+        },
+        {
+            "name": "One_Arm_Lat_Pulldown"
+        },
+        {
+            "name": "One_Arm_Pronated_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "One_Arm_Supinated_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "One_Half_Locust"
+        },
+        {
+            "name": "One_Handed_Hang"
+        },
+        {
+            "name": "One_Knee_To_Chest"
+        },
+        {
+            "name": "One_Leg_Barbell_Squat"
+        },
+        {
+            "name": "Open_Palm_Kettlebell_Clean"
+        },
+        {
+            "name": "Otis-Up"
+        },
+        {
+            "name": "Overhead_Cable_Curl"
+        },
+        {
+            "name": "Overhead_Lat"
+        },
+        {
+            "name": "Overhead_Slam"
+        },
+        {
+            "name": "Overhead_Squat"
+        },
+        {
+            "name": "Overhead_Stretch"
+        },
+        {
+            "name": "Overhead_Triceps"
+        },
+        {
+            "name": "Pallof_Press"
+        },
+        {
+            "name": "Pallof_Press_With_Rotation"
+        },
+        {
+            "name": "Palms-Down_Dumbbell_Wrist_Curl_Over_A_Bench"
+        },
+        {
+            "name": "Palms-Down_Wrist_Curl_Over_A_Bench"
+        },
+        {
+            "name": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench"
+        },
+        {
+            "name": "Palms-Up_Dumbbell_Wrist_Curl_Over_A_Bench"
+        },
+        {
+            "name": "Parallel_Bar_Dip"
+        },
+        {
+            "name": "Pelvic_Tilt_Into_Bridge"
+        },
+        {
+            "name": "Peroneals-SMR"
+        },
+        {
+            "name": "Peroneals_Stretch"
+        },
+        {
+            "name": "Physioball_Hip_Bridge"
+        },
+        {
+            "name": "Pin_Presses"
+        },
+        {
+            "name": "Piriformis-SMR"
+        },
+        {
+            "name": "Plank"
+        },
+        {
+            "name": "Plate_Pinch"
+        },
+        {
+            "name": "Plate_Twist"
+        },
+        {
+            "name": "Platform_Hamstring_Slides"
+        },
+        {
+            "name": "Plie_Dumbbell_Squat"
+        },
+        {
+            "name": "Plyo_Kettlebell_Pushups"
+        },
+        {
+            "name": "Plyo_Push-up"
+        },
+        {
+            "name": "Posterior_Tibialis_Stretch"
+        },
+        {
+            "name": "Power_Clean"
+        },
+        {
+            "name": "Power_Clean_from_Blocks"
+        },
+        {
+            "name": "Power_Jerk"
+        },
+        {
+            "name": "Power_Partials"
+        },
+        {
+            "name": "Power_Snatch"
+        },
+        {
+            "name": "Power_Snatch_from_Blocks"
+        },
+        {
+            "name": "Power_Stairs"
+        },
+        {
+            "name": "Preacher_Curl"
+        },
+        {
+            "name": "Preacher_Hammer_Dumbbell_Curl"
+        },
+        {
+            "name": "Press_Sit-Up"
+        },
+        {
+            "name": "Prone_Manual_Hamstring"
+        },
+        {
+            "name": "Prowler_Sprint"
+        },
+        {
+            "name": "Pull_Through"
+        },
+        {
+            "name": "Pullups"
+        },
+        {
+            "name": "Push-Up_Wide"
+        },
+        {
+            "name": "Push-Ups_-_Close_Triceps_Position"
+        },
+        {
+            "name": "Push-Ups_With_Feet_Elevated"
+        },
+        {
+            "name": "Push-Ups_With_Feet_On_An_Exercise_Ball"
+        },
+        {
+            "name": "Push_Press"
+        },
+        {
+            "name": "Push_Press_-_Behind_the_Neck"
+        },
+        {
+            "name": "Push_Up_to_Side_Plank"
+        },
+        {
+            "name": "Pushups"
+        },
+        {
+            "name": "Pushups_(Close_and_Wide_Hand_Positions)"
+        },
+        {
+            "name": "Pyramid"
+        },
+        {
+            "name": "Quad_Stretch"
+        },
+        {
+            "name": "Quadriceps-SMR"
+        },
+        {
+            "name": "Quick_Leap"
+        },
+        {
+            "name": "Rack_Delivery"
+        },
+        {
+            "name": "Rack_Pull_with_Bands"
+        },
+        {
+            "name": "Rack_Pulls"
+        },
+        {
+            "name": "Rear_Leg_Raises"
+        },
+        {
+            "name": "Recumbent_Bike"
+        },
+        {
+            "name": "Return_Push_from_Stance"
+        },
+        {
+            "name": "Reverse_Band_Bench_Press"
+        },
+        {
+            "name": "Reverse_Band_Box_Squat"
+        },
+        {
+            "name": "Reverse_Band_Deadlift"
+        },
+        {
+            "name": "Reverse_Band_Power_Squat"
+        },
+        {
+            "name": "Reverse_Band_Sumo_Deadlift"
+        },
+        {
+            "name": "Reverse_Barbell_Curl"
+        },
+        {
+            "name": "Reverse_Barbell_Preacher_Curls"
+        },
+        {
+            "name": "Reverse_Cable_Curl"
+        },
+        {
+            "name": "Reverse_Crunch"
+        },
+        {
+            "name": "Reverse_Flyes"
+        },
+        {
+            "name": "Reverse_Flyes_With_External_Rotation"
+        },
+        {
+            "name": "Reverse_Grip_Bent-Over_Rows"
+        },
+        {
+            "name": "Reverse_Grip_Triceps_Pushdown"
+        },
+        {
+            "name": "Reverse_Hyperextension"
+        },
+        {
+            "name": "Reverse_Machine_Flyes"
+        },
+        {
+            "name": "Reverse_Plate_Curls"
+        },
+        {
+            "name": "Reverse_Triceps_Bench_Press"
+        },
+        {
+            "name": "Rhomboids-SMR"
+        },
+        {
+            "name": "Rickshaw_Carry"
+        },
+        {
+            "name": "Rickshaw_Deadlift"
+        },
+        {
+            "name": "Ring_Dips"
+        },
+        {
+            "name": "Rocket_Jump"
+        },
+        {
+            "name": "Rocking_Standing_Calf_Raise"
+        },
+        {
+            "name": "Rocky_Pull-Ups_Pulldowns"
+        },
+        {
+            "name": "Romanian_Deadlift"
+        },
+        {
+            "name": "Romanian_Deadlift_from_Deficit"
+        },
+        {
+            "name": "Rope_Climb"
+        },
+        {
+            "name": "Rope_Crunch"
+        },
+        {
+            "name": "Rope_Jumping"
+        },
+        {
+            "name": "Rope_Straight-Arm_Pulldown"
+        },
+        {
+            "name": "Round_The_World_Shoulder_Stretch"
+        },
+        {
+            "name": "Rowing,_Stationary"
+        },
+        {
+            "name": "Runner's_Stretch"
+        },
+        {
+            "name": "Running,_Treadmill"
+        },
+        {
+            "name": "Russian_Twist"
+        },
+        {
+            "name": "Sandbag_Load"
+        },
+        {
+            "name": "Scapular_Pull-Up"
+        },
+        {
+            "name": "Scissor_Kick"
+        },
+        {
+            "name": "Scissors_Jump"
+        },
+        {
+            "name": "Seated_Band_Hamstring_Curl"
+        },
+        {
+            "name": "Seated_Barbell_Military_Press"
+        },
+        {
+            "name": "Seated_Barbell_Twist"
+        },
+        {
+            "name": "Seated_Bent-Over_One-Arm_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Seated_Bent-Over_Rear_Delt_Raise"
+        },
+        {
+            "name": "Seated_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Seated_Biceps"
+        },
+        {
+            "name": "Seated_Cable_Rows"
+        },
+        {
+            "name": "Seated_Cable_Shoulder_Press"
+        },
+        {
+            "name": "Seated_Calf_Raise"
+        },
+        {
+            "name": "Seated_Calf_Stretch"
+        },
+        {
+            "name": "Seated_Close-Grip_Concentration_Barbell_Curl"
+        },
+        {
+            "name": "Seated_Dumbbell_Curl"
+        },
+        {
+            "name": "Seated_Dumbbell_Inner_Biceps_Curl"
+        },
+        {
+            "name": "Seated_Dumbbell_Palms-Down_Wrist_Curl"
+        },
+        {
+            "name": "Seated_Dumbbell_Palms-Up_Wrist_Curl"
+        },
+        {
+            "name": "Seated_Dumbbell_Press"
+        },
+        {
+            "name": "Seated_Flat_Bench_Leg_Pull-In"
+        },
+        {
+            "name": "Seated_Floor_Hamstring_Stretch"
+        },
+        {
+            "name": "Seated_Front_Deltoid"
+        },
+        {
+            "name": "Seated_Glute"
+        },
+        {
+            "name": "Seated_Good_Mornings"
+        },
+        {
+            "name": "Seated_Hamstring"
+        },
+        {
+            "name": "Seated_Hamstring_and_Calf_Stretch"
+        },
+        {
+            "name": "Seated_Head_Harness_Neck_Resistance"
+        },
+        {
+            "name": "Seated_Leg_Curl"
+        },
+        {
+            "name": "Seated_Leg_Tucks"
+        },
+        {
+            "name": "Seated_One-Arm_Dumbbell_Palms-Down_Wrist_Curl"
+        },
+        {
+            "name": "Seated_One-Arm_Dumbbell_Palms-Up_Wrist_Curl"
+        },
+        {
+            "name": "Seated_One-arm_Cable_Pulley_Rows"
+        },
+        {
+            "name": "Seated_Overhead_Stretch"
+        },
+        {
+            "name": "Seated_Palm-Up_Barbell_Wrist_Curl"
+        },
+        {
+            "name": "Seated_Palms-Down_Barbell_Wrist_Curl"
+        },
+        {
+            "name": "Seated_Side_Lateral_Raise"
+        },
+        {
+            "name": "Seated_Triceps_Press"
+        },
+        {
+            "name": "Seated_Two-Arm_Palms-Up_Low-Pulley_Wrist_Curl"
+        },
+        {
+            "name": "See-Saw_Press_(Alternating_Side_Press)"
+        },
+        {
+            "name": "Shotgun_Row"
+        },
+        {
+            "name": "Shoulder_Circles"
+        },
+        {
+            "name": "Shoulder_Press_-_With_Bands"
+        },
+        {
+            "name": "Shoulder_Raise"
+        },
+        {
+            "name": "Shoulder_Stretch"
+        },
+        {
+            "name": "Side-Lying_Floor_Stretch"
+        },
+        {
+            "name": "Side_Bridge"
+        },
+        {
+            "name": "Side_Hop-Sprint"
+        },
+        {
+            "name": "Side_Jackknife"
+        },
+        {
+            "name": "Side_Lateral_Raise"
+        },
+        {
+            "name": "Side_Laterals_to_Front_Raise"
+        },
+        {
+            "name": "Side_Leg_Raises"
+        },
+        {
+            "name": "Side_Lying_Groin_Stretch"
+        },
+        {
+            "name": "Side_Neck_Stretch"
+        },
+        {
+            "name": "Side_Standing_Long_Jump"
+        },
+        {
+            "name": "Side_To_Side_Chins"
+        },
+        {
+            "name": "Side_Wrist_Pull"
+        },
+        {
+            "name": "Side_to_Side_Box_Shuffle"
+        },
+        {
+            "name": "Single-Arm_Cable_Crossover"
+        },
+        {
+            "name": "Single-Arm_Linear_Jammer"
+        },
+        {
+            "name": "Single-Arm_Push-Up"
+        },
+        {
+            "name": "Single-Cone_Sprint_Drill"
+        },
+        {
+            "name": "Single-Leg_High_Box_Squat"
+        },
+        {
+            "name": "Single-Leg_Hop_Progression"
+        },
+        {
+            "name": "Single-Leg_Lateral_Hop"
+        },
+        {
+            "name": "Single-Leg_Leg_Extension"
+        },
+        {
+            "name": "Single-Leg_Stride_Jump"
+        },
+        {
+            "name": "Single_Dumbbell_Raise"
+        },
+        {
+            "name": "Single_Leg_Butt_Kick"
+        },
+        {
+            "name": "Single_Leg_Glute_Bridge"
+        },
+        {
+            "name": "Single_Leg_Push-off"
+        },
+        {
+            "name": "Sit-Up"
+        },
+        {
+            "name": "Sit_Squats"
+        },
+        {
+            "name": "Skating"
+        },
+        {
+            "name": "Sled_Drag_-_Harness"
+        },
+        {
+            "name": "Sled_Overhead_Backward_Walk"
+        },
+        {
+            "name": "Sled_Overhead_Triceps_Extension"
+        },
+        {
+            "name": "Sled_Push"
+        },
+        {
+            "name": "Sled_Reverse_Flye"
+        },
+        {
+            "name": "Sled_Row"
+        },
+        {
+            "name": "Sledgehammer_Swings"
+        },
+        {
+            "name": "Smith_Incline_Shoulder_Raise"
+        },
+        {
+            "name": "Smith_Machine_Behind_the_Back_Shrug"
+        },
+        {
+            "name": "Smith_Machine_Bench_Press"
+        },
+        {
+            "name": "Smith_Machine_Bent_Over_Row"
+        },
+        {
+            "name": "Smith_Machine_Calf_Raise"
+        },
+        {
+            "name": "Smith_Machine_Close-Grip_Bench_Press"
+        },
+        {
+            "name": "Smith_Machine_Decline_Press"
+        },
+        {
+            "name": "Smith_Machine_Hang_Power_Clean"
+        },
+        {
+            "name": "Smith_Machine_Hip_Raise"
+        },
+        {
+            "name": "Smith_Machine_Incline_Bench_Press"
+        },
+        {
+            "name": "Smith_Machine_Leg_Press"
+        },
+        {
+            "name": "Smith_Machine_One-Arm_Upright_Row"
+        },
+        {
+            "name": "Smith_Machine_Overhead_Shoulder_Press"
+        },
+        {
+            "name": "Smith_Machine_Pistol_Squat"
+        },
+        {
+            "name": "Smith_Machine_Reverse_Calf_Raises"
+        },
+        {
+            "name": "Smith_Machine_Squat"
+        },
+        {
+            "name": "Smith_Machine_Stiff-Legged_Deadlift"
+        },
+        {
+            "name": "Smith_Machine_Upright_Row"
+        },
+        {
+            "name": "Smith_Single-Leg_Split_Squat"
+        },
+        {
+            "name": "Snatch"
+        },
+        {
+            "name": "Snatch_Balance"
+        },
+        {
+            "name": "Snatch_Deadlift"
+        },
+        {
+            "name": "Snatch_Pull"
+        },
+        {
+            "name": "Snatch_Shrug"
+        },
+        {
+            "name": "Snatch_from_Blocks"
+        },
+        {
+            "name": "Speed_Band_Overhead_Triceps"
+        },
+        {
+            "name": "Speed_Box_Squat"
+        },
+        {
+            "name": "Speed_Squats"
+        },
+        {
+            "name": "Spell_Caster"
+        },
+        {
+            "name": "Spider_Crawl"
+        },
+        {
+            "name": "Spider_Curl"
+        },
+        {
+            "name": "Spinal_Stretch"
+        },
+        {
+            "name": "Split_Clean"
+        },
+        {
+            "name": "Split_Jerk"
+        },
+        {
+            "name": "Split_Jump"
+        },
+        {
+            "name": "Split_Snatch"
+        },
+        {
+            "name": "Split_Squat_with_Dumbbells"
+        },
+        {
+            "name": "Split_Squats"
+        },
+        {
+            "name": "Squat_Jerk"
+        },
+        {
+            "name": "Squat_with_Bands"
+        },
+        {
+            "name": "Squat_with_Chains"
+        },
+        {
+            "name": "Squat_with_Plate_Movers"
+        },
+        {
+            "name": "Squats_-_With_Bands"
+        },
+        {
+            "name": "Stairmaster"
+        },
+        {
+            "name": "Standing_Alternating_Dumbbell_Press"
+        },
+        {
+            "name": "Standing_Barbell_Calf_Raise"
+        },
+        {
+            "name": "Standing_Barbell_Press_Behind_Neck"
+        },
+        {
+            "name": "Standing_Bent-Over_One-Arm_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Bent-Over_Two-Arm_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Biceps_Cable_Curl"
+        },
+        {
+            "name": "Standing_Biceps_Stretch"
+        },
+        {
+            "name": "Standing_Bradford_Press"
+        },
+        {
+            "name": "Standing_Cable_Chest_Press"
+        },
+        {
+            "name": "Standing_Cable_Lift"
+        },
+        {
+            "name": "Standing_Cable_Wood_Chop"
+        },
+        {
+            "name": "Standing_Calf_Raises"
+        },
+        {
+            "name": "Standing_Concentration_Curl"
+        },
+        {
+            "name": "Standing_Dumbbell_Calf_Raise"
+        },
+        {
+            "name": "Standing_Dumbbell_Press"
+        },
+        {
+            "name": "Standing_Dumbbell_Reverse_Curl"
+        },
+        {
+            "name": "Standing_Dumbbell_Straight-Arm_Front_Delt_Raise_Above_Head"
+        },
+        {
+            "name": "Standing_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Dumbbell_Upright_Row"
+        },
+        {
+            "name": "Standing_Elevated_Quad_Stretch"
+        },
+        {
+            "name": "Standing_Front_Barbell_Raise_Over_Head"
+        },
+        {
+            "name": "Standing_Gastrocnemius_Calf_Stretch"
+        },
+        {
+            "name": "Standing_Hamstring_and_Calf_Stretch"
+        },
+        {
+            "name": "Standing_Hip_Circles"
+        },
+        {
+            "name": "Standing_Hip_Flexors"
+        },
+        {
+            "name": "Standing_Inner-Biceps_Curl"
+        },
+        {
+            "name": "Standing_Lateral_Stretch"
+        },
+        {
+            "name": "Standing_Leg_Curl"
+        },
+        {
+            "name": "Standing_Long_Jump"
+        },
+        {
+            "name": "Standing_Low-Pulley_Deltoid_Raise"
+        },
+        {
+            "name": "Standing_Low-Pulley_One-Arm_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Military_Press"
+        },
+        {
+            "name": "Standing_Olympic_Plate_Hand_Squeeze"
+        },
+        {
+            "name": "Standing_One-Arm_Cable_Curl"
+        },
+        {
+            "name": "Standing_One-Arm_Dumbbell_Curl_Over_Incline_Bench"
+        },
+        {
+            "name": "Standing_One-Arm_Dumbbell_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Overhead_Barbell_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Palm-In_One-Arm_Dumbbell_Press"
+        },
+        {
+            "name": "Standing_Palms-In_Dumbbell_Press"
+        },
+        {
+            "name": "Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl"
+        },
+        {
+            "name": "Standing_Pelvic_Tilt"
+        },
+        {
+            "name": "Standing_Rope_Crunch"
+        },
+        {
+            "name": "Standing_Soleus_And_Achilles_Stretch"
+        },
+        {
+            "name": "Standing_Toe_Touches"
+        },
+        {
+            "name": "Standing_Towel_Triceps_Extension"
+        },
+        {
+            "name": "Standing_Two-Arm_Overhead_Throw"
+        },
+        {
+            "name": "Star_Jump"
+        },
+        {
+            "name": "Step-up_with_Knee_Raise"
+        },
+        {
+            "name": "Step_Mill"
+        },
+        {
+            "name": "Stiff-Legged_Barbell_Deadlift"
+        },
+        {
+            "name": "Stiff-Legged_Dumbbell_Deadlift"
+        },
+        {
+            "name": "Stiff_Leg_Barbell_Good_Morning"
+        },
+        {
+            "name": "Stomach_Vacuum"
+        },
+        {
+            "name": "Straight-Arm_Dumbbell_Pullover"
+        },
+        {
+            "name": "Straight-Arm_Pulldown"
+        },
+        {
+            "name": "Straight_Bar_Bench_Mid_Rows"
+        },
+        {
+            "name": "Straight_Raises_on_Incline_Bench"
+        },
+        {
+            "name": "Stride_Jump_Crossover"
+        },
+        {
+            "name": "Sumo_Deadlift"
+        },
+        {
+            "name": "Sumo_Deadlift_with_Bands"
+        },
+        {
+            "name": "Sumo_Deadlift_with_Chains"
+        },
+        {
+            "name": "Superman"
+        },
+        {
+            "name": "Supine_Chest_Throw"
+        },
+        {
+            "name": "Supine_One-Arm_Overhead_Throw"
+        },
+        {
+            "name": "Supine_Two-Arm_Overhead_Throw"
+        },
+        {
+            "name": "Suspended_Fallout"
+        },
+        {
+            "name": "Suspended_Push-Up"
+        },
+        {
+            "name": "Suspended_Reverse_Crunch"
+        },
+        {
+            "name": "Suspended_Row"
+        },
+        {
+            "name": "Suspended_Split_Squat"
+        },
+        {
+            "name": "Svend_Press"
+        },
+        {
+            "name": "T-Bar_Row_with_Handle"
+        },
+        {
+            "name": "Tate_Press"
+        },
+        {
+            "name": "The_Straddle"
+        },
+        {
+            "name": "Thigh_Abductor"
+        },
+        {
+            "name": "Thigh_Adductor"
+        },
+        {
+            "name": "Tire_Flip"
+        },
+        {
+            "name": "Toe_Touchers"
+        },
+        {
+            "name": "Torso_Rotation"
+        },
+        {
+            "name": "Trail_Running_Walking"
+        },
+        {
+            "name": "Trap_Bar_Deadlift"
+        },
+        {
+            "name": "Tricep_Dumbbell_Kickback"
+        },
+        {
+            "name": "Tricep_Side_Stretch"
+        },
+        {
+            "name": "Triceps_Overhead_Extension_with_Rope"
+        },
+        {
+            "name": "Triceps_Pushdown"
+        },
+        {
+            "name": "Triceps_Pushdown_-_Rope_Attachment"
+        },
+        {
+            "name": "Triceps_Pushdown_-_V-Bar_Attachment"
+        },
+        {
+            "name": "Triceps_Stretch"
+        },
+        {
+            "name": "Tuck_Crunch"
+        },
+        {
+            "name": "Two-Arm_Dumbbell_Preacher_Curl"
+        },
+        {
+            "name": "Two-Arm_Kettlebell_Clean"
+        },
+        {
+            "name": "Two-Arm_Kettlebell_Jerk"
+        },
+        {
+            "name": "Two-Arm_Kettlebell_Military_Press"
+        },
+        {
+            "name": "Two-Arm_Kettlebell_Row"
+        },
+        {
+            "name": "Underhand_Cable_Pulldowns"
+        },
+        {
+            "name": "Upper_Back-Leg_Grab"
+        },
+        {
+            "name": "Upper_Back_Stretch"
+        },
+        {
+            "name": "Upright_Barbell_Row"
+        },
+        {
+            "name": "Upright_Cable_Row"
+        },
+        {
+            "name": "Upright_Row_-_With_Bands"
+        },
+        {
+            "name": "Upward_Stretch"
+        },
+        {
+            "name": "V-Bar_Pulldown"
+        },
+        {
+            "name": "V-Bar_Pullup"
+        },
+        {
+            "name": "Vertical_Swing"
+        },
+        {
+            "name": "Walking,_Treadmill"
+        },
+        {
+            "name": "Weighted_Ball_Hyperextension"
+        },
+        {
+            "name": "Weighted_Ball_Side_Bend"
+        },
+        {
+            "name": "Weighted_Bench_Dip"
+        },
+        {
+            "name": "Weighted_Crunches"
+        },
+        {
+            "name": "Weighted_Jump_Squat"
+        },
+        {
+            "name": "Weighted_Pull_Ups"
+        },
+        {
+            "name": "Weighted_Sissy_Squat"
+        },
+        {
+            "name": "Weighted_Sit-Ups_-_With_Bands"
+        },
+        {
+            "name": "Weighted_Squat"
+        },
+        {
+            "name": "Wide-Grip_Barbell_Bench_Press"
+        },
+        {
+            "name": "Wide-Grip_Decline_Barbell_Bench_Press"
+        },
+        {
+            "name": "Wide-Grip_Decline_Barbell_Pullover"
+        },
+        {
+            "name": "Wide-Grip_Lat_Pulldown"
+        },
+        {
+            "name": "Wide-Grip_Pulldown_Behind_The_Neck"
+        },
+        {
+            "name": "Wide-Grip_Rear_Pull-Up"
+        },
+        {
+            "name": "Wide-Grip_Standing_Barbell_Curl"
+        },
+        {
+            "name": "Wide_Stance_Barbell_Squat"
+        },
+        {
+            "name": "Wide_Stance_Stiff_Legs"
+        },
+        {
+            "name": "Wind_Sprints"
+        },
+        {
+            "name": "Windmills"
+        },
+        {
+            "name": "World's_Greatest_Stretch"
+        },
+        {
+            "name": "Wrist_Circles"
+        },
+        {
+            "name": "Wrist_Roller"
+        },
+        {
+            "name": "Wrist_Rotations_with_Straight_Bar"
+        },
+        {
+            "name": "Yoke_Walk"
+        },
+        {
+            "name": "Zercher_Squats"
+        },
+        {
+            "name": "Zottman_Curl"
+        },
+        {
+            "name": "Zottman_Preacher_Curl"
+        }
+]
