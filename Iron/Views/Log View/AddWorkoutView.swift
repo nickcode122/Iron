@@ -40,8 +40,27 @@ struct AddWorkoutView: View {
         newWorkout.id = UUID()
         newWorkout.name = name
         newWorkout.date = selectedDate
+        addDefaultCategories(workout: newWorkout)
         PersistenceController.shared.save()
         dismiss()
+    }
+    
+    func addDefaultCategories(workout: Workout) {
+        let newCategory = ExerciseEntityCategory(context: moc)
+        newCategory.name = "Warm-up"
+        newCategory.workout = workout
+        newCategory.id = UUID()
+        newCategory.order = 1
+        let newCategory2 = ExerciseEntityCategory(context: moc)
+        newCategory2.name = "Main"
+        newCategory2.workout = workout
+        newCategory2.id = UUID()
+        newCategory2.order = 2
+        let newCategory3 = ExerciseEntityCategory(context: moc)
+        newCategory3.name = "Cooldown"
+        newCategory3.workout = workout
+        newCategory3.id = UUID()
+        newCategory3.order = 3
     }
 }
 

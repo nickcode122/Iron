@@ -15,3 +15,10 @@ public class Exercise: NSManagedObject {
     
 
 }
+extension Exercise {
+    //@NSManaged public var name: String?
+    public var strName: String {
+        get {name ?? "Unknown Name"}
+        set {name = newValue}
+    }
+}
