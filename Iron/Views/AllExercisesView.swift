@@ -82,7 +82,7 @@ struct AllExercisesView: View {
         newExercise.name = exercise.strName
         newExercise.workout = workout
         newExercise.id = UUID()
-        newExercise.tag = "main"
+        newExercise.category = workout?.exerciseCategories[1]
         let defaultSet = ESet(context: moc)
         defaultSet.exerciseEntity = newExercise
         defaultSet.set = 1

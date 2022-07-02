@@ -30,6 +30,15 @@ extension Workout {
             $0.wrappedName < $1.wrappedName
         }
     }
+    
+    //@NSManaged public var exerciseEntityCategory: NSSet?
+    public var exerciseCategories: [ExerciseEntityCategory] {
+        let set = exerciseEntityCategory as? Set<ExerciseEntityCategory> ?? []
+        return set.sorted {
+            $0.order < $1.order
+        }
+    }
+ 
     //@NSManaged public var date: Date?
     public var wrappedDate: Date {
         get { date ?? Date() }

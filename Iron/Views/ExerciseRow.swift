@@ -2,23 +2,33 @@
 //  ExerciseRow.swift
 //  Iron
 //
-//  Created by Nick Schwab on 6/30/22.
+//  Created by Nick Schwab on 7/1/22.
 //
 
 import SwiftUI
 
 struct ExerciseRow: View {
     @ObservedObject var exercise: ExerciseEntity
-    @Binding var updater: Bool
+    @ObservedObject var category: ExerciseEntityCategory
+    @ObservedObject var workout: Workout
     
-    init(_ exercise: ExerciseEntity, _ updater: Binding<Bool>) {
-        self.exercise = exercise
-        self._updater = updater
-    }
+    @Environment(\.managedObjectContext) var moc
     var body: some View {
+        if categoryMatches {
+            exerciseNavigationRow
+            .contextMenu { categoryButtons }
+        }
+    }
+    
+    func changeCategory (category: ExerciseEntityCategory) {
+        exercise.category = category
+        PersistenceController.shared.save()
+    }
+    
+    var exerciseNavigationRow: some View {
         NavigationButton(
-            action: {UIApplication.shared.endEditing()},
-            destination: {SetView(exercise: exercise)},
+            action: { UIApplication.shared.endEditing() },
+            destination: { SetView(exercise: exercise) },
             label: {
                 VStack(alignment: .leading) {
                     Text(exercise.wrappedName).font(.headline)
@@ -27,18 +37,15 @@ struct ExerciseRow: View {
             }
         )
         .foregroundColor(.primary)
-        .contextMenu {
-            Button ("Warmup") {exercise.tag = "warmup"
-                updater.toggle()
-            }
-            Button ("Main") {exercise.tag = "main"
-                updater.toggle()
-            }
-            Button ("Cooldown") {
-                exercise.tag = "cooldown"
-                updater.toggle()
-                
-            }
+    }
+    
+    var categoryButtons: some View {
+        ForEach(workout.exerciseCategories) {category in
+            Button (category.strName) {changeCategory(category: category)}
         }
+    }
+    
+    var categoryMatches: Bool {
+        return exercise.category == category
     }
 }
