@@ -14,6 +14,8 @@ struct WorkoutRow: View {
     @Binding var selectedWorkout: Workout?
     @Binding private var selectedDate: Date
     
+    @State private var showingConfirmation = false
+    
     init(_ workout: Workout, _ selectedWorkout: Binding<Workout?>, _ selectedDate: Binding<Date>) {
         self.workout = workout
         self._selectedWorkout = selectedWorkout
@@ -29,9 +31,12 @@ struct WorkoutRow: View {
                 }
             }
             .swipeActions {
-                deleteButton(workout)
-                editButton(workout)
+                deleteButton
+                editButton
                     .tint(.yellow)
+            }
+            .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
+                confirmationButtons
             }
         }
     }
@@ -41,28 +46,32 @@ struct WorkoutRow: View {
         return sameDay
     }
     
-    private func editButton(_ workout: Workout) -> some View {
-        Button {
-            editWorkout(workout)
-        } label: {
+    private var editButton: some View {
+        Button(action: editWorkout) {
             Label("Edit", systemImage: "pencil")
         }
     }
     
-    private func deleteButton(_ workout: Workout) -> some View {
-        Button(role: .destructive) {
-            deleteWorkout(workout)
-        } label: {
+    private var deleteButton: some View {
+        Button(role: .destructive, action: showConfirmation) {
             Label("Delete", systemImage: "trash.fill")
         }
     }
-    
-    private func deleteWorkout(_ workout: Workout) {
+    private var confirmationButtons: some View {
+        Group {
+            Button("Cancel", role: .cancel) { }
+            Button("Delete", role: .destructive, action: deleteWorkout)
+        }
+    }
+    private func deleteWorkout() {
         moc.delete(workout)
         PersistenceController.shared.save()
     }
-    private func editWorkout(_ workout: Workout) {
+    private func editWorkout() {
         selectedWorkout = workout
+    }
+    private func showConfirmation() {
+        showingConfirmation.toggle()
     }
 }
 
