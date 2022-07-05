@@ -58,7 +58,7 @@ struct ExerciseView: View {
     
     var newWorkoutButton: some View {
         Button (action: showSheet) {
-            Label("New Workout", systemImage: "plus")
+            Label("Edit", systemImage: "plus")
         }
     }
     

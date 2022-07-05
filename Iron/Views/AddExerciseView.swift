@@ -14,20 +14,12 @@ struct AddExerciseView: View {
     @State private var exerciseName = ""
     @State private var selectedCategory = ""
     
-    //@FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var allCategories: FetchedResults<ExerciseEntityCategory>
-    
     let exercises: [Exercise]
-    //let categories: [ExerciseEntityCategory]
     var body: some View {
         
         Form {
             TextField("Exercise Name", text: $exerciseName)
                 .multilineTextAlignment(.center)
-//            Picker("Choose a category", selection: $selectedCategory) {
-//                ForEach(categories, id: \.self) { category in
-//                    Text(category.strName)
-//                }
-//            }
             Button("Add Exercise") {addExercise()}
                 .frame(maxWidth: .infinity, alignment: .center)
                 .disabled(!isUnique)
@@ -47,13 +39,6 @@ struct AddExerciseView: View {
     var isUnique: Bool {
         !uniqueExerciseNames.contains(exerciseName)
     }
-//    var categories: [ExerciseEntityCategory] {
-//        var categories = [ExerciseEntityCategory]()
-//        for category in allCategories {
-//            categories.append(category)
-//        }
-//        return categories
-//    }
     func addExercise () {
         let newExercise = Exercise(context: moc)
         newExercise.name = exerciseName

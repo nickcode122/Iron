@@ -16,7 +16,8 @@ public class Workout: NSManagedObject {
 extension Workout {
     //@NSManaged public var name: String?
     public var wrappedName: String {
-        name ?? "Unknown Name"
+        get { name ?? "Unknown Name" }
+        set { name = newValue }
     }
    // @NSManaged public var notes: String?
     public var strNotes: String {
@@ -42,5 +43,6 @@ extension Workout {
     //@NSManaged public var date: Date?
     public var wrappedDate: Date {
         get { date ?? Date() }
+        set { date = newValue }
     }
 }
