@@ -13,9 +13,16 @@ struct ExerciseRow: View {
     @ObservedObject var workout: Workout
     
     @Environment(\.managedObjectContext) var moc
+    
+    init(_ exercise: ExerciseEntity, _ category: ExerciseEntityCategory, _ workout: Workout) {
+        self.exercise = exercise
+        self.category = category
+        self.workout = workout
+    }
+    
     var body: some View {
         if categoryMatches {
-            exerciseNavigationRow
+            navigationButton
             .contextMenu { categoryButtons }
         }
     }
@@ -25,7 +32,7 @@ struct ExerciseRow: View {
         PersistenceController.shared.save()
     }
     
-    var exerciseNavigationRow: some View {
+    var navigationButton: some View {
         NavigationButton(
             action: { UIApplication.shared.endEditing() },
             destination: { SetView(exercise: exercise) },
