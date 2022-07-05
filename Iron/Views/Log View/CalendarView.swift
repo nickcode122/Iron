@@ -10,66 +10,50 @@ import SwiftUI
 struct CalendarView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var workouts: FetchedResults<Workout>
-    @Environment(\.managedObjectContext) var moc
     
     @State private var selectedDate = Date.now
     @State private var showingSheet = false
+    @State var selectedWorkout: Workout?
+    
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     DatePicker("Select a date",selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                         .datePickerStyle(.graphical)
+                    
                     Section {
-                        List {
-                            ForEach(workouts, id: \.self) { workout in
-                                if sameDay(workoutDate: workout.wrappedDate) {
-                                    NavigationLink(destination: ExerciseView(workout: workout)) {
-                                        VStack(alignment: .leading) {
-                                            Text(workout.wrappedName).font(.headline)
-                                            Text("Exercises: \(workout.exerciseEntity?.count ?? 0)").font(.caption)
-                                        }
-
-                                    }
-                                }
-                            }
-                            .onDelete(perform: removeWorkout)
+                        List(workouts, id: \.self) { workout in
+                            WorkoutRow(workout, $selectedWorkout, $selectedDate)
                         }
                     }
+                }
+                .fullScreenCover(item: $selectedWorkout,onDismiss: didDismiss) {workout in
+                    EditWorkoutView(workout: workout)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showingSheet.toggle()
-                    } label: {
-                        Label("Add Workout", systemImage: "plus")
-                    }
+                    addWorkoutButton
                 }
             }
             .navigationBarTitle(Text("Workouts"), displayMode: .inline)
-            .sheet(isPresented: $showingSheet) {
-                AddWorkoutView()
-            }
+            .sheet(isPresented: $showingSheet) { AddWorkoutView() }
         }
     }
     
-    private func sameDay(workoutDate: Date) -> Bool {
-        let sameDay = Calendar.current.isDate(selectedDate, equalTo: workoutDate, toGranularity: .day)
-        return sameDay
+    private var addWorkoutButton: some View {
+        Button(action: addWorkout) {
+            Label("Add Workout", systemImage: "plus")
+        }
+    }
+    func addWorkout() {
+        showingSheet.toggle()
+    }
+    private func didDismiss() {
+        selectedWorkout = nil
     }
     
-    private func removeWorkout(at offsets: IndexSet) {
-         for index in offsets {
-             let set = workouts[index]
-             moc.delete(set)
-             PersistenceController.shared.save()
-         }
-     }
 }
 
-struct CalendarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarView()
-    }
-}
+
