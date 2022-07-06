@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ExerciseRow: View {
+    @Environment(\.managedObjectContext) var moc
+    
     @ObservedObject var exercise: ExerciseEntity
     @ObservedObject var category: ExerciseEntityCategory
     @ObservedObject var workout: Workout
     
-    @Environment(\.managedObjectContext) var moc
+    @State private var showingConfirmation = false
     
     init(_ exercise: ExerciseEntity, _ category: ExerciseEntityCategory, _ workout: Workout) {
         self.exercise = exercise
@@ -22,8 +24,19 @@ struct ExerciseRow: View {
     
     var body: some View {
         if categoryMatches {
-            navigationButton
+            NavigationButton( action: { UIApplication.shared.endEditing() }, destination: { SetView(exercise: exercise) }, label: {
+                VStack(alignment: .leading) {
+                    Text(exercise.wrappedName).font(.headline)
+                    Text("Sets: \(exercise.eSet?.count ?? 0)").font(.caption)
+                }})
+            .foregroundColor(.primary)
             .contextMenu { categoryButtons }
+            .swipeActions {
+                deleteButton
+            }
+            .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
+                confirmDeleteButton
+            }
         }
     }
     
@@ -33,16 +46,11 @@ struct ExerciseRow: View {
     }
     
     var navigationButton: some View {
-        NavigationButton(
-            action: { UIApplication.shared.endEditing() },
-            destination: { SetView(exercise: exercise) },
-            label: {
-                VStack(alignment: .leading) {
-                    Text(exercise.wrappedName).font(.headline)
-                    Text("Sets: \(exercise.eSet?.count ?? 0)").font(.caption)
-                }
-            }
-        )
+        NavigationButton( action: { UIApplication.shared.endEditing() }, destination: { SetView(exercise: exercise) }, label: {
+            VStack(alignment: .leading) {
+                Text(exercise.wrappedName).font(.headline)
+                Text("Sets: \(exercise.eSet?.count ?? 0)").font(.caption)
+            }})
         .foregroundColor(.primary)
     }
     
@@ -54,5 +62,21 @@ struct ExerciseRow: View {
     
     var categoryMatches: Bool {
         return exercise.category == category
+    }
+    private var deleteButton:  some View {
+        Button(role: .destructive, action: { showingConfirmation.toggle()}) {
+            Label("Delete", systemImage: "trash.fill")
+        }
+    }
+    var confirmDeleteButton: some View {
+        Button("Delete", role: .destructive, action: { deleteExercise(exercise)} )
+    }
+    
+    func deleteExercise(_ exercise: ExerciseEntity) {
+        moc.delete(exercise)
+        PersistenceController.shared.save()
+    }
+    func editExercise() {
+        
     }
 }

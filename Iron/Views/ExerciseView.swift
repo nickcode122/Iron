@@ -22,12 +22,6 @@ struct ExerciseView: View {
                     Section ("\(category.strName)") {
                         ForEach (workout.exerciseArray, id: \.self) { exercise in
                             ExerciseRow(exercise,category, workout)
-                                .swipeActions {
-                                    deleteButton
-                                }
-                                .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
-                                    confirmationDialogButtons(exercise)
-                                }
                         }
                     }
                 }
@@ -62,22 +56,6 @@ struct ExerciseView: View {
             Button("Done") { UIApplication.shared.endEditing() }
         }
         
-    }
-    
-    func confirmationDialogButtons(_ exercise: ExerciseEntity) -> some View {
-        Group {
-            Button("Cancel", role: .cancel) { }
-            Button("Delete", role: .destructive, action: {deleteExercise(exercise)})
-        }
-    }
-    private var deleteButton: some View {
-        Button(role: .destructive, action: { showingConfirmation = true}) {
-            Label("Delete", systemImage: "trash.fill")
-        }
-    }
-    func deleteExercise(_ exercise: ExerciseEntity) {
-        moc.delete(exercise)
-        PersistenceController.shared.save()
     }
     func showSheet() {
         showingSheet.toggle()
