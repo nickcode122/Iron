@@ -12,10 +12,8 @@ struct ExerciseFilteredListRow: View {
     
     @ObservedObject var exercise: Exercise
     @State private var showingConfirmation = false
-    
-    init(_ exercise: Exercise) {
-        self.exercise = exercise
-    }
+    @State private var showingSheet = false
+
     var body: some View {
         NavigationLink(destination: EditExerciseView(exercise)) {
             Text(exercise.strName)
@@ -27,6 +25,9 @@ struct ExerciseFilteredListRow: View {
         .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
             confirmDeleteButton
         }
+        .sheet(isPresented: $showingSheet) {
+            EditExerciseView(exercise)
+        }
     }
     private var deleteButton:  some View {
         Button(role: .destructive, action: { showingConfirmation.toggle()}) {
@@ -35,7 +36,7 @@ struct ExerciseFilteredListRow: View {
     }
     private var editButton: some View {
         Button(action: editExercise) {
-            Label("Edit", systemImage: "pencil")
+            Label(exercise.strName, systemImage: "pencil")
         }
         .tint(.yellow)
     }
@@ -48,9 +49,8 @@ struct ExerciseFilteredListRow: View {
         moc.delete(exercise)
         PersistenceController.shared.save()
     }
-    
     func editExercise() {
-        
+        showingSheet.toggle()
     }
 
 }

@@ -7,7 +7,7 @@
 import CoreData
 import SwiftUI
 
-struct AddExerciseView: View {
+struct NewExerciseView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
@@ -23,8 +23,6 @@ struct AddExerciseView: View {
             Button("Add Exercise") {addExercise()}
                 .frame(maxWidth: .infinity, alignment: .center)
                 .disabled(!isUnique)
-            
-
         }
         
     }

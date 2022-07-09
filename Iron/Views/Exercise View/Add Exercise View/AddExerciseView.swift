@@ -1,30 +1,41 @@
 //
-//  ExerciseListView.swift
+//  AllExercisesView.swift
 //  Iron
 //
-//  Created by Nick Schwab on 7/6/22.
+//  Created by Nick Schwab on 6/16/22.
 //
 
+import CoreData
 import SwiftUI
 
-/// View with a list of all Exercises
-struct ExerciseListView: View {
-    @Environment(\.managedObjectContext) var moc
+struct AddExerciseView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    let workout: Workout
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    @AppStorage("defaultReps") private var defaultReps = "5"
+    @AppStorage("defaultWeight") private var defaultWeight = "45"
+    @AppStorage("defaultRPE") private var defaultRPE = "7"
+    @AppStorage("defaultRIR") private var defaultRIR = "2"
     
     @State private var searchText = ""
     @State private var showingConfirmation = false
     
+    
+    @Binding public var dismiss: Bool
+    
     var body: some View {
         NavigationView {
-            List(searchResults, id: \.self) {exercise in
-                ExerciseFilteredListRow(exercise: exercise)
+            List(searchResults, id: \.self) { exercise in
+                AddExerciseRow(workout, exercise, $dismiss)
             }
             .searchable(text:$searchText, placement: .navigationBarDrawer(displayMode: .always))
-            .navigationTitle("All Exercises")
+            .navigationTitle("Add Exercise")
+
         }
     }
-    
     var exerciseArray: [Exercise] {
         var exerciseArray = [Exercise]()
         for exercise in exercises {
@@ -40,5 +51,3 @@ struct ExerciseListView: View {
         }
     }
 }
-
-

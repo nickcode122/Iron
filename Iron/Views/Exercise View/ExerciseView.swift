@@ -10,11 +10,12 @@ import SwiftUI
 struct ExerciseView: View {
     
     @Environment(\.managedObjectContext) var moc
-    
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var workout: Workout
     
     @State private var showingConfirmation = false
-    @State private var showingSheet = false
+    @State private var showingCover = false
+    
     var body: some View {
         VStack {
             Form {
@@ -26,7 +27,7 @@ struct ExerciseView: View {
                     }
                 }
                 Section {
-                    Button("Add Exercise") { showSheet() }
+                   addExerciseButton
                 }
                 
                 Section("Notes") {
@@ -36,17 +37,15 @@ struct ExerciseView: View {
             }
         }
         .navigationTitle("\(workout.wrappedName)")
-        
-        .sheet(isPresented: $showingSheet) { AllExercisesView(viewState: .add, workout: workout) }
-        
+        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) { newWorkoutButton }
+            ToolbarItem(placement: .navigationBarTrailing) { addExerciseButton }
             ToolbarItemGroup(placement: .keyboard) { keyboardDoneButton }
         }
     }
-    var newWorkoutButton: some View {
-        Button (action: showSheet) {
-            Label("Edit", systemImage: "plus")
+    var addExerciseButton: some View {
+        Button (action: showCover) {
+            Label("Add Exercise", systemImage: "plus")
         }
     }
     
@@ -57,8 +56,10 @@ struct ExerciseView: View {
         }
         
     }
-    func showSheet() {
-        showingSheet.toggle()
+    func showCover() {
+        withAnimation {
+            showingCover.toggle()
+        }
     }
 }
 
