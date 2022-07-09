@@ -27,7 +27,6 @@
 		019135B32874D83B002AF7E2 /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135B22874D83B002AF7E2 /* WorkoutRow.swift */; };
 		019135B52874FB6F002AF7E2 /* EditExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135B42874FB6F002AF7E2 /* EditExerciseView.swift */; };
 		019135B92875FEFF002AF7E2 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135B82875FEFF002AF7E2 /* ExerciseListView.swift */; };
-		019135BB28760932002AF7E2 /* ExerciseFilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135BA28760932002AF7E2 /* ExerciseFilteredList.swift */; };
 		019135BD28762053002AF7E2 /* ExerciseFilteredListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135BC28762053002AF7E2 /* ExerciseFilteredListRow.swift */; };
 		019135C428764B5A002AF7E2 /* AddExerciseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135C328764B5A002AF7E2 /* AddExerciseRow.swift */; };
 		0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */; };
@@ -65,7 +64,6 @@
 		019135B22874D83B002AF7E2 /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
 		019135B42874FB6F002AF7E2 /* EditExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExerciseView.swift; sourceTree = "<group>"; };
 		019135B82875FEFF002AF7E2 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
-		019135BA28760932002AF7E2 /* ExerciseFilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFilteredList.swift; sourceTree = "<group>"; };
 		019135BC28762053002AF7E2 /* ExerciseFilteredListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFilteredListRow.swift; sourceTree = "<group>"; };
 		019135C328764B5A002AF7E2 /* AddExerciseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseRow.swift; sourceTree = "<group>"; };
 		0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardExtension.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				019135B82875FEFF002AF7E2 /* ExerciseListView.swift */,
-				019135BA28760932002AF7E2 /* ExerciseFilteredList.swift */,
 				019135BC28762053002AF7E2 /* ExerciseFilteredListRow.swift */,
 			);
 			path = "Exercise List";
@@ -306,7 +303,6 @@
 			files = (
 				0161D1E52866128E0085320B /* SettingsView.swift in Sources */,
 				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
-				019135BB28760932002AF7E2 /* ExerciseFilteredList.swift in Sources */,
 				01D24AFC286B6E2400CE5255 /* CalendarView.swift in Sources */,
 				0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */,
 				01C49C4E286FC5D9006CF1BF /* EditWorkoutView.swift in Sources */,
