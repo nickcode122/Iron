@@ -19,15 +19,11 @@ struct ExerciseView: View {
     var body: some View {
         VStack {
             Form {
-                List (workout.exerciseCategories, id: \.self) { category in
-                    Section ("\(category.strName)") {
-                        ForEach (workout.exerciseArray, id: \.self) { exercise in
-                            ExerciseRow(exercise,category, workout)
-                        }
-                    }
+                List (workout.exerciseArray, id: \.self) { exercise in
+                    ExerciseRow(exercise, workout)
                 }
                 Section {
-                   addExerciseButton
+                    addExerciseButton
                 }
                 
                 Section("Notes") {

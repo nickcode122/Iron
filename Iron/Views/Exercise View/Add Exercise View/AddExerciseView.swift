@@ -33,7 +33,6 @@ struct AddExerciseView: View {
             }
             .searchable(text:$searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Add Exercise")
-
         }
     }
     var exerciseArray: [Exercise] {
