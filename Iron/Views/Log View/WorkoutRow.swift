@@ -33,7 +33,6 @@ struct WorkoutRow: View {
             .swipeActions {
                 deleteButton
                 editButton
-                    .tint(.yellow)
             }
             .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
                 confirmationButtons
@@ -50,6 +49,7 @@ struct WorkoutRow: View {
         Button(action: editWorkout) {
             Label("Edit", systemImage: "pencil")
         }
+        .tint(.yellow)
     }
     
     private var deleteButton: some View {

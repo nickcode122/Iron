@@ -35,7 +35,10 @@ struct SetView: View {
                     }
                 }
                 Button("Add Set") {
-                    addSet()
+                    withAnimation {
+                        addSet()
+                    }
+
                 }
                 Section("Notes") {
                     TextEditor(text: $exercise.strNotes)
