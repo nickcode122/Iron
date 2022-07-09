@@ -17,27 +17,32 @@ struct ExerciseView: View {
     @State private var showingCover = false
     
     var body: some View {
-        VStack {
-            Form {
-                List (workout.exerciseArray, id: \.self) { exercise in
-                    ExerciseRow(exercise, workout)
-                }
-                Section {
-                    addExerciseButton
-                }
-                
-                Section("Notes") {
-                    TextEditor(text: $workout.strNotes)
-                        .frame(height: 150, alignment: .topLeading)
+      //  NavigationView {
+            VStack {
+                Form {
+                    List (workout.exerciseArray, id: \.self) { exercise in
+                        ExerciseRow(exercise, workout)
+                    }
+                    Section {
+                        addExerciseButton
+                    }
+                    
+                    Section("Notes") {
+                        TextEditor(text: $workout.strNotes)
+                            .frame(height: 150, alignment: .topLeading)
+                    }
                 }
             }
-        }
-        .navigationTitle("\(workout.wrappedName)")
-        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
+
+
+ //       }
+            .navigationBarTitle(Text("\(workout.wrappedName)"), displayMode: .inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) { addExerciseButton }
             ToolbarItemGroup(placement: .keyboard) { keyboardDoneButton }
         }
+        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
+
     }
     var addExerciseButton: some View {
         Button (action: showCover) {
