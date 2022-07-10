@@ -13,7 +13,6 @@ struct CalendarView: View {
     
     @State private var selectedDate = Date.now
     @State private var showingSheet = false
-    @State var selectedWorkout: Workout?
     
     var body: some View {
         NavigationView {
@@ -21,15 +20,13 @@ struct CalendarView: View {
                 Form {
                     DatePicker("Select a date",selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                         .datePickerStyle(.graphical)
-                    
-                    Section {
-                        List(workouts, id: \.self) { workout in
-                            WorkoutRow(workout, $selectedWorkout, $selectedDate)
-                        }
+                    Section("Workouts from \(sevenDaysAgo.formatted(date: .abbreviated, time: .omitted)) to \(selectedDate.formatted(date: .abbreviated, time: .omitted))") {
+                        CalendarFilter(startDate: sevenDaysAgo as NSDate, endDate: selectedDateNoTime as NSDate)
                     }
-                }
-                .fullScreenCover(item: $selectedWorkout,onDismiss: didDismiss) {workout in
-                    EditWorkoutView(workout: workout)
+                    Section {
+                        addWorkoutButton
+                            
+                    }
                 }
             }
             .toolbar {
@@ -46,14 +43,20 @@ struct CalendarView: View {
         Button(action: addWorkout) {
             Label("Add Workout", systemImage: "plus")
         }
+        .frame(maxWidth: .infinity, alignment: .center)
     }
     func addWorkout() {
         showingSheet.toggle()
     }
-    private func didDismiss() {
-        selectedWorkout = nil
-    }
     
+    private var sevenDaysAgo: Date {
+        Calendar.current.date(byAdding: .weekOfYear, value: -1, to: selectedDateNoTime) ?? Date.now
+    }
+    ///Selected Date without current time
+    private var selectedDateNoTime: Date {
+        let components = Calendar.current.dateComponents([.day,.month,.year], from: selectedDate)
+        let selectedDateNoTime = Calendar.current.date(from: components) ?? Date.now
+        return selectedDateNoTime
+    }
 }
-
 

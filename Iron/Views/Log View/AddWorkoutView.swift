@@ -22,7 +22,7 @@ struct AddWorkoutView: View {
                 Form {
                     TextField("Workout Name", text: $workoutName)
                     Section("Date") {
-                        DatePicker("Date:", selection: $selectedDate, displayedComponents: .date)
+                        DatePicker("Date:", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                             .datePickerStyle(.graphical)
                     }
                     Button("Add") { addWorkout(name: workoutName)}
