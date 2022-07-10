@@ -21,7 +21,7 @@ struct CalendarView: View {
                     DatePicker("Select a date",selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                         .datePickerStyle(.graphical)
                     Section("Workouts from \(sevenDaysAgo.formatted(date: .abbreviated, time: .omitted)) to \(selectedDate.formatted(date: .abbreviated, time: .omitted))") {
-                        CalendarFilter(startDate: sevenDaysAgo as NSDate, endDate: selectedDate as NSDate)
+                        CalendarFilter(startDate: sevenDaysAgo as NSDate, endDate: selectedDateNoTime as NSDate)
                     }
                     Section {
                         addWorkoutButton
@@ -50,7 +50,13 @@ struct CalendarView: View {
     }
     
     private var sevenDaysAgo: Date {
-        Calendar.current.date(byAdding: .weekOfYear, value: -1, to: selectedDate) ?? Date.now
+        Calendar.current.date(byAdding: .weekOfYear, value: -1, to: selectedDateNoTime) ?? Date.now
+    }
+    ///Selected Date without current time
+    private var selectedDateNoTime: Date {
+        let components = Calendar.current.dateComponents([.day,.month,.year], from: selectedDate)
+        let selectedDateNoTime = Calendar.current.date(from: components) ?? Date.now
+        return selectedDateNoTime
     }
 }
 
