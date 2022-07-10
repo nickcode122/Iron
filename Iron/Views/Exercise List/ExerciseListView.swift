@@ -25,14 +25,8 @@ struct ExerciseListView: View {
         }
     }
     
-    var exerciseArray: [Exercise] {
-        var exerciseArray = [Exercise]()
-        for exercise in exercises {
-            exerciseArray.append(exercise)
-        }
-        return exerciseArray
-    }
     var searchResults: [Exercise] {
+        let exerciseArray: [Exercise] = exercises.map { $0 }
         if searchText.isEmpty {
             return exerciseArray
         } else {

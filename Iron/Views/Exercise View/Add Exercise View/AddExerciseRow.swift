@@ -72,6 +72,7 @@ struct AddExerciseRow: View {
         newExercise.workout = workout
         newExercise.id = UUID()
         newExercise.category = workout.exerciseCategories[1]
+        newExercise.userOrder = Int16( workout.exerciseArray.count + 1)
         let defaultSet = ESet(context: moc)
         defaultSet.exerciseEntity = newExercise
         defaultSet.set = 1

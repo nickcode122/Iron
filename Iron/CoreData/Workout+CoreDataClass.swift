@@ -28,7 +28,7 @@ extension Workout {
     public var exerciseArray: [ExerciseEntity] {
         let set = exerciseEntity as? Set<ExerciseEntity> ?? []
         return set.sorted {
-            $0.wrappedName < $1.wrappedName
+            $0.userOrder < $1.userOrder
         }
     }
     

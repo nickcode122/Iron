@@ -63,17 +63,20 @@ struct ExerciseRow: View {
 //        return exercise.category == category
 //    }
     private var deleteButton:  some View {
-        Button(role: .destructive, action: { showingConfirmation.toggle()}) {
+        Button(role: .destructive, action: showPrompt) {
             Label("Delete", systemImage: "trash.fill")
         }
     }
     var confirmDeleteButton: some View {
-        Button("Delete", role: .destructive, action: { deleteExercise(exercise)} )
+        Button("Delete", role: .destructive, action: deleteExercise )
     }
     
-    func deleteExercise(_ exercise: ExerciseEntity) {
+    func deleteExercise() {
         moc.delete(exercise)
         PersistenceController.shared.save()
+    }
+    func showPrompt() {
+        showingConfirmation.toggle()
     }
     func editExercise() {
         

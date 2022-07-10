@@ -19,8 +19,11 @@ struct ExerciseView: View {
     var body: some View {
         VStack {
             Form {
-                List (workout.exerciseArray, id: \.self) { exercise in
-                    ExerciseRow(exercise, workout)
+                List {
+                    ForEach (workout.exerciseArray, id: \.self) { exercise in
+                        ExerciseRow(exercise, workout)
+                    }
+                    .onMove( perform: move)
                 }
                 Section {
                     addExerciseButton
@@ -32,12 +35,13 @@ struct ExerciseView: View {
                 }
             }
         }
-        .navigationTitle("\(workout.wrappedName)")
-        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
+        .navigationBarTitle(Text("\(workout.wrappedName)"), displayMode: .inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) { addExerciseButton }
+            ToolbarItem(placement: .navigationBarTrailing) { EditButton() }
             ToolbarItemGroup(placement: .keyboard) { keyboardDoneButton }
         }
+        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
+        
     }
     var addExerciseButton: some View {
         Button (action: showCover) {
@@ -56,6 +60,18 @@ struct ExerciseView: View {
         withAnimation {
             showingCover.toggle()
         }
+    }
+    
+    private func move(from source: IndexSet, to destination: Int) {
+        var revisedItems: [ExerciseEntity] = workout.exerciseArray
+        revisedItems.move(fromOffsets: source, toOffset: destination)
+        
+        for reverseIndex in stride(from: revisedItems.count - 1, through: 0, by: -1) {
+            revisedItems[reverseIndex].userOrder = Int16(reverseIndex)
+        }
+        //forces a change to the observed workout, causing the list to update immediately
+        workout.id = UUID()
+        PersistenceController.shared.save()
     }
 }
 
