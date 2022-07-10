@@ -30,7 +30,7 @@ struct AddWorkoutView: View {
                 }
                 .multilineTextAlignment(.center)
             }
-            .navigationBarTitle(Text("Log Workout"), displayMode: .inline)
+            .navigationBarTitle(Text("Add Workout"), displayMode: .inline)
         }
 
     }

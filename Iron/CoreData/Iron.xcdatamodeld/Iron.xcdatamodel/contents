@@ -27,6 +27,7 @@
         <relationship name="eSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ESet" inverseName="exerciseEntity" inverseEntity="ESet"/>
         <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="exerciseEntity" inverseEntity="Exercise"/>
         <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exerciseEntity" inverseEntity="Workout"/>
+        <relationship name="workoutTemplate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutTemplate" inverseName="exerciseEntity" inverseEntity="WorkoutTemplate"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="id"/>
@@ -58,11 +59,24 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
+    <entity name="WorkoutTemplate" representedClassName="WorkoutTemplate" syncable="YES" codeGenerationType="category">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <relationship name="exerciseEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEntity" inverseName="workoutTemplate" inverseEntity="ExerciseEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <elements>
         <element name="ESet" positionX="95.7578125" positionY="-113.46875" width="128" height="134"/>
         <element name="Exercise" positionX="-279" positionY="54" width="128" height="59"/>
-        <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="149"/>
+        <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="164"/>
         <element name="ExerciseEntityCategory" positionX="-270" positionY="63" width="128" height="104"/>
         <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="119"/>
+        <element name="WorkoutTemplate" positionX="-288" positionY="45" width="128" height="104"/>
     </elements>
 </model>

@@ -10,20 +10,11 @@ import SwiftUI
 
 struct AddExerciseView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     let workout: Workout
     
     @Environment(\.managedObjectContext) var moc
     
-    @AppStorage("defaultReps") private var defaultReps = "5"
-    @AppStorage("defaultWeight") private var defaultWeight = "45"
-    @AppStorage("defaultRPE") private var defaultRPE = "7"
-    @AppStorage("defaultRIR") private var defaultRIR = "2"
-    
     @State private var searchText = ""
-    @State private var showingConfirmation = false
-    
-    
     @Binding public var dismiss: Bool
     
     var body: some View {
