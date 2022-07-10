@@ -11,38 +11,36 @@ struct WorkoutRow: View {
     @Environment(\.managedObjectContext) var moc
     
     @ObservedObject var workout: Workout
-    @Binding var selectedWorkout: Workout?
-    @Binding private var selectedDate: Date
     
     @State private var showingConfirmation = false
+    @State private var showingSheet = false
     
-    init(_ workout: Workout, _ selectedWorkout: Binding<Workout?>, _ selectedDate: Binding<Date>) {
+    init(_ workout: Workout) {
         self.workout = workout
-        self._selectedWorkout = selectedWorkout
-        self._selectedDate = selectedDate
     }
     
     var body: some View {
-        if sameDay {
-            NavigationLink(destination: ExerciseView(workout: workout)) {
+        NavigationLink(destination: ExerciseView(workout: workout)) {
+            HStack {
                 VStack(alignment: .leading) {
                     Text(workout.wrappedName).font(.headline)
                     Text("Exercises: \(workout.exerciseEntity?.count ?? 0)").font(.caption)
                 }
+                Spacer()
+                Text(workout.wrappedDate.formatted(date: .long, time: .omitted)).font(.caption)
             }
-            .swipeActions {
-                deleteButton
-                editButton
-            }
-            .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
-                confirmationButtons
-            }
+
         }
-    }
-    
-    private var sameDay: Bool {
-        let sameDay = Calendar.current.isDate(selectedDate, equalTo: workout.wrappedDate, toGranularity: .day)
-        return sameDay
+        .swipeActions {
+            deleteButton
+            editButton
+        }
+        .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
+            confirmationButtons
+        }
+        .sheet(isPresented: $showingSheet) {
+            EditWorkoutView(workout: workout)
+        }
     }
     
     private var editButton: some View {
@@ -68,7 +66,7 @@ struct WorkoutRow: View {
         PersistenceController.shared.save()
     }
     private func editWorkout() {
-        selectedWorkout = workout
+        showingSheet.toggle()
     }
     private func showConfirmation() {
         showingConfirmation.toggle()
