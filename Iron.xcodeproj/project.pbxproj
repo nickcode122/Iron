@@ -37,7 +37,9 @@
 		019135D3288226F4002AF7E2 /* Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135D2288226F4002AF7E2 /* Previewing.swift */; };
 		019135D52882277A002AF7E2 /* PreviewingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135D42882277A002AF7E2 /* PreviewingData.swift */; };
 		0191361628833DDB002AF7E2 /* TemplateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361528833DDB002AF7E2 /* TemplateRow.swift */; };
-		0191361828834168002AF7E2 /* deleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361728834168002AF7E2 /* deleteButton.swift */; };
+		0191361828834168002AF7E2 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361728834168002AF7E2 /* DeleteButton.swift */; };
+		0191361A2883524B002AF7E2 /* PencilEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019136192883524B002AF7E2 /* PencilEditButton.swift */; };
+		0191361E28837CD6002AF7E2 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361D28837CD6002AF7E2 /* TextFieldAlert.swift */; };
 		0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */; };
 		01C49C31286E7252006CF1BF /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */; };
 		01C49C34286E7A61006CF1BF /* ExerciseList.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C49C33286E7A61006CF1BF /* ExerciseList.json */; };
@@ -83,7 +85,9 @@
 		019135D2288226F4002AF7E2 /* Previewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewing.swift; sourceTree = "<group>"; };
 		019135D42882277A002AF7E2 /* PreviewingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewingData.swift; sourceTree = "<group>"; };
 		0191361528833DDB002AF7E2 /* TemplateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRow.swift; sourceTree = "<group>"; };
-		0191361728834168002AF7E2 /* deleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteButton.swift; sourceTree = "<group>"; };
+		0191361728834168002AF7E2 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		019136192883524B002AF7E2 /* PencilEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilEditButton.swift; sourceTree = "<group>"; };
+		0191361D28837CD6002AF7E2 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardExtension.swift; sourceTree = "<group>"; };
 		01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
 		01C49C33286E7A61006CF1BF /* ExerciseList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExerciseList.json; sourceTree = "<group>"; };
@@ -253,10 +257,12 @@
 		01E6F6762852486A00D54373 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
+				0191361D28837CD6002AF7E2 /* TextFieldAlert.swift */,
 				01E5AA722867FC58005C91B6 /* NavigationButton.swift */,
 				010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */,
 				0187BC87284979EC00B77DCF /* ClearTextField.swift */,
-				0191361728834168002AF7E2 /* deleteButton.swift */,
+				0191361728834168002AF7E2 /* DeleteButton.swift */,
+				019136192883524B002AF7E2 /* PencilEditButton.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -341,11 +347,13 @@
 				01E6F6742852416C00D54373 /* AddWorkoutView.swift in Sources */,
 				01D24AFC286B6E2400CE5255 /* CalendarView.swift in Sources */,
 				0187BC8628493C8F00B77DCF /* ExerciseView.swift in Sources */,
+				0191361A2883524B002AF7E2 /* PencilEditButton.swift in Sources */,
 				01C49C4E286FC5D9006CF1BF /* EditWorkoutView.swift in Sources */,
 				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
 				01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */,
 				019135D52882277A002AF7E2 /* PreviewingData.swift in Sources */,
-				0191361828834168002AF7E2 /* deleteButton.swift in Sources */,
+				0191361E28837CD6002AF7E2 /* TextFieldAlert.swift in Sources */,
+				0191361828834168002AF7E2 /* DeleteButton.swift in Sources */,
 				019135C428764B5A002AF7E2 /* AddExerciseRow.swift in Sources */,
 				01C49C36286E7AE4006CF1BF /* ExercisesList.swift in Sources */,
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,

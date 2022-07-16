@@ -30,15 +30,13 @@ struct WorkoutRow: View {
                     Spacer()
                     Text(workout.wrappedDate.formatted(date: .long, time: .omitted)).font(.caption)
                 }
-
             }
             .swipeActions {
-                deleteButton(showConfirmation)
-                //deleteButton
-                editButton
+                DeleteButton(showConfirmation)
+                PencilEditButton(editWorkout)
             }
             .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
-                confirmationButtons
+                Button("Delete", role: .destructive, action: deleteWorkout)
             }
             .sheet(isPresented: $showingSheet) {
                 EditWorkoutView(workout: workout)
@@ -47,21 +45,6 @@ struct WorkoutRow: View {
         }
     }
     
-    private var editButton: some View {
-        Button(action: editWorkout) {
-            Label("Edit", systemImage: "pencil")
-        }
-        .tint(.yellow)
-    }
-    
-//    private var deleteButton: some View {
-//        Button(role: .destructive, action: showConfirmation) {
-//            Label("Delete", systemImage: "trash.fill")
-//        }
-//    }
-    private var confirmationButtons: some View {
-        Button("Delete", role: .destructive, action: deleteWorkout)
-    }
     private func deleteWorkout() {
         moc.delete(workout)
         PersistenceController.shared.save()

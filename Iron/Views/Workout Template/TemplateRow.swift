@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TemplateRow: View {
-    
+    @Environment(\.managedObjectContext) var moc
     @ObservedObject var template: WorkoutTemplate
+    
+    @State private var showConfirmation = false
     
     init(_ template: WorkoutTemplate) {
         self.template = template
@@ -20,22 +22,24 @@ struct TemplateRow: View {
             Text(template.wrappedName)
         }
         .swipeActions {
-            deleteButton(delete)
-            editButton
+            DeleteButton(showDeletePrompt)
+            PencilEditButton(edit)
+        }
+        .confirmationDialog("Delete \(template.wrappedName)", isPresented: $showConfirmation, titleVisibility: .visible) {
+            Button("Delete", role: .destructive, action: delete)
         }
     }
     
-    private var editButton: some View {
-        Button(action: edit) {
-            Label("Edit", systemImage: "pencil")
-        }
+    private func showDeletePrompt() {
+        showConfirmation.toggle()
     }
-    
     private func delete() {
-        
+        moc.delete(template)
+        PersistenceController.shared.save()
     }
     
     private func edit() {
         
     }
+    
 }

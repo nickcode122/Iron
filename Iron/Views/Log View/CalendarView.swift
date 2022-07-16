@@ -19,11 +19,10 @@ struct CalendarView: View {
                     DatePicker("Select a date",selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                         .datePickerStyle(.graphical)
                     Section("Workouts from \(sevenDaysAgo.formatted(date: .abbreviated, time: .omitted)) to \(selectedDate.formatted(date: .abbreviated, time: .omitted))") {
-                        CalendarFilter(startDate: sevenDaysAgo as NSDate, endDate: selectedDateNoTime as NSDate)
+                        CalendarFilter(startDate: sevenDaysAgo as NSDate, endDate: adjustedDate as NSDate)
                     }
                     Section {
                         addWorkoutButton
-                        Text(selectedDateNoTime.formatted(date: .abbreviated, time: .complete))
                             
                     }
                 }
@@ -43,11 +42,8 @@ struct CalendarView: View {
             Previewing(contextWith: \.workouts) {
                 CalendarView()
             }
-            
         }
-        
     }
-    
     private var addWorkoutButton: some View {
         Button(action: addWorkout) {
             Label("Add Workout", systemImage: "plus")
@@ -59,13 +55,18 @@ struct CalendarView: View {
     }
     
     private var sevenDaysAgo: Date {
-        Calendar.current.date(byAdding: .weekOfYear, value: -1, to: selectedDateNoTime) ?? Date.now
+        Calendar.current.date(byAdding: .weekOfYear, value: -1, to: removeTime(selectedDate)) ?? Date.now
     }
-    ///Selected Date without current time
-    private var selectedDateNoTime: Date {
-        let components = Calendar.current.dateComponents([.day,.month,.year], from: selectedDate)
-        let selectedDateNoTime = Calendar.current.date(from: components) ?? Date.now
-        return selectedDateNoTime
+
+    private var adjustedDate: Date {
+        var adjustedDate = Calendar.current.date(byAdding: .day, value: 1, to: removeTime(selectedDate)) ?? Date.now
+        adjustedDate = Calendar.current.date(byAdding: .second, value: -1, to: adjustedDate) ?? Date.now
+        return adjustedDate
+    }
+    private func removeTime(_ date: Date) -> Date {
+        let components = Calendar.current.dateComponents([.day,.month,.year], from: date)
+        let newDate = Calendar.current.date(from: components) ?? Date.now
+        return newDate
     }
 }
 

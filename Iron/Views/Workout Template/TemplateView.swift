@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct TemplateView: View {
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var templates: FetchedResults<WorkoutTemplate>
     
     @State private var showSheet = false
+    @State private var templateName: String?
     
     var body: some View {
         NavigationView {
@@ -22,45 +24,55 @@ struct TemplateView: View {
                             .font(.title)
                             .listRowBackground(Color.clear)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            
+                        
                         Section {
                             List(templates, id: \.self) { template in
                                 TemplateRow(template)
                             }
                         }
                         .padding(.top, 0)
-
+                        
                         Section {
                             createTemplateButton
                         }
                         
                         
-                        .sheet(isPresented: $showSheet) {
-                            NewTemplateView()
-                        }
+                        //                        .sheet(isPresented: $showSheet) {
+                        //                            NewTemplateView()
+                        //                        }
+                        
                     }
                 }
             }
             .navigationBarTitle("Workout Templates", displayMode: .inline)
+            .textFieldAlert(isPresented: $showSheet) { () -> TextFieldAlert in
+                TextFieldAlert(title: "Create Template", message: "Enter a name", text: self.$templateName, action: createTemplate)
+            }
         }
         
         
         
     }
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            Previewing(contextWith: \.templates) {
-                TemplateView()
-            }
-        }
-    }
+//    struct ContentView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            Previewing(contextWith: \.templates) {
+//                TemplateView()
+//            }
+//        }
+//    }
 
     private var createTemplateButton: some View {
-        Button("Create Workout Template", action: createTemplate)
+        Button("Create Workout Template", action: showPrompt)
+    }
+    
+    func showPrompt() {
+        showSheet.toggle()
     }
     
     func createTemplate() {
-        showSheet.toggle()
+        let template = WorkoutTemplate(context: moc)
+        template.name = templateName ?? "Error"
+        PersistenceController.shared.save()
     }
 }

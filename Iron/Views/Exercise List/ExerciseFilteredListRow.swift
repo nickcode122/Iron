@@ -19,33 +19,21 @@ struct ExerciseFilteredListRow: View {
             Text(exercise.strName)
         }
         .swipeActions {
-            deleteButton
-            editButton
+            DeleteButton(showDeletePrompt)
+            PencilEditButton(editExercise)
         }
         .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
-            confirmDeleteButton
+            Button("Delete", role: .destructive, action: deleteExercise)
         }
         .sheet(isPresented: $showingSheet) {
             EditExerciseView(exercise)
         }
     }
-    private var deleteButton:  some View {
-        Button(role: .destructive, action: { showingConfirmation.toggle()}) {
-            Label("Delete", systemImage: "trash.fill")
-        }
-    }
-    private var editButton: some View {
-        Button(action: editExercise) {
-            Label(exercise.strName, systemImage: "pencil")
-        }
-        .tint(.yellow)
-    }
     
-    var confirmDeleteButton: some View {
-        Button("Delete", role: .destructive, action: { deleteExercise(exercise)} )
+    func showDeletePrompt() {
+        showingConfirmation.toggle()
     }
-    
-    func deleteExercise(_ exercise: Exercise) {
+    func deleteExercise() {
         moc.delete(exercise)
         PersistenceController.shared.save()
     }
