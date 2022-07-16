@@ -33,7 +33,7 @@ struct WorkoutRow: View {
 
             }
             .swipeActions {
-                deleteButton(action: showConfirmation)
+                deleteButton(showConfirmation)
                 //deleteButton
                 editButton
             }

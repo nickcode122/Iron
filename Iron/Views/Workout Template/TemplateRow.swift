@@ -20,7 +20,7 @@ struct TemplateRow: View {
             Text(template.wrappedName)
         }
         .swipeActions {
-            deleteButton(action: delete)
+            deleteButton(delete)
             editButton
         }
     }
