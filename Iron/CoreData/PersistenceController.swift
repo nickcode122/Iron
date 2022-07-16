@@ -18,11 +18,11 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     // A test configuration for SwiftUI previews
-    static var preview: PersistenceController = {
-        let controller = PersistenceController(inMemory: true)
-
-        return controller
-    }()
+//    static var preview: PersistenceController = {
+//        let controller = PersistenceController(inMemory: true)
+//
+//        return controller
+//    }()
 
     // An initializer to load Core Data, optionally able
     // to use an in-memory store.

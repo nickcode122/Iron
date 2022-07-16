@@ -9,8 +9,6 @@ import SwiftUI
 
 struct CalendarView: View {
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var workouts: FetchedResults<Workout>
-    
     @State private var selectedDate = Date.now
     @State private var showingSheet = false
     
@@ -25,6 +23,7 @@ struct CalendarView: View {
                     }
                     Section {
                         addWorkoutButton
+                        Text(selectedDateNoTime.formatted(date: .abbreviated, time: .complete))
                             
                     }
                 }
@@ -37,6 +36,16 @@ struct CalendarView: View {
             .navigationBarTitle(Text("Workouts"), displayMode: .inline)
             .sheet(isPresented: $showingSheet) { AddWorkoutView() }
         }
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Previewing(contextWith: \.workouts) {
+                CalendarView()
+            }
+            
+        }
+        
     }
     
     private var addWorkoutButton: some View {

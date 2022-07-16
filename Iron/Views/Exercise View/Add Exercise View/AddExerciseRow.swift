@@ -19,16 +19,30 @@ struct AddExerciseRow: View {
     @ObservedObject var exercise: Exercise
     @State private var showingConfirmation = false
     @State private var showingSheet = false
-    let workout: Workout
+    public let workout: Workout
+    public let template: WorkoutTemplate
     @Binding var dismiss: Bool
+    
+    @State var viewMode: AddView = .error
     
     init(_ workout: Workout, _ exercise: Exercise, _ dismiss: Binding<Bool>) {
         self.exercise = exercise
         self.workout = workout
         self._dismiss = dismiss
+        self.template = WorkoutTemplate()
+        self._viewMode = State(initialValue: .workout)
     }
+    
+    init(_ template: WorkoutTemplate, _ exercise: Exercise, _ dismiss: Binding<Bool>) {
+        self.exercise = exercise
+        self.workout = Workout()
+        self.template = template
+        self._dismiss = dismiss
+        self._viewMode = State(initialValue: .template)
+    }
+    
     var body: some View {
-        Button("\(exercise.strName)") {addExercise(exercise)}
+        Button("\(exercise.strName)", action: addExercise)
             .swipeActions {
                 deleteButton
                 editButton
@@ -40,6 +54,7 @@ struct AddExerciseRow: View {
                 EditExerciseView(exercise)
             }
     }
+    
     private var deleteButton:  some View {
         Button(role: .destructive, action: { showingConfirmation.toggle()}) {
             Label("Delete", systemImage: "trash.fill")
@@ -65,14 +80,23 @@ struct AddExerciseRow: View {
         showingSheet.toggle()
     }
     
-    func addExercise (_ exercise: Exercise) {
+    func addExercise () {
         let newExercise = ExerciseEntity(context: moc)
         newExercise.exercise = exercise
         newExercise.name = exercise.strName
-        newExercise.workout = workout
         newExercise.id = UUID()
-        newExercise.category = workout.exerciseCategories[1]
-        newExercise.userOrder = Int16( workout.exerciseArray.count + 1)
+        
+        switch viewMode {
+        case .template:
+            newExercise.workoutTemplate = template
+            newExercise.userOrder = Int16(template.exercises.count + 1)
+        case .workout:
+            newExercise.workout = workout
+            newExercise.category = workout.exerciseCategories[1]
+            newExercise.userOrder = Int16( workout.exerciseArray.count + 1)
+        case .error:
+            return
+        }
         let defaultSet = ESet(context: moc)
         defaultSet.exerciseEntity = newExercise
         defaultSet.set = 1
@@ -84,5 +108,9 @@ struct AddExerciseRow: View {
         
         PersistenceController.shared.save()
         dismiss.toggle()
+    }
+    
+    func addToTemplate() {
+        
     }
 }

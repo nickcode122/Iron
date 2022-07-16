@@ -20,26 +20,30 @@ struct WorkoutRow: View {
     }
     
     var body: some View {
-        NavigationLink(destination: ExerciseView(workout: workout)) {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(workout.wrappedName).font(.headline)
-                    Text("Exercises: \(workout.exerciseEntity?.count ?? 0)").font(.caption)
+        Group {
+            NavigationLink(destination: ExerciseView(workout: workout)) {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(workout.wrappedName).font(.headline)
+                        Text("Exercises: \(workout.exerciseEntity?.count ?? 0)").font(.caption)
+                    }
+                    Spacer()
+                    Text(workout.wrappedDate.formatted(date: .long, time: .omitted)).font(.caption)
                 }
-                Spacer()
-                Text(workout.wrappedDate.formatted(date: .long, time: .omitted)).font(.caption)
+
+            }
+            .swipeActions {
+                deleteButton(action: showConfirmation)
+                //deleteButton
+                editButton
+            }
+            .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
+                confirmationButtons
+            }
+            .sheet(isPresented: $showingSheet) {
+                EditWorkoutView(workout: workout)
             }
 
-        }
-        .swipeActions {
-            deleteButton
-            editButton
-        }
-        .confirmationDialog("Confirm Delete", isPresented: $showingConfirmation, titleVisibility: .visible) {
-            confirmationButtons
-        }
-        .sheet(isPresented: $showingSheet) {
-            EditWorkoutView(workout: workout)
         }
     }
     
@@ -50,16 +54,13 @@ struct WorkoutRow: View {
         .tint(.yellow)
     }
     
-    private var deleteButton: some View {
-        Button(role: .destructive, action: showConfirmation) {
-            Label("Delete", systemImage: "trash.fill")
-        }
-    }
+//    private var deleteButton: some View {
+//        Button(role: .destructive, action: showConfirmation) {
+//            Label("Delete", systemImage: "trash.fill")
+//        }
+//    }
     private var confirmationButtons: some View {
-        Group {
-            Button("Cancel", role: .cancel) { }
-            Button("Delete", role: .destructive, action: deleteWorkout)
-        }
+        Button("Delete", role: .destructive, action: deleteWorkout)
     }
     private func deleteWorkout() {
         moc.delete(workout)
@@ -70,6 +71,15 @@ struct WorkoutRow: View {
     }
     private func showConfirmation() {
         showingConfirmation.toggle()
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Previewing(\.workout) { workout in
+                WorkoutRow(workout)
+            }
+        }
+        
     }
 }
 

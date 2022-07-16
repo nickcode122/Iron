@@ -21,7 +21,7 @@ struct ExerciseView: View {
             Form {
                 List {
                     ForEach (workout.exerciseArray, id: \.self) { exercise in
-                        ExerciseRow(exercise, workout)
+                        ExerciseRow(exercise)
                     }
                     .onMove( perform: move)
                 }
@@ -40,7 +40,7 @@ struct ExerciseView: View {
             ToolbarItem(placement: .navigationBarTrailing) { EditButton() }
             ToolbarItemGroup(placement: .keyboard) { keyboardDoneButton }
         }
-        .sheet(isPresented: $showingCover) {AddExerciseView(workout: workout, dismiss: $showingCover) }
+        .sheet(isPresented: $showingCover) {AddExerciseView(workout, dismiss: $showingCover) }
         
     }
     var addExerciseButton: some View {

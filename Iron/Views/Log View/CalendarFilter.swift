@@ -27,4 +27,13 @@ struct CalendarFilter: View {
         fetchRequest.isEmpty
     }
     
+//    struct ContentView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            Previewing(contextWith: \.workouts) {
+//                CalendarFilter(startDate: Date() as NSDate, endDate:  Date() as NSDate )
+//            }
+//        }
+//
+//    }
+
 }

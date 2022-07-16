@@ -34,6 +34,10 @@
 		019135CD287B3184002AF7E2 /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135CC287B3184002AF7E2 /* TemplateView.swift */; };
 		019135CF287B31A8002AF7E2 /* NewTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135CE287B31A8002AF7E2 /* NewTemplateView.swift */; };
 		019135D1287B3B1A002AF7E2 /* TemplateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135D0287B3B1A002AF7E2 /* TemplateDetailView.swift */; };
+		019135D3288226F4002AF7E2 /* Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135D2288226F4002AF7E2 /* Previewing.swift */; };
+		019135D52882277A002AF7E2 /* PreviewingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019135D42882277A002AF7E2 /* PreviewingData.swift */; };
+		0191361628833DDB002AF7E2 /* TemplateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361528833DDB002AF7E2 /* TemplateRow.swift */; };
+		0191361828834168002AF7E2 /* deleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361728834168002AF7E2 /* deleteButton.swift */; };
 		0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */; };
 		01C49C31286E7252006CF1BF /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */; };
 		01C49C34286E7A61006CF1BF /* ExerciseList.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C49C33286E7A61006CF1BF /* ExerciseList.json */; };
@@ -76,6 +80,10 @@
 		019135CC287B3184002AF7E2 /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		019135CE287B31A8002AF7E2 /* NewTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTemplateView.swift; sourceTree = "<group>"; };
 		019135D0287B3B1A002AF7E2 /* TemplateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateDetailView.swift; sourceTree = "<group>"; };
+		019135D2288226F4002AF7E2 /* Previewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previewing.swift; sourceTree = "<group>"; };
+		019135D42882277A002AF7E2 /* PreviewingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewingData.swift; sourceTree = "<group>"; };
+		0191361528833DDB002AF7E2 /* TemplateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateRow.swift; sourceTree = "<group>"; };
+		0191361728834168002AF7E2 /* deleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteButton.swift; sourceTree = "<group>"; };
 		0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardExtension.swift; sourceTree = "<group>"; };
 		01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
 		01C49C33286E7A61006CF1BF /* ExerciseList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExerciseList.json; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 			children = (
 				0159A7532848393C005CDC32 /* Iron.xcdatamodeld */,
 				010B84BD284E6BE800732AF9 /* PersistenceController.swift */,
+				019135D2288226F4002AF7E2 /* Previewing.swift */,
+				019135D42882277A002AF7E2 /* PreviewingData.swift */,
 				01C49C37286F6209006CF1BF /* ExerciseEntityCategory+CoreDataClass.swift */,
 				01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */,
 				019135C7287B3024002AF7E2 /* WorkoutTemplate+CoreDataClass.swift */,
@@ -188,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				019135CC287B3184002AF7E2 /* TemplateView.swift */,
+				0191361528833DDB002AF7E2 /* TemplateRow.swift */,
 				019135D0287B3B1A002AF7E2 /* TemplateDetailView.swift */,
 				019135CE287B31A8002AF7E2 /* NewTemplateView.swift */,
 			);
@@ -245,6 +256,7 @@
 				01E5AA722867FC58005C91B6 /* NavigationButton.swift */,
 				010B2C5A284A8FF1000810E5 /* CheckboxStyle.swift */,
 				0187BC87284979EC00B77DCF /* ClearTextField.swift */,
+				0191361728834168002AF7E2 /* deleteButton.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -332,11 +344,14 @@
 				01C49C4E286FC5D9006CF1BF /* EditWorkoutView.swift in Sources */,
 				010B84C9284E6F0A00732AF9 /* Workout+CoreDataClass.swift in Sources */,
 				01E5AA732867FC58005C91B6 /* NavigationButton.swift in Sources */,
+				019135D52882277A002AF7E2 /* PreviewingData.swift in Sources */,
+				0191361828834168002AF7E2 /* deleteButton.swift in Sources */,
 				019135C428764B5A002AF7E2 /* AddExerciseRow.swift in Sources */,
 				01C49C36286E7AE4006CF1BF /* ExercisesList.swift in Sources */,
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,
 				0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */,
 				019135B32874D83B002AF7E2 /* WorkoutRow.swift in Sources */,
+				0191361628833DDB002AF7E2 /* TemplateRow.swift in Sources */,
 				0159A7552848393C005CDC32 /* Iron.xcdatamodeld in Sources */,
 				019135D1287B3B1A002AF7E2 /* TemplateDetailView.swift in Sources */,
 				0161D1E3285BBCD40085320B /* AddExerciseView.swift in Sources */,
@@ -355,6 +370,7 @@
 				0159A7442848336A005CDC32 /* IronApp.swift in Sources */,
 				01C49C31286E7252006CF1BF /* Exercise+CoreDataClass.swift in Sources */,
 				0161D1E72867B2FB0085320B /* ESetTitleView.swift in Sources */,
+				019135D3288226F4002AF7E2 /* Previewing.swift in Sources */,
 				010B84BE284E6BE800732AF9 /* PersistenceController.swift in Sources */,
 				0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */,
 				019135C6287A5C0A002AF7E2 /* CalendarFilter.swift in Sources */,
@@ -502,6 +518,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickschwab.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -531,6 +550,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickschwab.Iron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
