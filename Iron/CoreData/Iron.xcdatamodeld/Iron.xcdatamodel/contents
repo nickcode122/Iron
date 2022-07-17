@@ -68,6 +68,7 @@
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>
+                <constraint value="id"/>
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
@@ -77,6 +78,6 @@
         <element name="ExerciseEntity" positionX="160" positionY="192" width="128" height="164"/>
         <element name="ExerciseEntityCategory" positionX="-270" positionY="63" width="128" height="104"/>
         <element name="Workout" positionX="-489.796875" positionY="-54.03125" width="128" height="119"/>
-        <element name="WorkoutTemplate" positionX="-288" positionY="45" width="128" height="104"/>
+        <element name="WorkoutTemplate" positionX="-288" positionY="45" width="128" height="14"/>
     </elements>
 </model>

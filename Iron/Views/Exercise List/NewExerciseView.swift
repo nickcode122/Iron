@@ -8,15 +8,14 @@ import CoreData
 import SwiftUI
 
 struct NewExerciseView: View {
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var exercises: FetchedResults<Exercise>
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
     @State private var exerciseName = ""
     @State private var selectedCategory = ""
     
-    let exercises: [Exercise]
     var body: some View {
-        
         Form {
             TextField("Exercise Name", text: $exerciseName)
                 .multilineTextAlignment(.center)
@@ -24,7 +23,6 @@ struct NewExerciseView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .disabled(!isUnique)
         }
-        
     }
     var uniqueExerciseNames: [String] {
         var names = [String]()

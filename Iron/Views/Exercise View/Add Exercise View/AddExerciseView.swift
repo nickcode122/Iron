@@ -28,7 +28,6 @@ struct AddExerciseView: View {
         self.template = WorkoutTemplate()
         self._viewMode = State(initialValue: .workout)
     }
-    
     init(_ template: WorkoutTemplate, dismiss: Binding<Bool>) {
         self.template = template
         self.workout = Workout()

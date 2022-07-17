@@ -11,8 +11,10 @@ struct TemplateDetailView: View {
     @Environment(\.managedObjectContext) var moc
     
     @ObservedObject public var template: WorkoutTemplate
-    
     @State public var showSheet = false
+    @State private var showLogPrompt = false
+    @State private var logName: String?
+    
     
     init(_ template: WorkoutTemplate) {
         self.template = template
@@ -27,6 +29,7 @@ struct TemplateDetailView: View {
             }
             Section {
                 Button("Add Exercise", action: showAddExerciseView)
+                Button("Use Template", action: showLogNamePrompt)
             }
         }
         .navigationBarTitle(template.wrappedName, displayMode: .inline)
@@ -35,6 +38,9 @@ struct TemplateDetailView: View {
         }
         .toolbar {
             EditButton()
+        }
+        .textFieldAlert(isPresented: $showLogPrompt) { () -> TextFieldAlert in
+            TextFieldAlert(title: "Use Template", message: "Enter a name", text: self.$logName, action: createLog)
         }
     }
     private func showAddExerciseView() {
@@ -58,6 +64,14 @@ struct TemplateDetailView: View {
             moc.delete(exercise)
         }
         PersistenceController.shared.save()
+    }
+    
+    private func showLogNamePrompt() {
+        showLogPrompt.toggle()
+    }
+    
+    private func createLog() {
+        template.copyToLog(logName ?? "Error", context: moc)
     }
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

@@ -11,35 +11,32 @@ struct TemplateView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var templates: FetchedResults<WorkoutTemplate>
     
-    @State private var showSheet = false
+    @State private var showAlert = false
     @State private var templateName: String?
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.pink
-                VStack(alignment: .leading, spacing: 10) {
-                    Form {
-                        Text("Templates")
-                            .font(.title)
-                            .listRowBackground(Color.clear)
-                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                        
-                        Section {
-                            List(templates, id: \.self) { template in
-                                TemplateRow(template)
-                            }
+            VStack(alignment: .leading, spacing: 10) {
+                Form {
+                    Text("Templates")
+                        .font(.title)
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
+                    Section {
+                        List(templates, id: \.self) { template in
+                            TemplateRow(template)
                         }
-                        .padding(.top, 0)
-                        Section {
-                            createTemplateButton
-                        }
-                        
                     }
+                    .padding(.top, 0)
+                    Section {
+                        createTemplateButton
+                    }
+                    
                 }
             }
             .navigationBarTitle("Workout Templates", displayMode: .inline)
-            .textFieldAlert(isPresented: $showSheet) { () -> TextFieldAlert in
+            .textFieldAlert(isPresented: $showAlert) { () -> TextFieldAlert in
                 TextFieldAlert(title: "Create Template", message: "Enter a name", text: self.$templateName, action: createTemplate)
             }
         }
@@ -52,13 +49,13 @@ struct TemplateView: View {
             }
         }
     }
-
+    
     private var createTemplateButton: some View {
         Button("Create Workout Template", action: showPrompt)
     }
     
     func showPrompt() {
-        showSheet.toggle()
+        showAlert.toggle()
     }
     
     func createTemplate() {

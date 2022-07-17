@@ -13,6 +13,12 @@ struct TemplateRow: View {
     
     @State private var showConfirmation = false
     
+    @State private var showSheet = false
+    @State private var newName: String?
+    
+    @State private var showLogPrompt = false
+    @State private var logName: String?
+    
     init(_ template: WorkoutTemplate) {
         self.template = template
     }
@@ -20,16 +26,31 @@ struct TemplateRow: View {
     var body: some View {
         NavigationLink(destination: TemplateDetailView(template)) {
             Text(template.wrappedName)
+                .textFieldAlert(isPresented: $showSheet) { () -> TextFieldAlert in
+                    TextFieldAlert(title: "Edit Template Name", message: "Enter a new name", text: self.$newName, action: editTemplate)
+                }
+                .textFieldAlert(isPresented: $showLogPrompt) { () -> TextFieldAlert in
+                    TextFieldAlert(title: "Use Template", message: "Enter a name", text: self.$logName, action: createLog)
+                }
         }
-        .swipeActions {
+        .swipeActions(edge: .trailing) {
             DeleteButton(showDeletePrompt)
-            PencilEditButton(edit)
+            PencilEditButton(showEditPrompt)
+        }
+        .swipeActions(edge: .leading) {
+            copyTemplateButton
         }
         .confirmationDialog("Delete \(template.wrappedName)", isPresented: $showConfirmation, titleVisibility: .visible) {
             Button("Delete", role: .destructive, action: delete)
         }
+
     }
     
+    private var copyTemplateButton: some View {
+        Button {showLogPrompt.toggle()} label: {
+            Label("Copy", systemImage: "doc.on.doc.fill")
+        }
+    }
     private func showDeletePrompt() {
         showConfirmation.toggle()
     }
@@ -38,8 +59,17 @@ struct TemplateRow: View {
         PersistenceController.shared.save()
     }
     
-    private func edit() {
-        
+    private func showEditPrompt() {
+        newName = template.wrappedName
+        showSheet.toggle()
+    }
+    private func editTemplate() {
+        template.name = newName
+        PersistenceController.shared.save()
+    }
+    
+    private func createLog() {
+        template.copyToLog(logName ?? "Error", context: moc)
     }
     
 }

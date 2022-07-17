@@ -14,6 +14,7 @@ struct ExerciseListView: View {
     
     @State private var searchText = ""
     @State private var showingConfirmation = false
+    @State private var showSheet = false
     
     var body: some View {
         NavigationView {
@@ -22,6 +23,8 @@ struct ExerciseListView: View {
             }
             .searchable(text:$searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("All Exercises")
+            .toolbar { newExerciseToolbarItem }
+            .sheet(isPresented: $showSheet) { NewExerciseView() }
         }
     }
     
@@ -32,6 +35,16 @@ struct ExerciseListView: View {
         } else {
             return exerciseArray.filter { $0.strName.contains(searchText)}
         }
+    }
+    var newExerciseToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Button(action: showNewExerciseView) {
+                Label("Add Exercise", systemImage: "plus")
+            }
+        }
+    }
+    func showNewExerciseView() {
+        showSheet.toggle()
     }
 }
 
