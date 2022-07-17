@@ -46,6 +46,7 @@ class TextFieldAlertViewController: UIViewController {
     ///   - message: to be used as optional message of the UIAlertController
     ///   - text: binding for the text typed into the UITextField
     ///   - isPresented: binding to be set to false when the alert is dismissed (`Done` button tapped)
+    ///   - action: add action for save button
     init(title: String, message: String?, text: Binding<String?>, isPresented: Binding<Bool>?, action: @escaping () -> Void) {
         self.alertTitle = title
         self.message = message

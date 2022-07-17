@@ -31,15 +31,9 @@ struct TemplateView: View {
                             }
                         }
                         .padding(.top, 0)
-                        
                         Section {
                             createTemplateButton
                         }
-                        
-                        
-                        //                        .sheet(isPresented: $showSheet) {
-                        //                            NewTemplateView()
-                        //                        }
                         
                     }
                 }
@@ -49,18 +43,15 @@ struct TemplateView: View {
                 TextFieldAlert(title: "Create Template", message: "Enter a name", text: self.$templateName, action: createTemplate)
             }
         }
-        
-        
-        
     }
     
-//    struct ContentView_Previews: PreviewProvider {
-//        static var previews: some View {
-//            Previewing(contextWith: \.templates) {
-//                TemplateView()
-//            }
-//        }
-//    }
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            Previewing(contextWith: \.templates) {
+                TemplateView()
+            }
+        }
+    }
 
     private var createTemplateButton: some View {
         Button("Create Workout Template", action: showPrompt)
