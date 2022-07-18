@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ExerciseView: View {
-    
+    @ObservedObject var workout: Workout
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var workout: Workout
+    
     
     @State private var showingConfirmation = false
     @State private var showingCover = false

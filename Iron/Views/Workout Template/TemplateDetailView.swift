@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TemplateDetailView: View {
     @Environment(\.managedObjectContext) var moc
+    @EnvironmentObject private var viewRouter: ViewRouter
     
     @ObservedObject public var template: WorkoutTemplate
     @State public var showSheet = false
@@ -71,7 +72,10 @@ struct TemplateDetailView: View {
     }
     
     private func createLog() {
-        template.copyToLog(logName ?? "Error", context: moc)
+        let newWorkout = template.copyToLog(logName ?? "Error", context: moc)
+        viewRouter.newWorkout = newWorkout
+        viewRouter.currentView = .logs
+        viewRouter.workoutLinkActive = true
     }
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

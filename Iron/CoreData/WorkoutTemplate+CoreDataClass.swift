@@ -13,6 +13,7 @@ import SwiftUI
 
 @objc(WorkoutTemplate)
 public class WorkoutTemplate: NSManagedObject {
+    @EnvironmentObject private var viewRouter: ViewRouter
 }
 
 extension WorkoutTemplate {
@@ -35,7 +36,7 @@ extension WorkoutTemplate {
     /// - Parameters:
     ///   - logName: Name for the logged workout
     ///   - moc: Managed Object Context
-    public func copyToLog(_ logName: String, context moc: NSManagedObjectContext) {
+    public func copyToLog(_ logName: String, context moc: NSManagedObjectContext) -> Workout{
         let newLog = Workout(context: moc)
         newLog.name = logName
         newLog.date = Date()
@@ -62,6 +63,8 @@ extension WorkoutTemplate {
             }
             newExercise.workout = newLog
         }
+
         PersistenceController.shared.save()
+        return newLog
     }
 }

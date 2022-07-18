@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TemplateRow: View {
     @Environment(\.managedObjectContext) var moc
+    @EnvironmentObject private var viewRouter: ViewRouter
     @ObservedObject var template: WorkoutTemplate
     
     @State private var showConfirmation = false
@@ -69,7 +70,10 @@ struct TemplateRow: View {
     }
     
     private func createLog() {
-        template.copyToLog(logName ?? "Error", context: moc)
+        let newWorkout = template.copyToLog(logName ?? "Error", context: moc)
+        viewRouter.newWorkout = newWorkout
+        viewRouter.currentView = .logs
+        viewRouter.workoutLinkActive = true
     }
     
 }

@@ -41,6 +41,7 @@
 		0191361A2883524B002AF7E2 /* PencilEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019136192883524B002AF7E2 /* PencilEditButton.swift */; };
 		0191361E28837CD6002AF7E2 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191361D28837CD6002AF7E2 /* TextFieldAlert.swift */; };
 		0199E14D286CAE21003150C7 /* DismissKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */; };
+		01A544CD28849CE000967A71 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A544CC28849CE000967A71 /* ViewRouter.swift */; };
 		01C49C31286E7252006CF1BF /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */; };
 		01C49C34286E7A61006CF1BF /* ExerciseList.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C49C33286E7A61006CF1BF /* ExerciseList.json */; };
 		01C49C36286E7AE4006CF1BF /* ExercisesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C49C35286E7AE4006CF1BF /* ExercisesList.swift */; };
@@ -89,6 +90,7 @@
 		019136192883524B002AF7E2 /* PencilEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilEditButton.swift; sourceTree = "<group>"; };
 		0191361D28837CD6002AF7E2 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardExtension.swift; sourceTree = "<group>"; };
+		01A544CC28849CE000967A71 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		01C49C2F286E7252006CF1BF /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
 		01C49C33286E7A61006CF1BF /* ExerciseList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExerciseList.json; sourceTree = "<group>"; };
 		01C49C35286E7AE4006CF1BF /* ExercisesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesList.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				0199E14C286CAE21003150C7 /* DismissKeyboardExtension.swift */,
+				01A544CC28849CE000967A71 /* ViewRouter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				019135C428764B5A002AF7E2 /* AddExerciseRow.swift in Sources */,
 				01C49C36286E7AE4006CF1BF /* ExercisesList.swift in Sources */,
 				0159A7462848336A005CDC32 /* ContentView.swift in Sources */,
+				01A544CD28849CE000967A71 /* ViewRouter.swift in Sources */,
 				0187BC88284979EC00B77DCF /* ClearTextField.swift in Sources */,
 				019135B32874D83B002AF7E2 /* WorkoutRow.swift in Sources */,
 				0191361628833DDB002AF7E2 /* TemplateRow.swift in Sources */,

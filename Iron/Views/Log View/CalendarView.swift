@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @EnvironmentObject private var viewRouter: ViewRouter
     
     @State private var selectedDate = Date.now
     @State private var showingSheet = false
-    
+    @State private var selection: String? = nil
     var body: some View {
         NavigationView {
             VStack {
+                
                 Form {
                     DatePicker("Select a date",selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                         .datePickerStyle(.graphical)
@@ -23,9 +25,9 @@ struct CalendarView: View {
                     }
                     Section {
                         addWorkoutButton
-                            
                     }
                 }
+                NavigationLink(destination: ExerciseView(workout: viewRouter.newWorkout ?? Workout()), isActive: $viewRouter.workoutLinkActive) {EmptyView() }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -34,6 +36,8 @@ struct CalendarView: View {
             }
             .navigationBarTitle(Text("Workouts"), displayMode: .inline)
             .sheet(isPresented: $showingSheet) { AddWorkoutView() }
+            
+            
         }
     }
     

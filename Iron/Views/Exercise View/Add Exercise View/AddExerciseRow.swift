@@ -92,7 +92,6 @@ struct AddExerciseRow: View {
             newExercise.userOrder = Int16(template.exercises.count + 1)
         case .workout:
             newExercise.workout = workout
-            newExercise.category = workout.exerciseCategories[1]
             newExercise.userOrder = Int16( workout.exerciseArray.count + 1)
         case .error:
             return
